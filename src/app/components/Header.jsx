@@ -1,11 +1,20 @@
 import Image from "next/image";
+import { Orbitron } from "next/font/google";
+import Link from "next/link";
+
+const orbitron = Orbitron({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-pink-200 md:px-8 md:py-2">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <div className="flex items-center justify-center">
-          <span className="text-2xl font-semibold">Sublime</span>
+        <Link href="/" className="flex items-center justify-center">
+          <span className={`${orbitron.className} text-xl font-semibold`}>
+            Sublime
+          </span>
           <Image
             width={200}
             height={200}
@@ -13,25 +22,16 @@ const Header = () => {
             alt="Sublime by Emprendev"
             className="h-10 w-auto"
           />
-        </div>
+        </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
-          <a
-            href="#servicios"
-            className="text-foreground/80 hover:text-primary transition-colors font-medium"
-          >
+        <nav className="hidden text-base md:flex items-center gap-8">
+          <a href="#servicios" className="hover:text-blue-400 ">
             Servicios
           </a>
-          <a
-            href="#productos"
-            className="text-foreground/80 hover:text-primary transition-colors font-medium"
-          >
+          <a href="#productos" className="hover:text-blue-400 ">
             Productos
           </a>
-          <a
-            href="#contacto"
-            className="text-foreground/80 hover:text-primary transition-colors font-medium"
-          >
+          <a href="#contacto" className="hover:text-blue-400 ">
             Contacto
           </a>
         </nav>

@@ -1,9 +1,11 @@
-import { Roboto } from "next/font/google";
+import { Rubik } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Brand from "./components/Brand";
+import ScrollToTop from "./components/ScrollToTop";
 
-const roboto = Roboto({
+const rubik = Rubik({
   weight: "400",
   subsets: ["latin"],
 });
@@ -16,8 +18,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={`${roboto.className} antialiased`}>
+      <body className={`${rubik.className} antialiased`}>
+        <ScrollToTop />
         <Header />
+        <Brand />
         {children}
         <Footer />
       </body>

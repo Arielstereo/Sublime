@@ -1,6 +1,23 @@
 @import "tailwindcss";
 @plugin "@iconify/tailwind4";
 
-body {
-  @apply bg-gray-100 text-gray-900;
+
+html {
+    scroll-behavior: smooth;
+  }
+
+  @keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee {
+  white-space: nowrap;
+  display: inline-block;
+  animation: marquee 25s linear infinite;
 }
