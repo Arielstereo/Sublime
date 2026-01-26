@@ -31,7 +31,7 @@ const Services = () => {
   return (
     <section id="servicios" className="py-32 md:py-48 relative overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center mb-16 mx-16">
+        <div className="flex flex-col items-center mb-16 mx-4">
           <h2 className="text-4xl md:text-5xl mb-4">Nuestros Servicios</h2>
           <p className="text-slate-600 text-base md:text-lg">
             Realizamos productos personalizados para empresas, negocios y
@@ -44,7 +44,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mx-16 md:mx-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mx-4 md:mx-32">
           {services.map((service, index) => (
             <div
               key={service.title}

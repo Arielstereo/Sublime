@@ -25,19 +25,19 @@ const Header = () => {
         </Link>
 
         <nav className="hidden text-base md:flex items-center gap-8">
-          <a href="#servicios" className="hover:text-blue-400 ">
+          <Link href="#servicios" className="hover:text-blue-400 ">
             Servicios
-          </a>
-          <a href="#productos" className="hover:text-blue-400 ">
+          </Link>
+          <Link href="#productos" className="hover:text-blue-400 ">
             Productos
-          </a>
-          <a href="#contacto" className="hover:text-blue-400 ">
+          </Link>
+          <Link href="#contacto" className="hover:text-blue-400 ">
             Contacto
-          </a>
+          </Link>
         </nav>
 
-        <a
-          href="https://wa.me/5491100000000"
+        <Link
+          href="https://api.whatsapp.com/send?phone=+5491126922128&text=Hola%20Sublime:"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-full font-medium hover:scale-105 transition-transform"
@@ -48,7 +48,7 @@ const Header = () => {
             aria-hidden="true"
           ></i>
           <span className="hidden sm:inline">WhatsApp</span>
-        </a>
+        </Link>
       </div>
     </header>
   );

@@ -6,17 +6,20 @@ const categories = [
   {
     id: "empresas",
     label: "Merchandising corporativo",
-    image: "/Context.png",
+    image: "/github-contex.png",
+    color: "border-cyan-500",
   },
   {
     id: "regalos",
     label: "Regalos Personalizados",
     image: "/gorra.png",
+    color: "border-pink-500",
   },
   {
     id: "eventos",
     label: "Eventos especiales",
     image: "/taza.png",
+    color: "border-yellow-500",
   },
 ];
 
@@ -24,7 +27,7 @@ const Products = () => {
   return (
     <section id="productos" className="py-32">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center mb-12 mx-16">
+        <div className="flex flex-col items-center mb-12 mx-4">
           <h2 className="text-4xl md:text-5xl mb-4">Nuestros Productos</h2>
           <p className="text-slate-600 text-base md:text-lg mx-auto">
             Explorá por categoría y encontrá el producto perfecto según tu
@@ -37,21 +40,20 @@ const Products = () => {
         </div>
 
         {/* Category Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-16">
-          {categories.map((category, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full md:w-3/4 mx-auto">
+          {categories.map((category) => (
             <Link
               key={category.id}
               href={`/products/${category.id}`}
-              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 animate-scale-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`group bg-white border-2 ${category.color} rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 animate-scale-in`}
             >
-              <div className="relative overflow-hidden aspect-square bg-secondary/30">
+              <div className="relative overflow-hidden aspect-square">
                 <Image
                   width={300}
                   height={300}
                   src={category.image}
                   alt={category.label}
-                  className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover p-4 group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">

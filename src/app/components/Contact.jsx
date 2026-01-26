@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Contact = () => {
   return (
-    <section id="contacto" className="py-20 bg-secondary/50 relative">
+    <section id="contacto" className="py-32 relative">
       <div className="absolute top-0 left-0 w-full h-2 bg-gradient-graffiti" />
 
       <div className="container mx-auto px-4">
