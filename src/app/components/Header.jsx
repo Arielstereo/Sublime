@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import { Orbitron } from "next/font/google";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const orbitron = Orbitron({
   weight: "400",
@@ -8,6 +10,25 @@ const orbitron = Orbitron({
 });
 
 const Header = () => {
+  const router = useRouter();
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      // Si estamos en la misma página, hacemos scroll directo
+      element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Si no estamos en la página principal, navegamos y luego hacemos scroll
+      router.push("/");
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 500);
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-pink-200 md:px-8 md:py-2">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
@@ -25,15 +46,24 @@ const Header = () => {
         </Link>
 
         <nav className="hidden text-base md:flex items-center gap-8">
-          <Link href="#servicios" className="hover:text-blue-400 ">
+          <button
+            onClick={() => scrollToSection("servicios")}
+            className="hover:text-blue-400 cursor-pointer bg-transparent border-none"
+          >
             Servicios
-          </Link>
-          <Link href="#productos" className="hover:text-blue-400 ">
+          </button>
+          <button
+            onClick={() => scrollToSection("productos")}
+            className="hover:text-blue-400 cursor-pointer bg-transparent border-none"
+          >
             Productos
-          </Link>
-          <Link href="#contacto" className="hover:text-blue-400 ">
+          </button>
+          <button
+            onClick={() => scrollToSection("contacto")}
+            className="hover:text-blue-400 cursor-pointer bg-transparent border-none"
+          >
             Contacto
-          </Link>
+          </button>
         </nav>
 
         <Link

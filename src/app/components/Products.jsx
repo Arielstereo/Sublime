@@ -6,13 +6,13 @@ const categories = [
   {
     id: "empresas",
     label: "Merchandising corporativo",
-    image: "/github-contex.png",
+    image: "/remera-intel.jpeg",
     color: "border-cyan-500",
   },
   {
     id: "regalos",
     label: "Regalos Personalizados",
-    image: "/gorra.png",
+    image: "/magic.png",
     color: "border-pink-500",
   },
   {

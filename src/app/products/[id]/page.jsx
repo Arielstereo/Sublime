@@ -45,18 +45,18 @@ const allProducts = [
     id: 3,
     category: "empresas",
     name: "Remera Corporativa",
-    image2: "/back-github.png",
-    image: "/github-contex.png",
+    image2: "/remera-back.png",
+    image: "/remera-intel.jpeg",
     description: "Con logo de tu empresa",
     fullDescription:
-      "Remera corporativa de poliester blanca, sublimada con el logo de tu empresa. Perfecta para tu equipo de trabajo.",
+      "Remera corporativa de modal, sublimada con el logo de tu empresa. Perfecta para tu equipo de trabajo.",
     price: "$18.000",
     bulkPrice: "$15.000 c/u",
     features: [
       "Logo sublimado en frente y espalda, según diseño.",
-      "Poliester color blanco.",
+      "Diseño tipo Raglan manga combinada o clásico. ",
       "Para hombre y mujer.",
-      "Talles S a XXL.",
+      "Talles S a XL.",
     ],
   },
   {
@@ -81,12 +81,12 @@ const allProducts = [
   {
     id: 5,
     category: "regalos",
-    name: "Remera Diseño Único",
-    image: "/taza.png",
-    image2: "/gorra.png",
+    name: "gorra trucker personalizada",
+    image: "/dog.png",
+    image2: "/dog1.png",
     description: "Diseño exclusivo para regalar",
     fullDescription:
-      "Remera con diseño exclusivo e único. Confeccionada en algodón premium con acabado perfecto.",
+      "Gorra trucker personalizada con diseño exclusivo. Ideal para regalar en cumpleaños, eventos o como souvenir.",
     price: "$48.00",
     bulkPrice: "$42.00",
     features: [
@@ -100,11 +100,11 @@ const allProducts = [
     id: 6,
     category: "regalos",
     name: "Taza Personalizada",
-    image: "/gorra.png",
-    image2: "/Context.png",
-    description: "Con el mensaje que quieras",
+    image: "/magic1.png",
+    image2: "/magic2.png",
+    description: "Sorprende a tu agasajado",
     fullDescription:
-      "Taza de cerámica 100% personalizable con tu foto, nombre o mensaje especial.",
+      "Taza de cerámica mágica 100% personalizable con tu foto, nombre o mensaje especial. Cambia de color con el calor. Color negro de base.",
     price: "$28.00",
     bulkPrice: "$25.00",
     features: [
@@ -117,8 +117,9 @@ const allProducts = [
   {
     id: 7,
     category: "regalos",
-    name: "Kit Regalo Especial",
-    image: "/mouse.png",
+    name: "Remera personalizada",
+    image: "/mujer1.png",
+    image2: "/mujer.png",
     description: "Combina productos",
     fullDescription:
       "Kit regalo que combina múltiples productos personalizados. Perfecto para sorpresas especiales.",
@@ -187,20 +188,20 @@ const categoryProducts = {
   regalos: [
     {
       id: 5,
-      name: "Remera Diseño Único",
-      image: "/taza.png",
+      name: "Gorra trucker personalizada",
+      image: "/dog.png",
       description: "Diseño exclusivo para regalar",
     },
     {
       id: 6,
-      name: "Taza Personalizada",
-      image: "/gorra.png",
-      description: "Con el mensaje que quieras",
+      name: "Taza mágica personalizada",
+      image: "/magic1.png",
+      description: "Da una sorpresa a tu agasajado",
     },
     {
       id: 7,
-      name: "Kit Regalo Especial",
-      image: "/mouse.png",
+      name: "Remera personalizada",
+      image: "/mujer1.png",
       description: "Combina productos",
     },
   ],
