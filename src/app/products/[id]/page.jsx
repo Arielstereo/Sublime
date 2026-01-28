@@ -53,8 +53,8 @@ const allProducts = [
     price: "$18.000",
     bulkPrice: "$15.000 c/u",
     features: [
-      "Logo sublimado en frente y espalda, según diseño.",
-      "Diseño tipo Raglan manga combinada o clásico. ",
+      "Logo o imagen sublimado en frente y espalda, según diseño del cliente.",
+      "Diseño tipo Raglan manga combinada varios colores o blanca lisa clásica. ",
       "Para hombre y mujer.",
       "Talles S a XL.",
     ],
@@ -82,8 +82,8 @@ const allProducts = [
     id: 5,
     category: "regalos",
     name: "gorra trucker personalizada",
-    image: "/dog.png",
-    image2: "/dog1.png",
+    image: "/gorra1.png",
+    image2: "/gorra.png",
     description: "Diseño exclusivo para regalar",
     fullDescription:
       "Gorra trucker personalizada con diseño exclusivo. Ideal para regalar en cumpleaños, eventos o como souvenir.",
@@ -135,8 +135,8 @@ const allProducts = [
     id: 8,
     category: "empresas",
     name: "Taza Corporativa",
-    image: "/taza-frente.png",
-    image2: "/taza-frente2.png",
+    image: "/taza-frente2.png",
+    image2: "/kfc.png",
     description: "Ideal para merchandising",
     fullDescription: "Taza corporativa de cerámica.",
     price: "$16.000",
@@ -146,6 +146,42 @@ const allProducts = [
       "Diseño personalizado con tu logo o imagen.",
       "Fondo de color.",
       "Capacidad 350ml.",
+    ],
+  },
+  {
+    id: 9,
+    category: "empresas",
+    name: "Botella térmica",
+    image: "/termo.png",
+    image2: "/termo-tapa.avif",
+    description: "Ideal para merchandising",
+    fullDescription:
+      "Botella térmica de acero inoxidable, doble pared con tapa de bambú. Capacidad máxima aproximada 500 ml.",
+    price: "$25.000",
+    bulkPrice: "$20.000 c/u",
+    features: [
+      "Botella térmica de acero inoxidable, doble pared con tapa de bambú.",
+      "Diseño personalizado con tu logo.",
+      "7mm de diámetro.",
+      "Capacidad 350ml.",
+    ],
+  },
+  {
+    id: 10,
+    category: "empresas",
+    name: "Gorra Trucker Personalizada",
+    image: "/trucker1.png",
+    image2: "/trucker2.png",
+    description: "Ideal para merchandising",
+    fullDescription:
+      "Gorra trucker personalizada con diseño exclusivo de tu empresa.",
+    price: "$12.000",
+    bulkPrice: "$10.000 c/u",
+    features: [
+      "Gorra trucker personalizada con diseño exclusivo de tu empresa.",
+      "Diseño personalizado con tu logo.",
+      "Consultar colores disponibles.",
+      "Talla única ajustable.",
     ],
   },
 ];
@@ -169,8 +205,8 @@ const categoryProducts = {
     {
       id: 3,
       name: "Remera Corporativa",
-      image: "/github-contex.png",
-      description: "Con logo de tu empresa",
+      image: "/Lifestyle.png",
+      description: "Con logo de tu empresa o negocio",
     },
     {
       id: 4,
@@ -184,12 +220,24 @@ const categoryProducts = {
       image: "/taza-frente.png",
       description: "Ideal para merchandising",
     },
+    {
+      id: 9,
+      name: "Botella térmica",
+      image: "/termo.png",
+      description: "Ideal para merchandising",
+    },
+    {
+      id: 10,
+      name: "Gorra Trucker Personalizada",
+      image: "/trucker2.png",
+      description: "Ideal para merchandising",
+    },
   ],
   regalos: [
     {
       id: 5,
       name: "Gorra trucker personalizada",
-      image: "/dog.png",
+      image: "/gorra1.png",
       description: "Diseño exclusivo para regalar",
     },
     {
@@ -210,7 +258,7 @@ const categoryProducts = {
 const categoryNames = {
   empresas: "Merchandising corporativo",
   regalos: "Regalos Personalizados",
-  eventos: "Eventos especiales",
+  eventos: "Más productos",
 };
 
 const isCategory = (id) => {
@@ -227,7 +275,7 @@ function CategoryView({ categoryId }) {
         <div className="text-center">
           <h1 className="text-3xl font-bold mb-4">Categoría no encontrada</h1>
           <Link
-            href="/#productos"
+            href="/"
             className="text-pink-600 hover:text-pink-700 font-medium"
           >
             ← Volver al inicio
@@ -243,7 +291,7 @@ function CategoryView({ categoryId }) {
         {/* Header */}
         <div className="flex flex-col items-start mb-12 mx-4 md:mx-16">
           <Link
-            href="/#productos"
+            href="/"
             className="text-pink-600 hover:text-pink-700 font-medium mb-6"
           >
             ← Volver al inicio
@@ -435,7 +483,7 @@ function ProductDetail() {
               </div>
 
               {/* Botones */}
-              <div className="flex gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 <button className="flex-1 bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200">
                   Solicitar producto
                 </button>
@@ -450,7 +498,9 @@ function ProductDetail() {
         {/* Productos relacionados */}
         <div className="mt-16 mb-12 mx-4 md:mx-16">
           <h2 className="text-2xl font-bold mb-8 text-slate-900">
-            Productos relacionados | Arma tu kit
+            Productos relacionados |
+            <br />
+            Arma tu kit
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {allProducts

@@ -6,7 +6,7 @@ const categories = [
   {
     id: "empresas",
     label: "Merchandising corporativo",
-    image: "/remera-intel.jpeg",
+    image: "/merchadising.png",
     color: "border-cyan-500",
   },
   {
@@ -17,8 +17,8 @@ const categories = [
   },
   {
     id: "eventos",
-    label: "Eventos especiales",
-    image: "/taza.png",
+    label: "Otros productos",
+    image: "/almohada.png",
     color: "border-yellow-500",
   },
 ];
