@@ -7,30 +7,35 @@ const steps = [
     title: "Elegí tus productos",
     desc: "Navegá por la web y seleccioná tus productos.",
     color: "border-pink-500",
+    bg: "bg-pink-500",
   },
   {
     id: 2,
     title: "Pedí presupuesto o reservá por WhatsApp",
     desc: "Enviá cantidad y detalles para recibir un presupuesto rápido.",
     color: "border-cyan-500",
+    bg: "bg-cyan-500",
   },
   {
     id: 3,
     title: "Forma de pago",
     desc: "Transferencia bancaria o efectivo al retirar/entregar. Según el pedido te podríamos solicitar una seña del 50%.",
     color: "border-yellow-500",
+    bg: "bg-yellow-500",
   },
   {
     id: 4,
     title: "Enviá tu diseño o solicitá uno personalizado",
     desc: "Adjuntá tu archivo o consultanos para diseñarlo según tu necesidad.",
     color: "border-black",
+    bg: "bg-black",
   },
   {
     id: 5,
     title: "¡Listo!",
     desc: "Recibí o retirá tu pedido.El tiempo de producción varía según el tipo de producto y cantidad.",
     color: "border-green-500",
+    bg: "bg-green-500",
   },
 ];
 
@@ -53,7 +58,9 @@ const OrderSteps = () => {
               key={step.id}
               className={`flex flex-col items-start bg-slate-50 border-2 ${step.color} rounded-2xl p-6`}
             >
-              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-pink-600 text-white font-bold mb-4">
+              <div
+                className={`flex items-center justify-center w-12 h-12 rounded-full ${step.bg} text-white font-bold mb-4`}
+              >
                 {step.id}
               </div>
               <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
