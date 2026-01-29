@@ -48,19 +48,25 @@ const Header = () => {
         <nav className="hidden text-base md:flex items-center gap-8">
           <button
             onClick={() => scrollToSection("servicios")}
-            className="hover:text-blue-400 cursor-pointer bg-transparent border-none"
+            className="hover:text-pink-600 cursor-pointer bg-transparent border-none"
           >
             Servicios
           </button>
           <button
             onClick={() => scrollToSection("productos")}
-            className="hover:text-blue-400 cursor-pointer bg-transparent border-none"
+            className="hover:text-pink-600 cursor-pointer bg-transparent border-none"
           >
             Productos
           </button>
           <button
+            onClick={() => scrollToSection("pasos")}
+            className="hover:text-pink-600 cursor-pointer bg-transparent border-none"
+          >
+            ¿Como pedir?
+          </button>
+          <button
             onClick={() => scrollToSection("contacto")}
-            className="hover:text-blue-400 cursor-pointer bg-transparent border-none"
+            className="hover:text-pink-600 cursor-pointer bg-transparent border-none"
           >
             Contacto
           </button>

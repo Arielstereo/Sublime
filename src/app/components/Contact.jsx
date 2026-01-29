@@ -2,15 +2,17 @@ import Image from "next/image";
 
 const Contact = () => {
   return (
-    <section id="contacto" className="py-32 relative">
+    <section
+      id="contacto"
+      className="py-32 bg-linear-to-r from-slate-50 to-slate-100"
+    >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-display text-4xl md:text-5xl text-gradient-graffiti mb-4">
-            ¡Contactanos!
-          </h2>
-          <p className="text-slate-600 text-base md:text-lg mx-auto">
-            Estamos para ayudarte a crear productos únicos. ¡Escribinos y hacé
-            tu pedido!
+        <div className="flex flex-col items-center mb-12 mx-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Contactanos</h2>
+          <p className="text-slate-600 text-base md:text-lg mx-auto max-w-2xl text-left md:text-center">
+            ¿Tenés alguna consulta o querés solicitar un presupuesto? ¡Estamos
+            aquí para ayudarte! No dudes en contactarnos a través de nuestras
+            redes sociales o por correo electrónico.
           </p>
         </div>
 

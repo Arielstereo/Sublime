@@ -9,7 +9,7 @@ const orbitron = Orbitron({
 
 const Hero = () => {
   return (
-    <section className="flex flex-col my-16 md:my-32">
+    <section className="flex flex-col py-16 md:py-32 bg-pink-50">
       <div className="mx-auto px-4 text-center">
         <div className="flex flex-col-reverse md:flex-row justify-center items-center">
           <div className="flex flex-col gap-2">
@@ -43,13 +43,13 @@ const Hero = () => {
             href="#productos"
             className="w-64 cursor-pointer bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200"
           >
-            Ver productos
+            Nuestros Productos
           </Link>
           <Link
             href="#contacto"
-            className="w-64 cursor-pointer border-2 border-cyan-600 text-cyan-600 bg-white hover:bg-cyan-700 hover:text-white font-bold py-3 px-6 rounded-lg transition duration-200"
+            className="w-64 cursor-pointer border-2 border-black text-black hover:bg-black hover:text-white font-bold py-3 px-6 rounded-lg transition duration-200"
           >
-            Contacto
+            Solicitar presupuesto
           </Link>
         </div>
       </div>

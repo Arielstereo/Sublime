@@ -31,16 +31,14 @@ const Services = () => {
   return (
     <section id="servicios" className="py-32 md:py-48 relative overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center mb-16 mx-4">
-          <h2 className="text-4xl md:text-5xl mb-4">Nuestros Servicios</h2>
-          <p className="text-slate-600 text-base md:text-lg">
-            Realizamos productos personalizados para empresas, negocios y
-            eventos especiales.
-          </p>
-          <hr />
-          <p className="text-slate-600 text-base md:text-lg">
-            Trabajamos con sublimación de alta calidad en distintos productos
-            para satisfacer todas tus necesidades.
+        <div className="flex flex-col items-center mb-12 mx-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Nuestros Servicios Exclusivos
+          </h2>
+          <p className="text-slate-600 text-base md:text-lg mx-auto max-w-2xl text-left md:text-center">
+            Trabajamos con sublimación de alta calidad para ofrecerte productos
+            personalizados que destacan. Ya sea para tu empresa, negocio o
+            evento, tenemos la solución perfecta para ti.
           </p>
         </div>
 

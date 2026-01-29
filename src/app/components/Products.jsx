@@ -1,44 +1,25 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-
-const categories = [
-  {
-    id: "empresas",
-    label: "Merchandising corporativo",
-    image: "/merchadising.png",
-    color: "border-cyan-500",
-  },
-  {
-    id: "regalos",
-    label: "Regalos Personalizados",
-    image: "/magic.png",
-    color: "border-pink-500",
-  },
-  {
-    id: "eventos",
-    label: "Otros productos",
-    image: "/almohada.png",
-    color: "border-yellow-500",
-  },
-];
+import { categories } from "@/data/data.json";
 
 const Products = () => {
   return (
-    <section id="productos" className="py-32">
+    <section
+      id="productos"
+      className="py-32 bg-linear-to-r from-slate-50 to-slate-100"
+    >
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center mb-12 mx-4">
-          <h2 className="text-4xl md:text-5xl mb-4">Nuestros Productos</h2>
-          <p className="text-slate-600 text-base md:text-lg mx-auto">
-            Explorá por categoría y encontrá el producto perfecto según tu
-            necesidad.
-          </p>
-          <hr />
-          <p className="text-slate-600 text-base md:text-lg mx-auto">
-            Solicitá tu diseño o presupuesto sin compromiso.
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Categoría de Productos
+          </h2>
+          <p className="text-slate-600 text-base md:text-lg mx-auto max-w-2xl text-left md:text-center">
+            Todos nuestros productos para tu empresa, negocio o para evento.
+            Personalizamos una amplia variedad de productos según tus
+            necesidades.
           </p>
         </div>
-
         {/* Category Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full md:w-3/4 mx-auto">
           {categories.map((category) => (
