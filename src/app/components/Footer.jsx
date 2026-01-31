@@ -1,6 +1,26 @@
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Footer = () => {
+  const router = useRouter();
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      // Si estamos en la misma página, hacemos scroll directo
+      element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Si no estamos en la página principal, navegamos y luego hacemos scroll
+      router.push("/");
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 500);
+    }
+  };
   return (
     <footer className="bg-black text-white py-12">
       <div className="container mx-auto px-8">
@@ -16,18 +36,30 @@ const Footer = () => {
           </div>
 
           <nav className="flex flex-wrap justify-center gap-6 text-sm">
-            <a href="#servicios" className="hover:text-pink-400">
+            <button
+              onClick={() => scrollToSection("servicios")}
+              className="hover:text-pink-400 cursor-pointer"
+            >
               Servicios
-            </a>
-            <a href="#productos" className="hover:text-pink-400">
+            </button>
+            <button
+              onClick={() => scrollToSection("productos")}
+              className="hover:text-pink-400 cursor-pointer"
+            >
               Productos
-            </a>
-            <a href="#pasos" className="hover:text-pink-400">
+            </button>
+            <button
+              onClick={() => scrollToSection("pasos")}
+              className="hover:text-pink-400 cursor-pointer"
+            >
               ¿Como pedir?
-            </a>
-            <a href="#contacto" className="hover:text-pink-400">
+            </button>
+            <button
+              onClick={() => scrollToSection("contacto")}
+              className="hover:text-pink-400 cursor-pointer"
+            >
               Contacto
-            </a>
+            </button>
           </nav>
         </div>
 

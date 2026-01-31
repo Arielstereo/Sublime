@@ -85,11 +85,20 @@ function CategoryView({ categoryId }) {
           ))}
         </div>
 
-        {/* CTA Button */}
-        <div className="text-center mt-16">
-          <button className="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-lg transition duration-200">
-            Solicitar presupuesto
-          </button>
+        <div className="mt-16 flex justify-center items-center">
+          <Link
+            href="https://api.whatsapp.com/send?phone=+5491126922128&text=Necesito%20presupuesto%20para:%20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 w-64 cursor-pointer border border-black text-black bg-white hover:bg-black hover:border-white hover:text-white font-bold py-3 px-6 rounded-lg transition duration-200"
+          >
+            <span>Solicitar presupuesto</span>
+            <i
+              className="icon-[streamline-pixel--logo-whatapp] w-5 h-5"
+              role="img"
+              aria-hidden="true"
+            ></i>
+          </Link>
         </div>
       </div>
     </section>
@@ -253,12 +262,22 @@ function ProductDetail() {
 
               {/* Botones */}
               <div className="flex flex-col md:flex-row gap-4">
-                <button className="flex-1 bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200">
+                <Link
+                  href={`https://api.whatsapp.com/send?phone=+5491126922128&text=Quiero%20solicitar%20${product.name}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex justify-center items-center bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200"
+                >
                   Solicitar producto
-                </button>
-                <button className="flex-1 border-2 border-cyan-600 text-cyan-600 hover:text-white hover:bg-blue-500 font-bold py-3 px-6 rounded-lg transition duration-200">
+                </Link>
+                <Link
+                  href={`https://api.whatsapp.com/send?phone=+5491126922128&text=Quiero%20consultar%20sobre%20${product.name}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex justify-center items-center border-2 border-cyan-600 text-cyan-600 hover:text-white hover:bg-blue-500 font-bold py-3 px-6 rounded-lg transition duration-200"
+                >
                   Consultar
-                </button>
+                </Link>
               </div>
               <span className="text-slate-600 text-sm mt-4">
                 * Al solicitar este producto, indica cantidad, color, y diseño.

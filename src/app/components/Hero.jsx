@@ -56,7 +56,7 @@ const Hero = () => {
             Nuestros Productos
           </Link>
           <Link
-            href="https://api.whatsapp.com/send?phone=+5491126922128&text=Necesito%20presupuesto%20para%20personalizar%20productos"
+            href="https://api.whatsapp.com/send?phone=+5491126922128&text=Necesito%20presupuesto%20para:%20"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 w-64 cursor-pointer border border-black text-black bg-white hover:bg-black hover:border-white hover:text-white font-bold py-3 px-6 rounded-lg transition duration-200"

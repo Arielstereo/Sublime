@@ -64,7 +64,7 @@
     {
       "id": 3,
       "category": "empresas",
-      "name": "Remera Corporativa",
+      "name": "Remera Corporativa sublimada",
       "image2": "/empresas/vercel.png",
       "image": "/empresas/remera-intel.jpeg",
       "description": "Con logo de tu empresa",
@@ -238,7 +238,7 @@
     {
       "id": 11,
       "category": "empresas",
-      "name": "Remera Corporativa",
+      "name": "Remera Corporativa estampada",
       "badgeText": "¡Viste a tu equipo!",
       "showBulkPriceByQuantity": true,
       "colors": [
