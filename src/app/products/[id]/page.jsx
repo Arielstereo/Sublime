@@ -260,6 +260,12 @@ function ProductDetail() {
                   Consultar
                 </button>
               </div>
+              <span className="text-slate-600 text-sm mt-4">
+                * Al solicitar este producto, indica cantidad, color, y diseño.
+                En el caso de enviar tu propio diseño, adjunta el archivo o
+                imagen correspondiente en formato .PNG o .JPG. Consulta las
+                opciones disponibles.
+              </span>
             </div>
           </div>
         </div>

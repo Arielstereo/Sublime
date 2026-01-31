@@ -23,46 +23,42 @@
     {
       "id": 1,
       "category": "otros",
-      "name": "Remera Personalizada",
-      "image": "/taza.png",
-      "image2": "/gorra.png",
+      "name": "Taza infantil personalizada",
+      "image": "/otros/mockup-dante.png",
+      "image2": "/otros/mockup-joaco.png",
       "description": "Ideal para el agasajado o souvenir",
-      "fullDescription": "Remera 100% algodón personalizada con la foto y mensaje que desees. Perfecta para cumpleaños, despedidas y eventos especiales.",
-      "price": "$45.00",
-      "bulkPrice": "$40.00",
-      "showBulkPriceByQuantity": true,
-      "badgeText": "¡Arma tu kit personalizado!",
-      "colors": [
-        "#000000",
-        "#FFFFFF",
-        "#FF0000",
-        "#0000FF"
-      ],
+      "fullDescription": "Taza de plástico de alta calidad con tu diseño personalizado.",
+      "price": "$10.000",
+      "showBulkPriceByQuantity": false,
+      "badgeText": "¡Ideal jardín de infantes!",
       "features": [
-        "100% algodón",
+        "Taza de plástico sublimada con tu personaje favorito.",
         "Personalizable",
-        "Talla XS a XXL",
-        "Colores variados"
+        "Ideal para llevar al jardín o cumpleaños.",
+        "Caja personalizada"
       ]
     },
     {
       "id": 2,
       "category": "otros",
-      "name": "Taza de Cumpleaños",
-      "image": "/gorra.png",
-      "image2": "/Context.png",
+      "name": "Remera personalizada",
+      "image": "/otros/rangla1.png",
+      "image2": "/otros/rangla2.png",
       "description": "Con foto y mensaje especial",
-      "fullDescription": "Taza cerámica de alta calidad con tu diseño personalizado. Ideal para regalar o usar en ocasiones especiales.",
-      "price": "$25.00",
-      "bulkPrice": "$22.00",
+      "fullDescription": "Remera de modal tipo ranglan con tu diseño favorito.",
+      "price": "$16.000",
       "showBulkPriceByQuantity": false,
-      "badgeText": "¡Personaliza tu regalo!",
-      "colors": [],
+      "badgeText": "¡Diseño único!",
+      "colors": [
+        "bg-black",
+        "bg-blue-500",
+        "bg-red-500"
+      ],
       "features": [
-        "Cerámica de calidad",
-        "Apto lavavajillas",
+        "Remera de modal tipo ranglan con mangas y cuello de color.",
+        "Talles S a XL.",
         "Diseño personalizado",
-        "Capaz 350ml"
+        "Bandas, personajes, frases, futbol, etc."
       ]
     },
     {
@@ -74,7 +70,7 @@
       "description": "Con logo de tu empresa",
       "fullDescription": "Remera Ranglan Manga Combinada de Modal, sublimada con el logo de tu empresa o negocio. Perfecta para tu equipo de trabajo.",
       "price": "$12.500",
-      "bulkPrice": "$18.000",
+      "bulkPrice": "$16.000",
       "showBulkPriceByQuantity": true,
       "badgeText": "¡Equipa a tu equipo!",
       "colors": [
@@ -92,12 +88,12 @@
       "id": 4,
       "category": "empresas",
       "name": "Mousepad Personalizado",
-      "image": "/mouse-rectangular.png",
-      "image2": "/mouse-circular.png",
+      "image": "/empresas/mouse-rectangular.png",
+      "image2": "/empresas/mouse-circular.png",
       "description": "Regalos empresariales",
       "fullDescription": "Mousepad con base antideslizante y tu diseño personalizado.",
-      "price": "$5.600 ",
-      "bulkPrice": "$9.000 c/u",
+      "price": "$5.000 ",
+      "bulkPrice": "$6.500",
       "showBulkPriceByQuantity": true,
       "badgeText": "¡Promociona tu marca!",
       "colors": [],
@@ -111,36 +107,26 @@
     {
       "id": 5,
       "category": "otros",
-      "name": "Gorra trucker personalizada",
-      "image": "/gorra1.png",
-      "image2": "/gorra.png",
+      "name": "Mousepad Personalizado",
+      "image": "/otros/mouse1.png",
+      "image2": "/otros/mouse2.png",
       "description": "Diseño exclusivo para regalar",
-      "fullDescription": "Gorra trucker sublimablada con tu diseño personalizado, color con frente blanco",
+      "fullDescription": "Mousepad con base antideslizante y tu diseño personalizado.",
       "showBulkPriceByQuantity": false,
-      "badgeText": "¡Sorprende con estilo!",
-      "colors": [
-        "bg-blue-500",
-        "bg-red-500",
-        "bg-cyan-500",
-        "bg-green-500",
-        "bg-yellow-500",
-        "bg-black",
-        "bg-slate-400"
-      ],
-      "price": "$6.800",
+      "badgeText": "¡Para tu pc!",
+      "price": "$6.500",
       "features": [
         "Diseño personalizado.",
-        "Para regalar en ocasiones especiales.",
-        "Varias medidas",
-        "Colores a elección"
+        "Redondo o rectangular.",
+        "Base antideslizante."
       ]
     },
     {
       "id": 6,
       "category": "regalos",
       "name": "Taza mágica personalizada",
-      "image": "/magic1.png",
-      "image2": "/magic2.png",
+      "image": "/regalos/magic1.png",
+      "image2": "/regalos/magic2.png",
       "description": "Sorprende a tu agasajado",
       "fullDescription": "Taza de cerámica mágica 100% personalizable con tu foto, nombre o mensaje especial. Cambia de color con el calor. Color negro de base.",
       "showBulkPriceByQuantity": false,
@@ -179,8 +165,8 @@
       "id": 8,
       "category": "empresas",
       "name": "Taza Corporativa",
-      "image": "/taza-frente2.png",
-      "image2": "/kfc.png",
+      "image": "/empresas/taza-frente2.png",
+      "image2": "/empresas/kfc.png",
       "showBulkPriceByQuantity": true,
       "badgeText": "¡Refuerza tu marca!",
       "colors": [
@@ -193,8 +179,8 @@
       ],
       "description": "Ideal para merchandising",
       "fullDescription": "Taza de ceramica color interno y mango.",
-      "price": "$12.800",
-      "bulkPrice": "$16.000 c/u",
+      "price": "$12.500",
+      "bulkPrice": "$15.000",
       "features": [
         "Taza corporativa de cerámica, alta calidad.",
         "Diseño personalizado con tu logo o imagen.",
@@ -226,8 +212,8 @@
       "id": 10,
       "category": "empresas",
       "name": "Gorra Trucker Personalizada",
-      "image": "/trucker1.png",
-      "image2": "/trucker2.png",
+      "image": "/empresas/trucker1.png",
+      "image2": "/empresas/trucker2.png",
       "showBulkPriceByQuantity": true,
       "badgeText": "¡Destaca tu empresa!",
       "colors": [
@@ -240,8 +226,8 @@
       ],
       "description": "Ideal para merchandising",
       "fullDescription": "Gorra trucker sublimada con tu logo, color con frente blanco.",
-      "price": "$6.800",
-      "bulkPrice": "$11.000",
+      "price": "$6.500",
+      "bulkPrice": "$10.000",
       "features": [
         "Posee 5 gajos y frente de goma blanca.",
         "Diseño personalizado con tu logo.",
@@ -266,7 +252,7 @@
       "description": "Con logo de tu empresa",
       "fullDescription": "Remeras lisas de algodón premium, logo estampado diseño tipo parche. Varios colores disponibles.",
       "price": "$15.000",
-      "bulkPrice": "$19.500 c/u",
+      "bulkPrice": "$18.000",
       "features": [
         "Logo o imagen estampado, según diseño del cliente.",
         "Estampado tipo parche no se despega.",
@@ -278,12 +264,12 @@
       "id": 12,
       "category": "empresas",
       "name": "Kit taza + mousepad Corporativo",
-      "showBulkPriceByQuantity": true,
+      "showBulkPriceByQuantity": false,
       "image2": "/empresas/taza-frente2.png",
       "image": "/empresas/mouse-circular.png",
       "description": "Con logo de tu empresa",
       "fullDescription": "Combo corporativo ideal para regalos empresariales, incluye taza personalizada y mousepad con tu logo.",
-      "price": "$16.500",
+      "price": "$15.000",
       "bulkPrice": "$18.400",
       "features": [
         "Logo sublimado en ambos productos con tu logo.",
@@ -296,12 +282,12 @@
       "id": 13,
       "category": "empresas",
       "name": "Kit remera sublimada + gorra trucker",
-      "showBulkPriceByQuantity": true,
+      "showBulkPriceByQuantity": false,
       "image2": "/empresas/remera-intel.jpeg",
       "image": "/empresas/trucker2.png",
       "description": "Con logo de tu empresa",
       "fullDescription": "Combo corporativo ideal para regalos empresariales, incluye remera sublimada y gorra trucker con tu logo.",
-      "price": "$17.200",
+      "price": "$16.500",
       "bulkPrice": "$19.300",
       "features": [
         "Logo sublimado en ambos productos con tu logo.",
@@ -338,7 +324,7 @@
       "image": "/regalos/spotify1.png",
       "description": "Con tu diseño especial",
       "fullDescription": "Taza con código de Spotify personalizado.",
-      "price": "$16.000",
+      "price": "$15.000",
       "features": [
         "Diseño personalizado con código de Spotify.",
         "Taza de cerámica fondo y asa de color.",
@@ -363,27 +349,58 @@
         "Color blanco.",
         "Ideal para regalos."
       ]
+    },
+    {
+      "id": 17,
+      "category": "otros",
+      "name": "Gorra Trucker Personalizada",
+      "showBulkPriceByQuantity": false,
+      "badgeText": "¡Para vos!",
+      "image2": "/otros/gorra-negra.png",
+      "image": "/otros/gorra-rosa.png",
+      "colors": [
+        "bg-black",
+        "bg-pink-500",
+        "bg-blue-500",
+        "bg-green-500",
+        "bg-yellow-500"
+      ],
+      "description": "Con tu diseño especial",
+      "fullDescription": "Gorra trucker personalizada con tu diseño favorito.",
+      "price": "$10.000",
+      "features": [
+        "Diseño personalizado con tu imagen o frase.",
+        "Gorra trucker con diseño personalizado.",
+        "Color blanco delante, color de la malla a elección.",
+        "Talla única ajustable."
+      ]
     }
   ],
   "categoryProducts": {
     "otros": [
       {
         "id": 1,
-        "name": "Remera Personalizada",
-        "image": "/taza.png",
-        "description": "Ideal para el agasajado o souvenir"
+        "name": "Taza infantil personalizada",
+        "image": "/otros/mockup-dante.png",
+        "description": "Ideal para el colegio o souvenir"
       },
       {
         "id": 2,
-        "name": "Taza de Cumpleaños",
-        "image": "/gorra.png",
-        "description": "Con foto y mensaje especial"
+        "name": "Remera personalizada",
+        "image": "/otros/rangla1.png",
+        "description": "Con tu pasión favorita"
       },
       {
         "id": 5,
-        "name": "Gorra trucker personalizada",
-        "image": "/gorra1.png",
-        "description": "Diseño exclusivo para regalar"
+        "name": "Mousepad Personalizado",
+        "image": "/otros/mouse2.png",
+        "description": "Para gamers"
+      },
+      {
+        "id": 17,
+        "name": "Gorra Trucker Personalizada",
+        "image": "/otros/gorra-negra.png",
+        "description": "Con tu diseño favorito"
       }
     ],
     "empresas": [
@@ -396,25 +413,25 @@
       {
         "id": 4,
         "name": "Mousepad Personalizado",
-        "image": "/mouse-rectangular.png",
+        "image": "/empresas/mouse-rectangular.png",
         "description": "Ideal para merchandising"
       },
       {
         "id": 8,
         "name": "Taza Corporativa",
-        "image": "/taza-frente2.png",
+        "image": "/empresas/taza-frente2.png",
         "description": "Regalos empresariales"
       },
       {
         "id": 9,
         "name": "Botella térmica",
-        "image": "/termo.png",
+        "image": "/empresas/termo.png",
         "description": "Ideal para merchandising"
       },
       {
         "id": 10,
         "name": "Gorra Trucker Personalizada",
-        "image": "/trucker2.png",
+        "image": "/empresas/trucker2.png",
         "description": "Ideal para merchandising"
       },
       {
