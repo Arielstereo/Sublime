@@ -55,7 +55,7 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="https://facebook.com/sublimebyemprendev"
+                  href="https://www.facebook.com/profile.php?id=61587309211928"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-xl bg-secondary/50 hover:bg-graffiti-cyan/10 transition-colors group"
@@ -70,7 +70,7 @@ const Contact = () => {
                   <div>
                     <p className="font-medium">Facebook</p>
                     <p className="text-muted-foreground text-sm">
-                      Sublime by Emprendev
+                      Sublime By Emprendev
                     </p>
                   </div>
                 </a>
