@@ -15,8 +15,8 @@ const Products = () => {
             Categoría de Productos
           </h2>
           <p className="text-slate-600 text-base md:text-lg mx-auto max-w-2xl text-left md:text-center">
-            Todos nuestros productos para tu empresa, negocio o para evento.
-            Personalizamos una amplia variedad de productos según tus
+            Ofrecemos productos personalizados para tu empresa, negocio o
+            evento. Personalizamos una amplia variedad de productos según tus
             necesidades.
           </p>
         </div>

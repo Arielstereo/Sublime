@@ -142,9 +142,9 @@ function ProductDetail() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 md:p-12">
             {/* Imagen */}
             <div className="flex flex-col items-center justify-start">
-              <div className="bg-slate-100 rounded-lg p-8 w-full mb-6 relative">
+              <div className="border border-cyan-500 rounded-xl p-8 w-full mb-6 relative">
                 <div className="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg z-10">
-                  Combina con otros productos para armar tu kit
+                  {product.badgeText || "¡Arma tu kit personalizado!"}
                 </div>
                 <div className="relative w-full h-96">
                   <Image
@@ -162,7 +162,7 @@ function ProductDetail() {
                   <button
                     key={index}
                     onClick={() => setSelectedImage(index)}
-                    className={`flex-1 relative h-24 rounded-lg border-2 transition-all overflow-hidden ${
+                    className={`flex-1 relative h-24 rounded-lg border-2 cursor-pointer transition-all overflow-hidden ${
                       selectedImage === index
                         ? "border-pink-600 shadow-lg"
                         : "border-slate-300 hover:border-slate-400"
@@ -195,26 +195,47 @@ function ProductDetail() {
                 {product.fullDescription}
               </p>
 
-              <div className="mb-8">
+              <div className="mb-6">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="text-3xl font-bold text-green-600">
                     {product.price}
                   </div>
-                  <span className="text-sm text-slate-600 font-medium">
-                    por unidad
-                  </span>
+                  {product.showBulkPriceByQuantity && (
+                    <span className="text-sm text-slate-600 font-medium">
+                      c/u solicitando más de 5 unidades.
+                    </span>
+                  )}
                 </div>
-                <div className="text-sm text-slate-500 pl-0">
-                  Solicitando 5+ unidades:{" "}
-                  <span className="font-semibold text-slate-700">
-                    {product.bulkPrice}
-                  </span>
-                </div>
+                {product.showBulkPriceByQuantity && (
+                  <div className="text-sm text-slate-500 pl-0">
+                    Precio por unidad:{" "}
+                    <span className="font-semibold text-slate-700">
+                      {product.bulkPrice}
+                    </span>
+                  </div>
+                )}
               </div>
+
+              {/* Colores disponibles */}
+              {product.colors && product.colors.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="text-sm font-semibold text-slate-900 mb-3">
+                    Colores disponibles:
+                  </h3>
+                  <div className="flex gap-3 flex-wrap">
+                    {product.colors.map((color, index) => (
+                      <div
+                        key={index}
+                        className={`w-8 h-8 rounded-full border-2 border-slate-300 hover:border-slate-600 transition-all cursor-pointer shadow-sm hover:shadow-md ${color}`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Características */}
               <div className="mb-8">
-                <h3 className="text-lg font-semibold mb-4 text-slate-900">
+                <h3 className="text-sm font-semibold mb-4 text-slate-900">
                   Características:
                 </h3>
                 <ul className="space-y-2">

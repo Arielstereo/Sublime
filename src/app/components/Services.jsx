@@ -38,7 +38,7 @@ const Services = () => {
           <p className="text-slate-600 text-base md:text-lg mx-auto max-w-2xl text-left md:text-center">
             Trabajamos con sublimación de alta calidad para ofrecerte productos
             personalizados que destacan. Ya sea para tu empresa, negocio o
-            evento, tenemos la solución perfecta para ti.
+            evento, tenemos la solución perfecta.
           </p>
         </div>
 
