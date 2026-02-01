@@ -114,13 +114,6 @@ const ProductCarousel = () => {
                         {product.description}
                       </p>
 
-                      {/* Price */}
-                      <div className="mb-4">
-                        <div className="text-2xl font-bold text-green-600">
-                          {product.price}
-                        </div>
-                      </div>
-
                       {/* CTA */}
                       <span className="inline-flex items-center gap-2 text-pink-600 font-medium hover:text-pink-700 text-sm md:text-base">
                         Ver detalles →
