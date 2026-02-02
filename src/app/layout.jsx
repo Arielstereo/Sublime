@@ -10,9 +10,29 @@ const rubik = Rubik({
   subsets: ["latin"],
 });
 
+export const metadataBase = new URL(
+  process.env.NEXT_PUBLIC_SITE_URL || "https://sublime.empren.dev",
+);
+
 export const metadata = {
   title: "Sublime by Emprendev",
   description: "Personalizá todo lo que imagines",
+  keywords: [
+    "Sublime",
+    "personalizados",
+    "regalos",
+    "emprendev",
+    "productos personalizados",
+  ],
+  authors: [{ name: "Sublime by Emprendev" }],
+  openGraph: {
+    title: "Sublime by Emprendev",
+    description: "Personalizá todo lo que imagines",
+    siteName: "Sublime",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({ children }) {
