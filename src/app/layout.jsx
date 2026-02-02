@@ -21,8 +21,14 @@ export const metadata = {
     "Sublime",
     "personalizados",
     "regalos",
-    "emprendev",
+    "corporativos",
     "productos personalizados",
+    "sublimación",
+    "tazas personalizadas",
+    "camisetas personalizadas",
+    "merchandising",
+    "artículos promocionales",
+    "regalos empresariales",
   ],
   authors: [{ name: "Sublime by Emprendev" }],
   openGraph: {
@@ -32,6 +38,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
+  },
+  verification: {
+    google: "qGCnmT790OHmqDOzts3TDjYJ0jSRQRscQHJHb_hSeIM",
   },
 };
 
