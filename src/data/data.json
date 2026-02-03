@@ -22,13 +22,13 @@
   "products": [
     {
       "id": 1,
-      "category": "otros",
+      "category": "regalos",
       "name": "Taza infantil personalizada",
       "image": "/otros/mockup-dante.png",
       "image2": "/otros/mockup-joaco.png",
       "description": "Ideal para el agasajado o souvenir",
       "fullDescription": "Taza de plástico de alta calidad con tu diseño personalizado.",
-      "price": "$10.000",
+      "price": "$8.500",
       "showBulkPriceByQuantity": false,
       "badgeText": "¡Ideal jardín de infantes!",
       "features": [
@@ -125,8 +125,8 @@
       "id": 6,
       "category": "regalos",
       "name": "Taza mágica personalizada",
-      "image": "/regalos/magic1.png",
-      "image2": "/regalos/magic2.png",
+      "image": "/regalos/cumple.png",
+      "image2": "/regalos/cumple-magic.png",
       "description": "Sorprende a tu agasajado",
       "fullDescription": "Taza de cerámica mágica 100% personalizable con tu foto, nombre o mensaje especial. Cambia de color con el calor. Color negro de base.",
       "showBulkPriceByQuantity": false,
@@ -271,6 +271,8 @@
       "fullDescription": "Combo corporativo ideal para regalos empresariales, incluye taza personalizada y mousepad con tu logo.",
       "price": "$15.000",
       "bulkPrice": "$18.400",
+      "isPromo": true,
+      "imagePromo": "/empresas/combo.png",
       "features": [
         "Logo sublimado en ambos productos con tu logo.",
         "Taza de cerámica con diseño personalizado.",
@@ -289,6 +291,8 @@
       "fullDescription": "Combo corporativo ideal para regalos empresariales, incluye remera sublimada y gorra trucker con tu logo.",
       "price": "$16.500",
       "bulkPrice": "$19.300",
+      "isPromo": true,
+      "imagePromo": "/empresas/combo2.png",
       "features": [
         "Logo sublimado en ambos productos con tu logo.",
         "Remera sublimada con diseño personalizado.",
@@ -325,6 +329,8 @@
       "description": "Con tu diseño especial",
       "fullDescription": "Taza con código de Spotify personalizado.",
       "price": "$15.000",
+      "isPromo": true,
+      "imagePromo": "/regalos/spotify.png",
       "features": [
         "Diseño personalizado con código de Spotify.",
         "Taza de cerámica fondo y asa de color.",
@@ -334,7 +340,7 @@
     },
     {
       "id": 16,
-      "category": "regalos",
+      "category": "otros",
       "name": "Almohada Personalizada",
       "showBulkPriceByQuantity": false,
       "badgeText": "¡Regala comodidad!",
@@ -374,16 +380,53 @@
         "Color blanco delante, color de la malla a elección.",
         "Talla única ajustable."
       ]
+    },
+    {
+      "id": 18,
+      "category": "otros",
+      "name": "Kit Taza infantil + Set de toallas",
+      "image": "/otros/kit.png",
+      "image2": "/otros/mockup-dante.png",
+      "description": "Combo ideal para comenzar las clases",
+      "fullDescription": "Taza infantil personalizada + set de 3 toallas. Perfecto para iniciar el ciclo escolar.",
+      "price": "$16.000",
+      "colors": [
+        "bg-cyan-300",
+        "bg-pink-300",
+        "bg-white"
+      ],
+      "showBulkPriceByQuantity": false,
+      "badgeText": "Oferta de inicio de clases",
+      "isPromo": true,
+      "imagePromo": "/otros/kit.png",
+      "features": [
+        "Taza infantil sublimada con diseño personalizado.",
+        "Set de toallas pequeñas con caja regalo.",
+        "Empaque listo para regalo."
+      ]
+    },
+    {
+      "id": 19,
+      "category": "regalos",
+      "name": "Taza Mágica San Valentín",
+      "image": "/regalos/svmagic.png",
+      "image2": "/regalos/stich-magic.png",
+      "description": "Taza mágica romántica ideal para regalar",
+      "fullDescription": "Taza personalizada con diseño especial de San Valentín. Incluye caja decorativa.",
+      "price": "$16.000",
+      "showBulkPriceByQuantity": false,
+      "badgeText": "Promoción San Valentín",
+      "isPromo": true,
+      "imagePromo": "/regalos/svmagic.png",
+      "features": [
+        "Diseño romántico personalizado.",
+        "Incluye caja para regalo.",
+        "Cerámica resistente."
+      ]
     }
   ],
   "categoryProducts": {
     "otros": [
-      {
-        "id": 1,
-        "name": "Taza infantil personalizada",
-        "image": "/otros/mockup-dante.png",
-        "description": "Ideal para el colegio o souvenir"
-      },
       {
         "id": 2,
         "name": "Remera personalizada",
@@ -401,6 +444,19 @@
         "name": "Gorra Trucker Personalizada",
         "image": "/otros/gorra-negra.png",
         "description": "Con tu diseño favorito"
+      },
+      {
+        "id": 18,
+        "category": "otros",
+        "name": "Kit Taza infantil + Set de toallas",
+        "image": "/otros/kit.png",
+        "description": "Combo ideal para comenzar las clases"
+      },
+      {
+        "id": 16,
+        "name": "Almohada Personalizada",
+        "image": "/regalos/almohada2.png",
+        "description": "Con tu diseño especial"
       }
     ],
     "empresas": [
@@ -455,6 +511,12 @@
     ],
     "regalos": [
       {
+        "id": 1,
+        "name": "Taza infantil personalizada",
+        "image": "/otros/mockup-joaco.png",
+        "description": "Ideal para el colegio o souvenir"
+      },
+      {
         "id": 6,
         "name": "Taza mágica personalizada",
         "image": "/regalos/magic.jpg",
@@ -479,10 +541,10 @@
         "description": "Regala música personalizada"
       },
       {
-        "id": 16,
-        "name": "Almohada Personalizada",
-        "image": "/regalos/almohada2.png",
-        "description": "Con tu diseño especial"
+        "id": 19,
+        "name": "Taza Mágica San Valentín",
+        "image": "/regalos/svmagic.png",
+        "description": "Taza mágica romántica ideal para regalar"
       }
     ]
   },

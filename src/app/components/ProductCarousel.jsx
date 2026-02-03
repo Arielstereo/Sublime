@@ -9,7 +9,9 @@ const ProductCarousel = () => {
   const [itemsPerSlide, setItemsPerSlide] = useState(3);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
 
-  const products = data.products;
+  const allProducts = data.products;
+  const promoProducts = allProducts.filter((p) => p.isPromo);
+  const products = promoProducts.length ? promoProducts : allProducts;
 
   useEffect(() => {
     const handleResize = () => {
@@ -93,7 +95,7 @@ const ProductCarousel = () => {
                     {/* Image Container */}
                     <div className="relative overflow-hidden aspect-square bg-slate-100">
                       <Image
-                        src={product.image}
+                        src={product.imagePromo}
                         alt={product.name}
                         width={300}
                         height={300}
