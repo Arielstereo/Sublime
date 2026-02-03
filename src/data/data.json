@@ -28,7 +28,7 @@
       "image2": "/otros/mockup-joaco.png",
       "description": "Ideal para el agasajado o souvenir",
       "fullDescription": "Taza de plástico de alta calidad con tu diseño personalizado.",
-      "price": "$8.500",
+      "price": "$8.000",
       "showBulkPriceByQuantity": false,
       "badgeText": "¡Ideal jardín de infantes!",
       "features": [
@@ -42,11 +42,11 @@
       "id": 2,
       "category": "otros",
       "name": "Remera personalizada",
-      "image": "/otros/rangla1.png",
+      "image": "/otros/rangla-emilia.png",
       "image2": "/otros/rangla2.png",
       "description": "Con foto y mensaje especial",
       "fullDescription": "Remera de modal tipo ranglan con tu diseño favorito.",
-      "price": "$16.000",
+      "price": "$12.000",
       "showBulkPriceByQuantity": false,
       "badgeText": "¡Diseño único!",
       "colors": [
@@ -69,8 +69,8 @@
       "image": "/empresas/remera-intel.jpeg",
       "description": "Con logo de tu empresa",
       "fullDescription": "Remera Ranglan Manga Combinada de Modal, sublimada con el logo de tu empresa o negocio. Perfecta para tu equipo de trabajo.",
-      "price": "$12.500",
-      "bulkPrice": "$16.000",
+      "price": "$9.000",
+      "bulkPrice": "$12.000",
       "showBulkPriceByQuantity": true,
       "badgeText": "¡Equipa a tu equipo!",
       "colors": [
@@ -92,8 +92,8 @@
       "image2": "/empresas/mouse-circular.png",
       "description": "Regalos empresariales",
       "fullDescription": "Mousepad con base antideslizante y tu diseño personalizado.",
-      "price": "$5.000 ",
-      "bulkPrice": "$6.500",
+      "price": "$5.000",
+      "bulkPrice": "$7.000",
       "showBulkPriceByQuantity": true,
       "badgeText": "¡Promociona tu marca!",
       "colors": [],
@@ -114,7 +114,7 @@
       "fullDescription": "Mousepad con base antideslizante y tu diseño personalizado.",
       "showBulkPriceByQuantity": false,
       "badgeText": "¡Para tu pc!",
-      "price": "$6.500",
+      "price": "$7.000",
       "features": [
         "Diseño personalizado.",
         "Redondo o rectangular.",
@@ -148,12 +148,14 @@
       "name": "Remera personalizada",
       "image": "/regalos/modal-mujer.png",
       "image2": "/regalos/modal-dog.png",
-      "description": "Combina productos",
+      "description": "Remera",
       "showBulkPriceByQuantity": false,
       "badgeText": "¡El regalo perfecto!",
-      "colors": [],
+      "colors": [
+        "bg-white"
+      ],
       "fullDescription": "Remera de modal de alta calidad, ideal para regalos especiales.",
-      "price": "$15.000",
+      "price": "$10.000",
       "features": [
         "Diseño personalizado.Imagen, dibujo o texto.",
         "Color blanco.",
@@ -179,8 +181,8 @@
       ],
       "description": "Ideal para merchandising",
       "fullDescription": "Taza de ceramica color interno y mango.",
-      "price": "$12.500",
-      "bulkPrice": "$15.000",
+      "price": "$10.000",
+      "bulkPrice": "$14.000",
       "features": [
         "Taza corporativa de cerámica, alta calidad.",
         "Diseño personalizado con tu logo o imagen.",
@@ -199,8 +201,8 @@
       "colors": [],
       "description": "Regalos empresariales",
       "fullDescription": "Botella térmica de acero inoxidable con tu logo sublimado, con tapa de bambú.",
-      "price": "$22.000",
-      "bulkPrice": "$29.900",
+      "price": "$19.000",
+      "bulkPrice": "$25.000",
       "features": [
         "Botella térmica de acero inoxidable, doble pared con tapa de bambú.",
         "Diseño personalizado con tu logo.",
@@ -226,8 +228,8 @@
       ],
       "description": "Ideal para merchandising",
       "fullDescription": "Gorra trucker sublimada con tu logo, color con frente blanco.",
-      "price": "$6.500",
-      "bulkPrice": "$10.000",
+      "price": "$7.000",
+      "bulkPrice": "$9.500",
       "features": [
         "Posee 5 gajos y frente de goma blanca.",
         "Diseño personalizado con tu logo.",
@@ -251,8 +253,8 @@
       "image": "/empresas/remera-color2.png",
       "description": "Con logo de tu empresa",
       "fullDescription": "Remeras lisas de algodón premium, logo estampado diseño tipo parche. Varios colores disponibles.",
-      "price": "$15.000",
-      "bulkPrice": "$18.000",
+      "price": "$12.000",
+      "bulkPrice": "$16.000",
       "features": [
         "Logo o imagen estampado, según diseño del cliente.",
         "Estampado tipo parche no se despega.",
@@ -269,8 +271,7 @@
       "image": "/empresas/mouse-circular.png",
       "description": "Con logo de tu empresa",
       "fullDescription": "Combo corporativo ideal para regalos empresariales, incluye taza personalizada y mousepad con tu logo.",
-      "price": "$15.000",
-      "bulkPrice": "$18.400",
+      "price": "$13.500",
       "isPromo": true,
       "imagePromo": "/empresas/combo.png",
       "features": [
@@ -289,8 +290,7 @@
       "image": "/empresas/trucker2.png",
       "description": "Con logo de tu empresa",
       "fullDescription": "Combo corporativo ideal para regalos empresariales, incluye remera sublimada y gorra trucker con tu logo.",
-      "price": "$16.500",
-      "bulkPrice": "$19.300",
+      "price": "$15.000",
       "isPromo": true,
       "imagePromo": "/empresas/combo2.png",
       "features": [
@@ -328,7 +328,7 @@
       "image": "/regalos/spotify1.png",
       "description": "Con tu diseño especial",
       "fullDescription": "Taza con código de Spotify personalizado.",
-      "price": "$15.000",
+      "price": "$14.000",
       "isPromo": true,
       "imagePromo": "/regalos/spotify.png",
       "features": [
@@ -344,11 +344,11 @@
       "name": "Almohada Personalizada",
       "showBulkPriceByQuantity": false,
       "badgeText": "¡Regala comodidad!",
-      "image2": "/regalos/almohada.png",
-      "image": "/regalos/almohada2.png",
+      "image2": "/otros/almohada.png",
+      "image": "/otros/almohada2.png",
       "description": "Con tu diseño especial",
       "fullDescription": "Almohada personalizada con tu diseño.",
-      "price": "$12.000",
+      "price": "$9.500",
       "features": [
         "Diseño personalizado con tu imagen o frase.",
         "Almohada con relleno incluido 20 x 20 cm.",
@@ -373,7 +373,7 @@
       ],
       "description": "Con tu diseño especial",
       "fullDescription": "Gorra trucker personalizada con tu diseño favorito.",
-      "price": "$10.000",
+      "price": "$9.500",
       "features": [
         "Diseño personalizado con tu imagen o frase.",
         "Gorra trucker con diseño personalizado.",
@@ -389,7 +389,7 @@
       "image2": "/otros/mockup-dante.png",
       "description": "Combo ideal para comenzar las clases",
       "fullDescription": "Taza infantil personalizada + set de 3 toallas. Perfecto para iniciar el ciclo escolar.",
-      "price": "$16.000",
+      "price": "$15.000",
       "colors": [
         "bg-cyan-300",
         "bg-pink-300",
@@ -423,6 +423,24 @@
         "Incluye caja para regalo.",
         "Cerámica resistente."
       ]
+    },
+    {
+      "id": 20,
+      "category": "otros",
+      "name": "Remera infantil",
+      "image": "/otros/niño.png",
+      "image2": "/otros/niña.png",
+      "description": "Remera niña/o personalizada",
+      "fullDescription": "Remera 100% poliéster personalizada con tu personaje favorito.",
+      "price": "$9.000",
+      "showBulkPriceByQuantity": false,
+      "badgeText": "Infantiles",
+      "isPromo": false,
+      "features": [
+        "Diseño infantil personalizado.",
+        "Remera blanca de poliéster.",
+        "Varios talles."
+      ]
     }
   ],
   "categoryProducts": {
@@ -430,7 +448,7 @@
       {
         "id": 2,
         "name": "Remera personalizada",
-        "image": "/otros/rangla1.png",
+        "image": "/otros/rangla2.png",
         "description": "Con tu pasión favorita"
       },
       {
@@ -455,8 +473,14 @@
       {
         "id": 16,
         "name": "Almohada Personalizada",
-        "image": "/regalos/almohada2.png",
+        "image": "/otros/almohada2.png",
         "description": "Con tu diseño especial"
+      },
+      {
+        "id": 20,
+        "name": "Remera infantil",
+        "image": "/otros/niño.png",
+        "description": "Remera niña/o personalizada"
       }
     ],
     "empresas": [
