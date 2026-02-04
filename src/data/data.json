@@ -28,14 +28,15 @@
       "image2": "/otros/mockup-joaco.png",
       "description": "Ideal para el agasajado o souvenir",
       "fullDescription": "Taza de plástico de alta calidad con tu diseño personalizado.",
-      "price": "$8.000",
-      "showBulkPriceByQuantity": false,
-      "badgeText": "¡Ideal jardín de infantes!",
+      "price": "$6.500",
+      "bulkPrice": "$8.000",
+      "showBulkPriceByQuantity": true,
+      "badgeText": "¡Ideal jardín de infantes o souvenir!",
       "features": [
         "Taza de plástico sublimada con tu personaje favorito.",
-        "Personalizable",
-        "Ideal para llevar al jardín o cumpleaños.",
-        "Caja personalizada"
+        "Elije tu diseño",
+        "Ideal para al jardín o souvenir de cumpleaños.",
+        "Caja personalizada."
       ]
     },
     {
@@ -134,7 +135,7 @@
       "colors": [
         "bg-black"
       ],
-      "price": "$16.000",
+      "price": "$15.000",
       "features": [
         "Personalizable.",
         "Cerámica resistente.",
@@ -168,7 +169,7 @@
       "category": "empresas",
       "name": "Taza Corporativa",
       "image": "/empresas/taza-frente2.png",
-      "image2": "/empresas/kfc.png",
+      "image2": "/empresas/caja-google.png",
       "showBulkPriceByQuantity": true,
       "badgeText": "¡Refuerza tu marca!",
       "colors": [
@@ -181,13 +182,13 @@
       ],
       "description": "Ideal para merchandising",
       "fullDescription": "Taza de ceramica color interno y mango.",
-      "price": "$10.000",
-      "bulkPrice": "$14.000",
+      "price": "$9.500",
+      "bulkPrice": "$12.000",
       "features": [
         "Taza corporativa de cerámica, alta calidad.",
         "Diseño personalizado con tu logo o imagen.",
         "Color en interior y mango.",
-        "Capacidad 350ml."
+        "Caja personalizada."
       ]
     },
     {
@@ -273,9 +274,9 @@
       "fullDescription": "Combo corporativo ideal para regalos empresariales, incluye taza personalizada y mousepad con tu logo.",
       "price": "$13.500",
       "isPromo": true,
-      "imagePromo": "/empresas/combo.png",
+      "imagePromo": "/empresas/microsoft.png",
       "features": [
-        "Logo sublimado en ambos productos con tu logo.",
+        "Logo sublimado en ambos productos.",
         "Taza de cerámica con diseño personalizado.",
         "Mousepad circular o rectangular con diseño personalizado.",
         "Consulta por otros kits disponibles."
@@ -310,12 +311,12 @@
       "image": "/regalos/osi-uma.png",
       "description": "Con tu diseño especial",
       "fullDescription": "Taza de cerámica con asa de corazón personalizada.",
-      "price": "$12.500",
+      "price": "$10.000",
       "features": [
         "Diseño personalizado con tu imagen, frase o dibujo.",
         "Taza de cerámica resistente.",
         "Asa de corazón decorativa.",
-        "Color blanco."
+        "Empaque listo para regalo."
       ]
     },
     {
@@ -328,14 +329,14 @@
       "image": "/regalos/spotify1.png",
       "description": "Con tu diseño especial",
       "fullDescription": "Taza con código de Spotify personalizado.",
-      "price": "$14.000",
+      "price": "$12.000",
       "isPromo": true,
       "imagePromo": "/regalos/spotify.png",
       "features": [
         "Diseño personalizado con código de Spotify.",
         "Taza de cerámica fondo y asa de color.",
         "Elige el tema favorito de tu artista o playlist.",
-        "Regala música."
+        "Caja personalizada."
       ]
     },
     {
@@ -413,7 +414,7 @@
       "image2": "/regalos/stich-magic.png",
       "description": "Taza mágica romántica ideal para regalar",
       "fullDescription": "Taza personalizada con diseño especial de San Valentín. Incluye caja decorativa.",
-      "price": "$16.000",
+      "price": "$15.000",
       "showBulkPriceByQuantity": false,
       "badgeText": "Promoción San Valentín",
       "isPromo": true,
@@ -421,7 +422,8 @@
       "features": [
         "Diseño romántico personalizado.",
         "Incluye caja para regalo.",
-        "Cerámica resistente."
+        "Cerámica resistente.",
+        "Caja personalizada."
       ]
     },
     {
@@ -440,6 +442,33 @@
         "Diseño infantil personalizado.",
         "Remera blanca de poliéster.",
         "Varios talles."
+      ]
+    },
+    {
+      "id": 21,
+      "category": "otros",
+      "name": "Taza personalizada",
+      "image": "/otros/gamer.png",
+      "image2": "/otros/stich.png",
+      "description": "Taza",
+      "fullDescription": "Taza de cerámica personalizada con tu diseño,interior y asa de color.",
+      "price": "$12.000",
+      "showBulkPriceByQuantity": false,
+      "badgeText": "Infantiles",
+      "colors": [
+        "bg-black",
+        "bg-blue-500",
+        "bg-violet-500",
+        "bg-pink-500",
+        "bg-green-500",
+        "bg-yellow-500"
+      ],
+      "isPromo": false,
+      "features": [
+        "Diseño personalizado.",
+        "Cerámica resistente.",
+        "Caja personalizada.",
+        "Color en interior y mango."
       ]
     }
   ],
@@ -481,6 +510,12 @@
         "name": "Remera infantil",
         "image": "/otros/niño.png",
         "description": "Remera niña/o personalizada"
+      },
+      {
+        "id": 21,
+        "name": "Taza personalizada",
+        "image": "/otros/stich.png",
+        "description": "Taza personalizada"
       }
     ],
     "empresas": [
@@ -523,7 +558,7 @@
       {
         "id": 12,
         "name": "Kit Taza + mousepad Corporativo",
-        "image": "/empresas/combo.png",
+        "image": "/empresas/microsoft.png",
         "description": "Con logo de tu empresa"
       },
       {
