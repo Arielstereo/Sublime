@@ -385,12 +385,12 @@
     {
       "id": 18,
       "category": "otros",
-      "name": "Kit Taza infantil + Set de toallas",
+      "name": "Kit para el jardín",
       "image": "/otros/kit.png",
       "image2": "/otros/mockup-dante.png",
       "description": "Combo ideal para comenzar las clases",
-      "fullDescription": "Taza infantil personalizada + set de 3 toallas. Perfecto para iniciar el ciclo escolar.",
-      "price": "$15.000",
+      "fullDescription": "Taza infantil personalizada + set de toalla, servilleta, mantelito.",
+      "price": "$16.000",
       "colors": [
         "bg-cyan-300",
         "bg-pink-300",
@@ -401,9 +401,9 @@
       "isPromo": true,
       "imagePromo": "/otros/kit.png",
       "features": [
-        "Taza infantil sublimada con diseño personalizado.",
-        "Set de toallas pequeñas con caja regalo.",
-        "Empaque listo para regalo."
+        "Taza infantil con caja sublimada con diseño personalizado.",
+        "Set de toalla, servilleta y mantelito.",
+        "Bolsito tipo mochila de regalo!"
       ]
     },
     {
