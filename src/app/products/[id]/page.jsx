@@ -151,16 +151,16 @@ function ProductDetail() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 md:p-12">
             {/* Imagen */}
             <div className="flex flex-col items-center justify-start">
-              <div className="border border-cyan-500 rounded-xl p-8 w-2/3 mb-6 relative">
+              <div className="border border-cyan-500 rounded-xl p-4 md:p-8 w-full md:w-2/3 mb-6 relative">
                 <div className="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg z-10">
-                  {product.badgeText || "¡Arma tu kit personalizado!"}
+                  {product.badgeText}
                 </div>
                 <div className="relative w-full h-96 md:h-110">
                   <Image
                     src={currentImage}
                     alt={product.name}
                     fill
-                    className="object-contain w-full h-full"
+                    className="object-cover w-full h-full rounded-lg"
                   />
                 </div>
               </div>
@@ -181,7 +181,7 @@ function ProductDetail() {
                       src={img}
                       alt={`${product.name} vista ${index + 1}`}
                       fill
-                      className="object-contain p-2"
+                      className="object-cover p-4"
                     />
                   </button>
                 ))}
