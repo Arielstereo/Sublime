@@ -151,7 +151,7 @@ function ProductDetail() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 md:p-12">
             {/* Imagen */}
             <div className="flex flex-col items-center justify-start">
-              <div className="border border-cyan-500 rounded-xl p-8 w-full md:w-3/4 mb-6 relative">
+              <div className="border border-cyan-500 rounded-xl p-8 w-2/3 mb-6 relative">
                 <div className="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg z-10">
                   {product.badgeText || "¡Arma tu kit personalizado!"}
                 </div>

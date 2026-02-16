@@ -43,10 +43,10 @@
       "id": 2,
       "category": "regalos",
       "name": "Set de jardín",
-      "image": "/otros/set.jpeg",
+      "image": "/otros/set2.jpeg",
       "image2": "/otros/dante.jpeg",
       "description": "Combo ideal para el jardín de infantes",
-      "fullDescription": "Taza infantil personalizada + set de toalla, servilleta y mantel.",
+      "fullDescription": "Taza o vaso infantil + set de toalla, servilleta y mantel.",
       "price": "$18.000",
       "colors": [
         "bg-cyan-300",
@@ -62,10 +62,10 @@
       "isPromo": true,
       "imagePromo": "/otros/set.jpeg",
       "features": [
-        "Taza infantil con caja sublimada con diseño personalizado.",
+        "Taza o vaso a elección con caja sublimada y diseño personalizado.",
         "Set de toalla, servilleta y mantelito.",
         "Bolsito tipo mochila de regalo!",
-        "Todo personalizado a tu elección"
+        "Todo personalizado."
       ]
     },
     {
@@ -454,6 +454,29 @@
         "Cerámica resistente.",
         "Caja personalizada.",
         "Color en interior y mango."
+      ]
+    },
+    {
+      "id": 22,
+      "category": "otros",
+      "name": "Pocillo de café c/ zuncho + posavaso",
+      "image": "/otros/pocillo.jpeg",
+      "image2": "/otros/pocillo2.jpeg",
+      "imagePromo": "/otros/pocillo.jpeg",
+      "description": "Pocillo de café",
+      "fullDescription": "Pocillo de café + zuncho + posavaso.",
+      "price": "$9.500",
+      "bulkPrice": "$12.000",
+      "showBulkPriceByQuantity": true,
+      "badgeText": "Para la oficina",
+      "colors": [
+        "bg-white"
+      ],
+      "isPromo": true,
+      "features": [
+        "Diseño personalizado del zuncho y posavaso.",
+        "Cerámica resistente.",
+        "Caja personalizada."
       ]
     }
   ],
