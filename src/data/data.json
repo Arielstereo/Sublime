@@ -24,42 +24,48 @@
       "id": 1,
       "category": "regalos",
       "name": "Taza infantil personalizada",
-      "image": "/otros/mockup-dante.png",
-      "image2": "/otros/mockup-joaco.png",
+      "image": "/otros/cajas.jpeg",
+      "image2": "/otros/cumple.jpeg",
       "description": "Ideal para el agasajado o souvenir",
       "fullDescription": "Taza de plástico de alta calidad con tu diseño personalizado.",
       "price": "$6.500",
       "bulkPrice": "$8.000",
       "showBulkPriceByQuantity": true,
-      "badgeText": "¡Ideal jardín de infantes o souvenir!",
+      "badgeText": "¡Ideal para el jardín o souvenir!",
       "features": [
         "Taza de plástico sublimada con tu personaje favorito.",
         "Elije tu diseño",
         "Ideal para al jardín o souvenir de cumpleaños.",
-        "Caja personalizada."
+        "Caja personalizada de regalo."
       ]
     },
     {
       "id": 2,
-      "category": "otros",
-      "name": "Remera personalizada",
-      "image": "/otros/rangla-emilia.png",
-      "image2": "/otros/rangla2.png",
-      "description": "Con foto y mensaje especial",
-      "fullDescription": "Remera de modal tipo ranglan con tu diseño favorito.",
-      "price": "$12.000",
-      "showBulkPriceByQuantity": false,
-      "badgeText": "¡Diseño único!",
+      "category": "regalos",
+      "name": "Set de jardín",
+      "image": "/otros/set.jpeg",
+      "image2": "/otros/dante.jpeg",
+      "description": "Combo ideal para el jardín de infantes",
+      "fullDescription": "Taza infantil personalizada + set de toalla, servilleta y mantel.",
+      "price": "$18.000",
       "colors": [
-        "bg-black",
+        "bg-cyan-300",
+        "bg-pink-300",
+        "bg-white",
         "bg-blue-500",
-        "bg-red-500"
+        "bg-green-500",
+        "bg-red-500",
+        "bg-yellow-500"
       ],
+      "showBulkPriceByQuantity": false,
+      "badgeText": "Oferta de inicio de clases",
+      "isPromo": true,
+      "imagePromo": "/otros/set.jpeg",
       "features": [
-        "Remera de modal tipo ranglan con mangas y cuello de color.",
-        "Talles S a XL.",
-        "Diseño personalizado",
-        "Bandas, personajes, frases, futbol, etc."
+        "Taza infantil con caja sublimada con diseño personalizado.",
+        "Set de toalla, servilleta y mantelito.",
+        "Bolsito tipo mochila de regalo!",
+        "Todo personalizado a tu elección"
       ]
     },
     {
@@ -103,23 +109,6 @@
         "Diseño personalizado con tu logo o imagen.",
         "Medida estándar.",
         "Rectangular o circular."
-      ]
-    },
-    {
-      "id": 5,
-      "category": "otros",
-      "name": "Mousepad Personalizado",
-      "image": "/otros/mouse1.png",
-      "image2": "/otros/mouse2.png",
-      "description": "Diseño exclusivo para regalar",
-      "fullDescription": "Mousepad con base antideslizante y tu diseño personalizado.",
-      "showBulkPriceByQuantity": false,
-      "badgeText": "¡Para tu pc!",
-      "price": "$7.000",
-      "features": [
-        "Diseño personalizado.",
-        "Redondo o rectangular.",
-        "Base antideslizante."
       ]
     },
     {
@@ -385,45 +374,41 @@
     {
       "id": 18,
       "category": "otros",
-      "name": "Kit para el jardín",
-      "image": "/otros/kit.png",
-      "image2": "/otros/mockup-dante.png",
-      "description": "Combo ideal para comenzar las clases",
-      "fullDescription": "Taza infantil personalizada + set de toalla, servilleta, mantelito.",
-      "price": "$16.000",
-      "colors": [
-        "bg-cyan-300",
-        "bg-pink-300",
-        "bg-white"
-      ],
+      "name": "Remera personalizada",
+      "image": "/otros/rangla-emilia.png",
+      "image2": "/otros/rangla2.png",
+      "description": "Con foto y mensaje especial",
+      "fullDescription": "Remera de modal tipo ranglan con tu diseño favorito.",
+      "price": "$12.000",
       "showBulkPriceByQuantity": false,
-      "badgeText": "Oferta de inicio de clases",
-      "isPromo": true,
-      "imagePromo": "/otros/kit.png",
+      "badgeText": "¡Diseño único!",
+      "colors": [
+        "bg-black",
+        "bg-blue-500",
+        "bg-red-500"
+      ],
       "features": [
-        "Taza infantil con caja sublimada con diseño personalizado.",
-        "Set de toalla, servilleta y mantelito.",
-        "Bolsito tipo mochila de regalo!"
+        "Remera de modal tipo ranglan con mangas y cuello de color.",
+        "Talles S a XL.",
+        "Diseño personalizado",
+        "Bandas, personajes, frases, futbol, etc."
       ]
     },
     {
       "id": 19,
-      "category": "regalos",
-      "name": "Taza Mágica San Valentín",
-      "image": "/regalos/svmagic.png",
-      "image2": "/regalos/stich-magic.png",
-      "description": "Taza mágica romántica ideal para regalar",
-      "fullDescription": "Taza personalizada con diseño especial de San Valentín. Incluye caja decorativa.",
-      "price": "$15.000",
+      "category": "otros",
+      "name": "Mousepad Personalizado",
+      "image": "/otros/mouse1.png",
+      "image2": "/otros/mouse2.png",
+      "description": "Diseño exclusivo para regalar",
+      "fullDescription": "Mousepad con base antideslizante y tu diseño personalizado.",
       "showBulkPriceByQuantity": false,
-      "badgeText": "Promoción San Valentín",
-      "isPromo": true,
-      "imagePromo": "/regalos/svmagic.png",
+      "badgeText": "¡Para tu pc!",
+      "price": "$7.000",
       "features": [
-        "Diseño romántico personalizado.",
-        "Incluye caja para regalo.",
-        "Cerámica resistente.",
-        "Caja personalizada."
+        "Diseño personalizado.",
+        "Redondo o rectangular.",
+        "Base antideslizante."
       ]
     },
     {
@@ -481,29 +466,22 @@
         "description": "Con tu pasión favorita"
       },
       {
-        "id": 5,
-        "name": "Mousepad Personalizado",
-        "image": "/otros/mouse2.png",
-        "description": "Para gamers"
-      },
-      {
         "id": 17,
         "name": "Gorra Trucker Personalizada",
         "image": "/otros/gorra-negra.png",
         "description": "Con tu diseño favorito"
       },
       {
-        "id": 18,
-        "category": "otros",
-        "name": "Kit Taza infantil + Set de toallas",
-        "image": "/otros/kit.png",
-        "description": "Combo ideal para comenzar las clases"
-      },
-      {
         "id": 16,
         "name": "Almohada Personalizada",
         "image": "/otros/almohada2.png",
         "description": "Con tu diseño especial"
+      },
+      {
+        "id": 19,
+        "name": "Mousepad Personalizado",
+        "image": "/otros/mouse2.png",
+        "description": "Para gamers"
       },
       {
         "id": 20,
@@ -572,8 +550,15 @@
       {
         "id": 1,
         "name": "Taza infantil personalizada",
-        "image": "/otros/mockup-joaco.png",
+        "image": "/otros/cajas.jpeg",
         "description": "Ideal para el colegio o souvenir"
+      },
+      {
+        "id": 2,
+        "category": "regalos",
+        "name": "Kit Taza infantil + Set de toalla, servilleta y mantel.",
+        "image": "/otros/set.jpeg",
+        "description": "Combo ideal para comenzar las clases"
       },
       {
         "id": 6,
@@ -598,12 +583,6 @@
         "name": "Taza Spotify",
         "image": "/regalos/spotify2.png",
         "description": "Regala música personalizada"
-      },
-      {
-        "id": 19,
-        "name": "Taza Mágica San Valentín",
-        "image": "/regalos/svmagic.png",
-        "description": "Taza mágica romántica ideal para regalar"
       }
     ]
   },

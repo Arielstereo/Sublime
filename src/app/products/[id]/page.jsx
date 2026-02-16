@@ -56,7 +56,7 @@ function CategoryView({ categoryId }) {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full md:w-5/6 mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full mx-auto">
           {products.map((product) => (
             <Link
               key={product.id}
@@ -69,7 +69,7 @@ function CategoryView({ categoryId }) {
                   height={300}
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover p-4 group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
@@ -147,26 +147,26 @@ function ProductDetail() {
           </Link>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="bg-white rounded-lg overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 md:p-12">
             {/* Imagen */}
             <div className="flex flex-col items-center justify-start">
-              <div className="border border-cyan-500 rounded-xl p-8 w-full mb-6 relative">
+              <div className="border border-cyan-500 rounded-xl p-8 w-full md:w-3/4 mb-6 relative">
                 <div className="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg z-10">
                   {product.badgeText || "¡Arma tu kit personalizado!"}
                 </div>
-                <div className="relative w-full h-96">
+                <div className="relative w-full h-96 md:h-110">
                   <Image
                     src={currentImage}
                     alt={product.name}
                     fill
-                    className="object-contain"
+                    className="object-contain w-full h-full"
                   />
                 </div>
               </div>
 
               {/* Selector de imágenes */}
-              <div className="flex gap-4 w-full">
+              <div className="flex gap-4 w-1/2">
                 {images.map((img, index) => (
                   <button
                     key={index}
