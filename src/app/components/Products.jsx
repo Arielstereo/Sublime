@@ -58,7 +58,7 @@ const Products = () => {
           <div className="text-center mt-8">
             <button
               onClick={() => setShowAll(true)}
-              className="w-64 cursor-pointer bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200"
+              className="w-64 cursor-pointer border border-pink-600 hover:bg-pink-50 text-pink-600 font-bold py-3 px-6 rounded-lg transition duration-200"
             >
               Cargar más productos
             </button>

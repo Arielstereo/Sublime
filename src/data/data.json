@@ -2,27 +2,33 @@
   "categories": [
     {
       "id": "empresas",
+      "name": "Empresas y Negocios",
       "label": "Merchandising corporativo",
-      "image": "/background-hero.png",
-      "color": "border-cyan-500"
+      "image": "/background-hero.png"
     },
     {
-      "id": "regalos",
-      "label": "Regalos Personalizados",
-      "image": "/mockup-regalos.png",
-      "color": "border-pink-500"
+      "id": "tazas",
+      "label": "Tazas personalizadas",
+      "name": "Tazas",
+      "image": "/otros/gamer.png"
     },
     {
-      "id": "otros",
-      "label": "Más productos",
-      "image": "/mockup-otros.png",
-      "color": "border-yellow-500"
+      "id": "remeras",
+      "name": "Remeras",
+      "label": "Remeras personalizadas",
+      "image": "/otros/rangla2.png"
+    },
+    {
+      "id": "varios",
+      "name": "Más productos",
+      "label": "¡Busca el tuyo!",
+      "image": "/otros/mouse1.png"
     }
   ],
   "products": [
     {
       "id": 1,
-      "category": "regalos",
+      "category": "tazas",
       "name": "Taza infantil personalizada",
       "image": "/otros/cajas.jpeg",
       "image2": "/otros/cumple.jpeg",
@@ -41,7 +47,7 @@
     },
     {
       "id": 2,
-      "category": "regalos",
+      "category": "varios",
       "name": "Set de jardín",
       "image": "/otros/set2.jpeg",
       "image2": "/otros/dante.jpeg",
@@ -113,7 +119,7 @@
     },
     {
       "id": 6,
-      "category": "regalos",
+      "category": "tazas",
       "name": "Taza mágica personalizada",
       "image": "/regalos/cumple.png",
       "image2": "/regalos/cumple-magic.png",
@@ -134,11 +140,11 @@
     },
     {
       "id": 7,
-      "category": "regalos",
+      "category": "remeras",
       "name": "Remera personalizada",
       "image": "/regalos/modal-mujer.png",
       "image2": "/regalos/modal-dog.png",
-      "description": "Remera",
+      "description": "Remera personalizada",
       "showBulkPriceByQuantity": false,
       "badgeText": "¡El regalo perfecto!",
       "colors": [
@@ -292,7 +298,7 @@
     },
     {
       "id": 14,
-      "category": "regalos",
+      "category": "tazas",
       "name": "Taza con asa de corazón",
       "showBulkPriceByQuantity": false,
       "badgeText": "¡Regala amor y personalización!",
@@ -310,7 +316,7 @@
     },
     {
       "id": 15,
-      "category": "regalos",
+      "category": "tazas",
       "name": "Taza Spotify",
       "showBulkPriceByQuantity": false,
       "badgeText": "¡Regala música personalizada!",
@@ -330,12 +336,12 @@
     },
     {
       "id": 16,
-      "category": "otros",
+      "category": "varios",
       "name": "Almohada Personalizada",
       "showBulkPriceByQuantity": false,
       "badgeText": "¡Regala comodidad!",
-      "image2": "/otros/almohada.png",
-      "image": "/otros/almohada2.png",
+      "image2": "/otros/coka.jpeg",
+      "image": "/otros/coka2.jpeg",
       "description": "Con tu diseño especial",
       "fullDescription": "Almohada personalizada con tu diseño.",
       "price": "$9.500",
@@ -348,7 +354,7 @@
     },
     {
       "id": 17,
-      "category": "otros",
+      "category": "varios",
       "name": "Gorra Trucker Personalizada",
       "showBulkPriceByQuantity": false,
       "badgeText": "¡Para vos!",
@@ -373,7 +379,7 @@
     },
     {
       "id": 18,
-      "category": "otros",
+      "category": "remeras",
       "name": "Remera personalizada",
       "image": "/otros/rangla-emilia.png",
       "image2": "/otros/rangla2.png",
@@ -396,7 +402,7 @@
     },
     {
       "id": 19,
-      "category": "otros",
+      "category": "varios",
       "name": "Mousepad Personalizado",
       "image": "/otros/mouse1.png",
       "image2": "/otros/mouse2.png",
@@ -413,7 +419,7 @@
     },
     {
       "id": 20,
-      "category": "otros",
+      "category": "remeras",
       "name": "Remera infantil",
       "image": "/otros/niño.png",
       "image2": "/otros/niña.png",
@@ -431,7 +437,7 @@
     },
     {
       "id": 21,
-      "category": "otros",
+      "category": "tazas",
       "name": "Taza personalizada",
       "image": "/otros/gamer.png",
       "image2": "/otros/stich.png",
@@ -458,7 +464,7 @@
     },
     {
       "id": 22,
-      "category": "otros",
+      "category": "tazas",
       "name": "Pocillo de café c/ zuncho + posavaso",
       "image": "/otros/pocillo.jpeg",
       "image2": "/otros/pocillo2.jpeg",
@@ -481,12 +487,33 @@
     }
   ],
   "categoryProducts": {
-    "otros": [
+    "remeras": [
       {
         "id": 2,
         "name": "Remera personalizada",
         "image": "/otros/rangla2.png",
         "description": "Con tu pasión favorita"
+      },
+      {
+        "id": 20,
+        "name": "Remera infantil",
+        "image": "/otros/niño.png",
+        "description": "Remera niña/o personalizada"
+      },
+      {
+        "id": 7,
+        "name": "Remera personalizada",
+        "image": "/regalos/bebe.png",
+        "description": "Con tu diseño especial"
+      }
+    ],
+    "varios": [
+      {
+        "id": 2,
+        "category": "varios",
+        "name": "Kit Taza infantil + Set de toalla, servilleta y mantel.",
+        "image": "/otros/set.jpeg",
+        "description": "Combo ideal para comenzar las clases"
       },
       {
         "id": 17,
@@ -497,7 +524,7 @@
       {
         "id": 16,
         "name": "Almohada Personalizada",
-        "image": "/otros/almohada2.png",
+        "image": "/otros/coka.jpeg",
         "description": "Con tu diseño especial"
       },
       {
@@ -505,18 +532,6 @@
         "name": "Mousepad Personalizado",
         "image": "/otros/mouse2.png",
         "description": "Para gamers"
-      },
-      {
-        "id": 20,
-        "name": "Remera infantil",
-        "image": "/otros/niño.png",
-        "description": "Remera niña/o personalizada"
-      },
-      {
-        "id": 21,
-        "name": "Taza personalizada",
-        "image": "/otros/stich.png",
-        "description": "Taza personalizada"
       }
     ],
     "empresas": [
@@ -569,7 +584,7 @@
         "description": "Con logo de tu empresa"
       }
     ],
-    "regalos": [
+    "tazas": [
       {
         "id": 1,
         "name": "Taza infantil personalizada",
@@ -577,23 +592,16 @@
         "description": "Ideal para el colegio o souvenir"
       },
       {
-        "id": 2,
-        "category": "regalos",
-        "name": "Kit Taza infantil + Set de toalla, servilleta y mantel.",
-        "image": "/otros/set.jpeg",
-        "description": "Combo ideal para comenzar las clases"
+        "id": 21,
+        "name": "Taza personalizada",
+        "image": "/otros/stich.png",
+        "description": "Taza personalizada"
       },
       {
         "id": 6,
         "name": "Taza mágica personalizada",
         "image": "/regalos/magic.jpg",
         "description": "Da una sorpresa a tu agasajado"
-      },
-      {
-        "id": 7,
-        "name": "Remera personalizada",
-        "image": "/regalos/bebe.png",
-        "description": "Con tu diseño especial"
       },
       {
         "id": 14,
@@ -610,8 +618,9 @@
     ]
   },
   "categoryNames": {
-    "empresas": "Merchandising corporativo",
-    "regalos": "Regalos Personalizados",
-    "otros": "Otros productos"
+    "empresas": "Empresas y Negocios",
+    "remeras": "Remeras Personalizadas",
+    "tazas": "Tazas personalizadas",
+    "varios": "Otros productos"
   }
 }

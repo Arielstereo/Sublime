@@ -9,9 +9,9 @@ const ProductCarousel = () => {
   const [itemsPerSlide, setItemsPerSlide] = useState(3);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
 
-  const allProducts = data.products;
-  const promoProducts = allProducts.filter((p) => p.isPromo);
-  const products = promoProducts.length ? promoProducts : allProducts;
+  const allCategories = data.categories;
+  // const promoProducts = allProducts.filter((p) => p.isPromo);
+  const categories = allCategories;
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,27 +34,27 @@ const ProductCarousel = () => {
 
     const timer = setInterval(() => {
       setCurrentIndex((prev) => {
-        const maxIndex = Math.max(0, products.length - itemsPerSlide);
+        const maxIndex = Math.max(0, categories.length - itemsPerSlide);
         return prev >= maxIndex ? 0 : prev + 1;
       });
     }, 5000);
 
     return () => clearInterval(timer);
-  }, [isAutoPlay, products.length, itemsPerSlide]);
+  }, [isAutoPlay, categories.length, itemsPerSlide]);
 
   const handleNext = () => {
-    const maxIndex = Math.max(0, products.length - itemsPerSlide);
+    const maxIndex = Math.max(0, categories.length - itemsPerSlide);
     setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
     setIsAutoPlay(false);
   };
 
   const handlePrev = () => {
-    const maxIndex = Math.max(0, products.length - itemsPerSlide);
+    const maxIndex = Math.max(0, categories.length - itemsPerSlide);
     setCurrentIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
     setIsAutoPlay(false);
   };
 
-  const visibleProducts = products.slice(
+  const visiblecategories = categories.slice(
     currentIndex,
     currentIndex + itemsPerSlide,
   );
@@ -83,37 +83,37 @@ const ProductCarousel = () => {
                 transform: `translateX(-${currentIndex * (100 / itemsPerSlide)}%)`,
               }}
             >
-              {products.map((product) => (
+              {categories.map((category) => (
                 <div
-                  key={product.id}
+                  key={category.id}
                   className="w-full md:w-1/2 lg:w-1/3 shrink-0 px-2 md:px-3"
                 >
                   <Link
-                    href={`/products/${product.id}`}
+                    href={`/products/${category.id}`}
                     className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col"
                   >
                     {/* Image Container */}
                     <div className="relative overflow-hidden aspect-square bg-slate-100">
                       <Image
-                        src={product.imagePromo}
-                        alt={product.name}
+                        src={category.image}
+                        alt={category.id}
                         width={300}
                         height={300}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       {/* Category Badge */}
                       <div className="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                        {data.categoryNames[product.category]}
+                        {category.label}
                       </div>
                     </div>
 
                     {/* Content */}
                     <div className="p-4 md:p-6 flex flex-col grow">
                       <h3 className="font-bold text-lg md:text-xl mb-2 line-clamp-2">
-                        {product.name}
+                        {category.name}
                       </h3>
                       <p className="text-slate-600 text-sm md:text-base mb-4 line-clamp-2 grow">
-                        {product.description}
+                        {category.label}
                       </p>
 
                       {/* CTA */}
@@ -171,7 +171,7 @@ const ProductCarousel = () => {
           {/* Dots Indicator */}
           <div className="flex justify-center gap-2 mt-8">
             {Array.from({
-              length: Math.max(1, products.length - itemsPerSlide + 1),
+              length: Math.max(1, categories.length - itemsPerSlide + 1),
             }).map((_, index) => (
               <button
                 key={index}
