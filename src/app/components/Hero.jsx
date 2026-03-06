@@ -50,10 +50,11 @@ const Hero = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
           <Link
-            href="#productos"
+            href="/catalogo.pdf"
+            target="_blank"
             className="w-64 cursor-pointer bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200"
           >
-            Nuestros Productos
+            Ver catálogo
           </Link>
           <Link
             href="https://api.whatsapp.com/send?phone=+5491126922128&text=Necesito%20presupuesto%20para:%20"

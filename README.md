@@ -29,6 +29,25 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Generar catálogo PDF
+
+Se incluye un script para crear un catálogo en PDF usando los productos definidos en `src/data/data.json`.
+Genera ahora una **tabla de una sola fila por producto** con columnas para nombre, descripción, precio e imagen (las imágenes se reducen). Añade el logo de Sublime en la cabecera y un color tenue de fondo alternado en las filas.
+
+1. Instala dependencias (incluye pdfkit):
+
+```bash
+npm install
+```
+
+2. Ejecuta el script:
+
+```bash
+npm run generate-catalog
+```
+
+El PDF resultante se genera en `public/catalogo.pdf`. Puedes enlazarlo desde tu sitio como recurso estático.
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
