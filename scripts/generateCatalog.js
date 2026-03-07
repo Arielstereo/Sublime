@@ -79,10 +79,13 @@ products.forEach((p) => {
   // measure height
   const textWidth = colWidths.name;
   const hName = doc.heightOfString(p.name, { width: textWidth });
-  const hDesc = doc.heightOfString(p.description || "", {
+  const hDesc = doc.heightOfString(p.fullDescription || "", {
     width: colWidths.desc,
   });
-  const hPrice = doc.heightOfString(p.price || "", { width: colWidths.price });
+  // price cell may include bulk price text
+  const priceText =
+    (p.price || "") + (p.bulkPrice ? `\nmayor: ${p.bulkPrice}` : "");
+  const hPrice = doc.heightOfString(priceText, { width: colWidths.price });
   const imgH = p.image ? 50 : 0;
   const rowHeight = Math.max(hName, hDesc, hPrice, imgH) + 20;
 
@@ -100,11 +103,14 @@ products.forEach((p) => {
 
   // draw cells
   doc.text(p.name, left + 5, currentY + 5, { width: colWidths.name });
-  doc.text(p.description || "", left + 5 + colWidths.name, currentY + 5, {
+  doc.text(p.fullDescription || "", left + 5 + colWidths.name, currentY + 5, {
     width: colWidths.desc,
   });
+  // compose price cell with optional bulk price
+  const priceCell =
+    (p.price || "") + (p.bulkPrice ? `\n+5 unidades: ${p.bulkPrice}` : "");
   doc.text(
-    p.price || "",
+    priceCell,
     left + 5 + colWidths.name + colWidths.desc,
     currentY + 5,
     { width: colWidths.price },

@@ -209,18 +209,14 @@ function ProductDetail() {
                   <div className="text-3xl font-bold text-green-600">
                     {product.price}
                   </div>
-                  {product.showBulkPriceByQuantity && (
-                    <span className="text-sm text-slate-600 font-medium">
-                      c/u solicitando más de 5 unidades.
-                    </span>
-                  )}
                 </div>
                 {product.showBulkPriceByQuantity && (
-                  <div className="text-sm text-slate-500 pl-0">
-                    Precio por unidad:{" "}
-                    <span className="font-semibold text-slate-700">
+                  <div className="text-lg text-slate-500 pl-0">
+                    + 5 unidades:{" "}
+                    <span className="font-semibold text-pink-700 text-lg animate-pulse">
                       {product.bulkPrice}
                     </span>
+                    {"  "}c/u
                   </div>
                 )}
               </div>
