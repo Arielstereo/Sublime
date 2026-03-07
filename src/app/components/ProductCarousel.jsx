@@ -10,7 +10,6 @@ const ProductCarousel = () => {
   const [isAutoPlay, setIsAutoPlay] = useState(true);
 
   const allCategories = data.categories;
-  // const promoProducts = allProducts.filter((p) => p.isPromo);
   const categories = allCategories;
 
   useEffect(() => {
@@ -53,11 +52,6 @@ const ProductCarousel = () => {
     setCurrentIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
     setIsAutoPlay(false);
   };
-
-  const visiblecategories = categories.slice(
-    currentIndex,
-    currentIndex + itemsPerSlide,
-  );
 
   return (
     <section className="py-16 bg-linear-to-r from-slate-50 to-slate-100">
