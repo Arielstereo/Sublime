@@ -28,7 +28,7 @@
       "id": "tazas",
       "name": "Tazas",
       "label": "Tazas personalizadas",
-      "image": "/otros/gamer.png"
+      "image": "/tazas/corazon4.png"
     },
     {
       "id": "otros",
@@ -228,6 +228,24 @@
       ]
     },
     {
+      "id": 13,
+      "category": "tazas",
+      "name": "Taza de cerámica",
+      "showBulkPriceByQuantity": true,
+      "badgeText": "Desayuno con amor",
+      "image2": "/tazas/taza1.png",
+      "image": "/tazas/taza2.png",
+      "description": "Con tu diseño especial",
+      "fullDescription": "Taza de cerámica con asa de corazón personalizada.",
+      "price": "$10.000",
+      "bulkPrice": "$8.000",
+      "features": [
+        "Diseño personalizado con tu imagen, frase o dibujo.",
+        "Taza de cerámica resistente.",
+        "Empaque listo para regalo."
+      ]
+    },
+    {
       "id": 14,
       "category": "tazas",
       "name": "Taza con asa de corazón",
@@ -238,7 +256,7 @@
       "description": "Con tu diseño especial",
       "fullDescription": "Taza de cerámica con asa de corazón personalizada.",
       "price": "$12.000",
-      "bulkPrice": "$8.000",
+      "bulkPrice": "$8.500",
       "features": [
         "Diseño personalizado con tu imagen, frase o dibujo.",
         "Taza de cerámica resistente.",
@@ -525,6 +543,12 @@
         "name": "Taza mágica personalizada",
         "image": "/regalos/magic.jpg",
         "description": "Da una sorpresa a tu agasajado"
+      },
+      {
+        "id": 13,
+        "name": "Taza de cerámica",
+        "image": "/tazas/taza4.png",
+        "description": "Con tu diseño especial"
       },
       {
         "id": 14,
