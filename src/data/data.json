@@ -442,8 +442,8 @@
       "imagePromo": "/otros/pocillo.jpeg",
       "description": "Pocillo de café",
       "fullDescription": "Pocillo de café + zuncho + posavaso.",
-      "price": "$12.000",
-      "bulkPrice": "$9.000",
+      "price": "$15.000",
+      "bulkPrice": "$10.000",
       "showBulkPriceByQuantity": true,
       "badgeText": "Para la oficina",
       "colors": [
