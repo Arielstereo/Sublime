@@ -138,12 +138,13 @@
       "image2": "/tazas/cumple-magic.png",
       "description": "Sorprende a tu agasajado",
       "fullDescription": "Taza de cerámica mágica 100% personalizable con tu foto, nombre o mensaje especial. Cambia de color con el calor. Color negro de base.",
-      "showBulkPriceByQuantity": false,
+      "showBulkPriceByQuantity": true,
       "badgeText": "¡Magia en cada taza!",
       "colors": [
         "bg-black"
       ],
-      "price": "$15.000",
+      "price": "$14.000",
+      "bulkPrice": "$10.000",
       "features": [
         "Personalizable.",
         "Cerámica resistente.",
@@ -191,8 +192,8 @@
       ],
       "description": "Ideal para merchandising",
       "fullDescription": "Taza de ceramica color interno y mango.",
-      "price": "$13.500",
-      "bulkPrice": "$10.000",
+      "price": "$13.000",
+      "bulkPrice": "$9.000",
       "features": [
         "Taza corporativa de cerámica, alta calidad.",
         "Diseño personalizado con tu logo o imagen.",
@@ -228,6 +229,24 @@
       ]
     },
     {
+      "id": 12,
+      "category": "tazas",
+      "name": "Taza de cerámica, personalizada con asa con accesorio de pelota de fútbol.",
+      "showBulkPriceByQuantity": true,
+      "badgeText": "Personalizada con tu equipo favorito",
+      "image2": "/tazas/taza-boca.png",
+      "image": "/tazas/taza-river.png",
+      "description": "Con tu equipo favorito",
+      "fullDescription": "Taza de cerámica personalizada con asa con accesorio de pelota de fútbol.",
+      "price": "$13.500",
+      "bulkPrice": "$10.000",
+      "features": [
+        "Diseño personalizado con imagenes de tu equipo favorito.",
+        "Taza de cerámica.",
+        "Empaque personalizado."
+      ]
+    },
+    {
       "id": 13,
       "category": "tazas",
       "name": "Taza de cerámica",
@@ -237,7 +256,7 @@
       "image": "/tazas/taza2.png",
       "description": "Con tu diseño especial",
       "fullDescription": "Taza de cerámica personalizada.",
-      "price": "$10.000",
+      "price": "$12.000",
       "bulkPrice": "$8.000",
       "features": [
         "Diseño personalizado con tu imagen, frase o dibujo.",
@@ -256,7 +275,7 @@
       "description": "Con tu diseño especial",
       "fullDescription": "Taza de cerámica con asa de corazón personalizada.",
       "price": "$12.000",
-      "bulkPrice": "$8.500",
+      "bulkPrice": "$8.000",
       "features": [
         "Diseño personalizado con tu imagen, frase o dibujo.",
         "Taza de cerámica resistente.",
@@ -274,7 +293,7 @@
       "image": "/tazas/spotify1.png",
       "description": "Con tu diseño especial",
       "fullDescription": "Taza con código de Spotify personalizado.",
-      "price": "$13.500",
+      "price": "$13.000",
       "isPromo": true,
       "imagePromo": "/tazas/spotify.png",
       "features": [
@@ -390,13 +409,14 @@
       "id": 21,
       "category": "tazas",
       "name": "Taza personalizada color interior y asa",
-      "image": "/otros/gamer.png",
-      "image2": "/otros/stich.png",
+      "image": "/tazas/gamer.png",
+      "image2": "/tazas/san-valen.png",
       "description": "Taza",
       "fullDescription": "Taza de cerámica personalizada con tu diseño,interior y asa de color.",
-      "price": "$13.500",
-      "showBulkPriceByQuantity": false,
-      "badgeText": "Infantiles",
+      "price": "$13.000",
+      "bulkPrice": "$9.000",
+      "showBulkPriceByQuantity": true,
+      "badgeText": "¡Personaliza tu taza!",
       "colors": [
         "bg-black",
         "bg-blue-500",
@@ -444,8 +464,8 @@
       "image2": "/tazas/messi.png",
       "description": "Preparate para el mundial",
       "fullDescription": "Taza de cerámica, personalizada con asa con accesorio de pelota de fútbol.",
-      "price": "$12.000",
-      "bulkPrice": "$9.000",
+      "price": "$13.500",
+      "bulkPrice": "$10.000",
       "showBulkPriceByQuantity": true,
       "badgeText": "¡Mundial 2026!",
       "features": [
@@ -535,13 +555,13 @@
       {
         "id": 21,
         "name": "Taza personalizada",
-        "image": "/otros/stich.png",
+        "image": "/tazas/san-valen.png",
         "description": "Taza personalizada"
       },
       {
         "id": 6,
         "name": "Taza mágica personalizada",
-        "image": "/regalos/magic.jpg",
+        "image": "/tazas/magic.jpg",
         "description": "Da una sorpresa a tu agasajado"
       },
       {
@@ -549,6 +569,12 @@
         "name": "Taza de cerámica",
         "image": "/tazas/taza4.png",
         "description": "Con tu diseño especial"
+      },
+      {
+        "id": 12,
+        "name": "Taza de cerámica, personalizada con asa con accesorio de pelota de fútbol.",
+        "image": "/tazas/taza-river.png",
+        "description": "Con tu equipo favorito"
       },
       {
         "id": 14,
