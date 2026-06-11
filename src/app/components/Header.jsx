@@ -34,7 +34,7 @@ const Header = () => {
       <div className="mx-auto px-4 py-3 flex items-center justify-between max-w-full">
         <button
           onClick={() => scrollToSection("inicio")}
-          className="flex items-center justify-center cursor-pointer"
+          className="flex gap-2 items-center justify-center cursor-pointer"
         >
           <span className={`${orbitron.className} text-xl font-semibold`}>
             Sublime
@@ -42,7 +42,7 @@ const Header = () => {
           <Image
             width={200}
             height={200}
-            src="/logo.png"
+            src="/logo-sublime.png"
             alt="Sublime by Emprendev"
             className="h-10 w-auto"
           />
