@@ -54,7 +54,7 @@ const ProductCarousel = () => {
   };
 
   return (
-    <section className="py-16 bg-linear-to-r from-slate-50 to-slate-100">
+    <section className="py-16">
       <div className="container mx-auto px-8">
         {/* Header */}
         <div className="flex flex-col items-center mb-12 mx-4">

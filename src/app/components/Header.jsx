@@ -30,7 +30,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-pink-200 md:px-8 py-2 w-full">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black text-white md:px-8 py-2 w-full">
       <div className="mx-auto px-4 py-3 flex items-center justify-between max-w-full">
         <button
           onClick={() => scrollToSection("inicio")}

@@ -41,35 +41,51 @@ const steps = [
 
 const OrderSteps = () => {
   return (
-    <section id="pasos" className="py-16 md:py-48 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center mb-12 mx-4">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Como realizar tu pedido
-          </h2>
-          <p className="text-slate-600 text-base md:text-lg mx-auto max-w-2xl text-left md:text-center">
-            Seguí estos simples pasos para completar tu pedido.
-          </p>
-        </div>
+    <div className="min-h-screen w-full bg-white relative">
+      {/* White Grid with Dots Background */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `
+        linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px),
+        radial-gradient(circle, rgba(51,65,85,0.4) 1px, transparent 1px)
+      `,
+          backgroundSize: "20px 20px, 20px 20px, 20px 20px",
+          backgroundPosition: "0 0, 0 0, 0 0",
+        }}
+      />
+      {/* Your Content/Components */}
+      <section id="pasos" className="py-16 md:py-48 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center mb-12 mx-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Como realizar tu pedido
+            </h2>
+            <p className="text-slate-600 text-base md:text-lg mx-auto max-w-2xl text-left md:text-center">
+              Seguí estos simples pasos para completar tu pedido.
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          {steps.map((step) => (
-            <div
-              key={step.id}
-              className={`flex flex-col items-start bg-slate-50 border-2 ${step.color} rounded-2xl p-6`}
-            >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative">
+            {steps.map((step) => (
               <div
-                className={`flex items-center justify-center w-12 h-12 rounded-full ${step.bg} text-white font-bold mb-4`}
+                key={step.id}
+                className={`flex flex-col items-start bg-white border-2 ${step.color} rounded-2xl p-6`}
               >
-                {step.id}
+                <div
+                  className={`flex items-center justify-center w-12 h-12 rounded-full ${step.bg} text-white font-bold mb-4`}
+                >
+                  {step.id}
+                </div>
+                <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
+                <p className="text-sm text-slate-600">{step.desc}</p>
               </div>
-              <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
-              <p className="text-sm text-slate-600">{step.desc}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

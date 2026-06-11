@@ -56,7 +56,7 @@ function CategoryView({ categoryId }) {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-3/4 mx-auto">
           {products.map((product) => (
             <Link
               key={product.id}
@@ -77,9 +77,19 @@ function CategoryView({ categoryId }) {
                 <p className="text-muted-foreground mb-4">
                   {product.description}
                 </p>
-                <span className="inline-flex items-center gap-2 text-primary font-medium hover:underline">
-                  Ver detalles →
-                </span>
+                <Link
+                  href={`https://api.whatsapp.com/send?phone=+5491126922128&text=Necesito%20presupuesto%20para:%20${encodeURIComponent(product.name)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-64 cursor-pointer border border-black text-black bg-white hover:bg-black hover:border-white hover:text-white font-bold py-3 px-6 rounded-lg transition duration-200"
+                >
+                  <span>Solicitar presupuesto</span>
+                  <i
+                    className="icon-[streamline-pixel--logo-whatapp] w-5 h-5"
+                    role="img"
+                    aria-hidden="true"
+                  ></i>
+                </Link>
               </div>
             </Link>
           ))}

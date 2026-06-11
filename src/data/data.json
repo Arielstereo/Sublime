@@ -4,7 +4,7 @@
       "id": "empresas",
       "name": "Empresas & Negocios",
       "label": "Merchandising corporativo",
-      "image": "/background-hero.png"
+      "image": "/empresas/tredi.jpeg"
     },
     {
       "id": "kids",
@@ -16,19 +16,19 @@
       "id": "mundial-2026",
       "name": "Mundial 2026",
       "label": "Colección Mundial 2026",
-      "image": "/tazas/2026.png"
+      "image": "/mundial.png"
     },
     {
       "id": "remeras",
       "name": "Remeras",
       "label": "Remeras personalizadas",
-      "image": "/remeras/rangla3.png"
+      "image": "/remeras/remera.png"
     },
     {
       "id": "tazas",
       "name": "Tazas",
       "label": "Tazas personalizadas",
-      "image": "/tazas/corazon4.png"
+      "image": "/tazas/svmockup.png"
     },
     {
       "id": "otros",

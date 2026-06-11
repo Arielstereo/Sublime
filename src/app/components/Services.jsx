@@ -29,36 +29,55 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="servicios" className="py-32 md:py-48 relative overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center mb-12 mx-4">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Nuestros Servicios Exclusivos
-          </h2>
-          <p className="text-slate-600 text-base md:text-lg mx-auto max-w-2xl text-left md:text-center">
-            Trabajamos con sublimación de alta calidad para ofrecerte productos
-            personalizados que destacan. Ya sea para tu empresa, negocio o
-            evento, tenemos la solución perfecta.
-          </p>
-        </div>
+    <div className="min-h-screen w-full bg-white relative">
+      {/* White Grid with Dots Background */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `
+        linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px),
+        radial-gradient(circle, rgba(51,65,85,0.4) 1px, transparent 1px)
+      `,
+          backgroundSize: "20px 20px, 20px 20px, 20px 20px",
+          backgroundPosition: "0 0, 0 0, 0 0",
+        }}
+      />
+      {/* Your Content/Components */}
+      <section
+        id="servicios"
+        className="py-32 md:py-48 relative overflow-hidden"
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center mb-12 mx-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Nuestros Servicios Exclusivos
+            </h2>
+            <p className="text-slate-600 text-base md:text-lg mx-auto max-w-2xl text-left md:text-center">
+              Trabajamos con sublimación de alta calidad para ofrecerte
+              productos personalizados que destacan. Ya sea para tu empresa,
+              negocio o evento, tenemos la solución perfecta.
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mx-4 md:mx-32">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className={`group bg-white border-2 ${service.color} rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in`}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-                <Image src="/logo.png" alt="Logo" width={96} height={96} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mx-4 md:mx-32">
+            {services.map((service, index) => (
+              <div
+                key={service.title}
+                className={`group bg-white border-2 ${service.color} rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                  <Image src="/logo.png" alt="Logo" width={96} height={96} />
+                </div>
+                <h3 className="font-bold text-xl mb-2">{service.title}</h3>
+                <p className="text-muted-foreground">{service.description}</p>
               </div>
-              <h3 className="font-bold text-xl mb-2">{service.title}</h3>
-              <p className="text-muted-foreground">{service.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
