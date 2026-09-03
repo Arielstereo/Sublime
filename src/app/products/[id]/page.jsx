@@ -19,12 +19,12 @@ function CategoryView({ categoryId }) {
 
   if (products.length === 0) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
+      <div className="min-h-screen flex items-center justify-center bg-ink-950">
+        <div className="text-center px-4">
           <h1 className="text-3xl font-bold mb-4">Categoría no encontrada</h1>
           <Link
             href="/"
-            className="text-pink-600 hover:text-pink-700 font-medium"
+            className="text-accent-strong hover:text-accent font-medium"
           >
             ← Volver al inicio
           </Link>
@@ -34,20 +34,20 @@ function CategoryView({ categoryId }) {
   }
 
   return (
-    <section className="pt-8 pb-32">
-      <div className="container mx-auto px-4">
+    <section className="pt-8 pb-32 bg-ink-950 min-h-screen">
+      <div className="container mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="flex flex-col items-start mb-12 mx-4 md:mx-16">
           <Link
             href="/"
-            className="text-pink-600 hover:text-pink-700 font-medium mb-6"
+            className="text-accent-strong hover:text-accent font-medium mb-6"
           >
             ← Volver al inicio
           </Link>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
             {categoryName}
           </h1>
-          <p className="text-slate-600 text-base md:text-lg">
+          <p className="text-fg-secondary text-base md:text-lg max-w-2xl text-pretty">
             Descubrí todos nuestros productos en esta categoría. Consulta
             presupuesto por cantidades o diseños especiales.
             <br />
@@ -56,40 +56,37 @@ function CategoryView({ categoryId }) {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-3/4 mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full md:w-4/5 mx-auto">
           {products.map((product) => (
             <Link
               key={product.id}
               href={`/products/${product.id}`}
-              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 animate-scale-in"
+              className="group dark-card rounded-2xl overflow-hidden hover:border-border-strong transition-all duration-300"
             >
-              <div className="relative overflow-hidden aspect-square bg-secondary/30">
+              <div className="relative overflow-hidden aspect-square bg-ink-800">
                 <Image
                   width={300}
                   height={300}
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover p-4 group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover p-6 group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-xl mb-2">{product.name}</h3>
-                <p className="text-muted-foreground mb-4">
+                <h3 className="font-semibold text-xl mb-2 line-clamp-1">
+                  {product.name}
+                </h3>
+                <p className="text-fg-muted mb-4 line-clamp-2">
                   {product.description}
                 </p>
-                <Link
-                  href={`https://api.whatsapp.com/send?phone=+5491126922128&text=Necesito%20presupuesto%20para:%20${encodeURIComponent(product.name)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-64 cursor-pointer border border-black text-black bg-white hover:bg-black hover:border-white hover:text-white font-bold py-3 px-6 rounded-lg transition duration-200"
-                >
+                <span className="inline-flex items-center justify-center gap-2 w-full cursor-pointer border border-border-strong bg-ink-800 hover:bg-accent hover:border-accent text-fg hover:text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 active:scale-[0.98]">
                   <span>Solicitar presupuesto</span>
                   <i
                     className="icon-[streamline-pixel--logo-whatapp] w-5 h-5"
                     role="img"
                     aria-hidden="true"
                   ></i>
-                </Link>
+                </span>
               </div>
             </Link>
           ))}
@@ -100,7 +97,7 @@ function CategoryView({ categoryId }) {
             href="https://api.whatsapp.com/send?phone=+5491126922128&text=Necesito%20presupuesto%20para:%20"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 w-64 cursor-pointer border border-black text-black bg-white hover:bg-black hover:border-white hover:text-white font-bold py-3 px-6 rounded-lg transition duration-200"
+            className="flex items-center justify-center gap-2 w-72 cursor-pointer border border-border-strong bg-ink-800 hover:bg-accent hover:border-accent text-fg hover:text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 active:scale-[0.98]"
           >
             <span>Solicitar presupuesto</span>
             <i
@@ -120,7 +117,6 @@ function ProductDetail() {
   const id = params.id;
   const [selectedImage, setSelectedImage] = useState(0);
 
-  // Verificar si es una categoría
   if (isCategory(id)) {
     return <CategoryView categoryId={id} />;
   }
@@ -130,10 +126,10 @@ function ProductDetail() {
 
   if (!product) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
+      <div className="min-h-screen flex items-center justify-center bg-ink-950">
+        <div className="text-center px-4">
           <h1 className="text-4xl font-bold mb-4">Producto no encontrado</h1>
-          <Link href="/#productos" className="text-blue-600 hover:underline">
+          <Link href="/#productos" className="text-accent-strong hover:underline">
             Volver a categorías
           </Link>
         </div>
@@ -141,89 +137,93 @@ function ProductDetail() {
     );
   }
 
-  const images = [product.image, product.image2];
-  const currentImage = images[selectedImage];
+  const images = [product.image, product.image2].filter(Boolean);
+  const currentImage = images[selectedImage] || product.image;
 
   return (
-    <div className="min-h-screen from-slate-50 to-slate-100 py-12">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen bg-ink-950 py-10 md:py-14">
+      <div className="container mx-auto px-4 md:px-8">
         {/* Breadcrumb */}
-        <div className="mb-4 mx-4 md:mx-16">
+        <div className="mb-6 mx-4 md:mx-10">
           <Link
             href={`/products/${product.category}`}
-            className="text-cyan-600 hover:text-slate-900"
+            className="text-accent-strong hover:text-accent font-medium"
           >
             ← Volver a {categoryNames[product.category]}
           </Link>
         </div>
 
-        <div className="bg-white rounded-lg overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 md:p-12">
+        <div className="dark-card rounded-2xl overflow-hidden border-border-base">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 md:p-10">
             {/* Imagen */}
             <div className="flex flex-col items-center justify-start">
-              <div className="border border-cyan-500 rounded-xl p-4 md:p-8 w-full md:w-2/3 mb-6 relative">
-                <div className="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg z-10">
-                  {product.badgeText}
-                </div>
-                <div className="relative w-full h-96 md:h-110">
+              <div className="dark-card rounded-xl p-4 md:p-8 w-full mb-6 relative border-border-base">
+                {product.badgeText && (
+                  <span className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg z-10">
+                    {product.badgeText}
+                  </span>
+                )}
+                <div className="relative w-full aspect-square">
                   <Image
                     src={currentImage}
                     alt={product.name}
                     fill
-                    className="object-cover w-full h-full rounded-lg"
+                    className="object-cover rounded-lg"
                   />
                 </div>
               </div>
 
               {/* Selector de imágenes */}
-              <div className="flex gap-4 w-1/2">
-                {images.map((img, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setSelectedImage(index)}
-                    className={`flex-1 relative h-24 rounded-lg border-2 cursor-pointer transition-all overflow-hidden ${
-                      selectedImage === index
-                        ? "border-pink-600 shadow-lg"
-                        : "border-slate-300 hover:border-slate-400"
-                    }`}
-                  >
-                    <Image
-                      src={img}
-                      alt={`${product.name} vista ${index + 1}`}
-                      fill
-                      className="object-cover p-4"
-                    />
-                  </button>
-                ))}
-              </div>
+              {images.length > 1 && (
+                <div className="flex gap-4 w-1/2">
+                  {images.map((img, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedImage(index)}
+                      className={`flex-1 relative aspect-square rounded-lg border-2 cursor-pointer transition-all overflow-hidden ${
+                        selectedImage === index
+                          ? "border-accent shadow-[0_0_0_3px_rgba(236,72,153,0.2)]"
+                          : "border-border-soft hover:border-border-strong"
+                      }`}
+                    >
+                      <Image
+                        src={img}
+                        alt={`${product.name} vista ${index + 1}`}
+                        fill
+                        className="object-cover p-3"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Detalles */}
             <div className="flex flex-col justify-center">
               <div className="mb-4">
-                <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">
+                <span className="inline-block px-3 py-1 bg-accent-soft text-accent-strong rounded-full text-sm font-semibold">
                   {categoryNames[product.category]}
                 </span>
               </div>
 
-              <h1 className="text-4xl font-bold mb-4 text-slate-900">
+              <h1 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
                 {product.name}
               </h1>
 
-              <p className="text-xl text-slate-600 mb-6">
+              <p className="text-lg text-fg-secondary mb-6 text-pretty">
                 {product.fullDescription}
               </p>
 
               <div className="mb-6">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="text-3xl font-bold text-green-600">
+                  <div className="text-3xl font-bold text-accent-strong tabular-nums">
                     {product.price}
                   </div>
                 </div>
                 {product.showBulkPriceByQuantity && (
-                  <div className="text-lg text-slate-500 pl-0">
+                  <div className="text-lg text-fg-secondary pl-0">
                     + 5 unidades:{" "}
-                    <span className="font-semibold text-pink-700 text-lg animate-pulse">
+                    <span className="font-semibold text-accent-strong text-lg">
                       {product.bulkPrice}
                     </span>
                     {"  "}c/u
@@ -234,14 +234,14 @@ function ProductDetail() {
               {/* Colores disponibles */}
               {product.colors && product.colors.length > 0 && (
                 <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-slate-900 mb-3">
+                  <h3 className="text-sm font-semibold mb-3">
                     Colores disponibles:
                   </h3>
                   <div className="flex gap-3 flex-wrap">
                     {product.colors.map((color, index) => (
                       <div
                         key={index}
-                        className={`w-8 h-8 rounded-full border-2 border-slate-300 hover:border-slate-600 transition-all cursor-pointer shadow-sm hover:shadow-md ${color}`}
+                        className={`w-8 h-8 rounded-full border-2 border-border-strong hover:scale-110 transition-all cursor-pointer shadow-sm ${color}`}
                       />
                     ))}
                   </div>
@@ -250,16 +250,14 @@ function ProductDetail() {
 
               {/* Características */}
               <div className="mb-8">
-                <h3 className="text-sm font-semibold mb-4 text-slate-900">
-                  Características:
-                </h3>
+                <h3 className="text-sm font-semibold mb-4">Características:</h3>
                 <ul className="space-y-2">
                   {product.features.map((feature, index) => (
                     <li
                       key={index}
-                      className="flex items-center text-slate-700"
+                      className="flex items-start text-fg-secondary"
                     >
-                      <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                      <span className="mt-2 mr-3 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
                       {feature}
                     </li>
                   ))}
@@ -267,12 +265,12 @@ function ProductDetail() {
               </div>
 
               {/* Botones */}
-              <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href={`https://api.whatsapp.com/send?phone=+5491126922128&text=Quiero%20solicitar%20${product.name}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex justify-center items-center bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200"
+                  className="flex justify-center items-center bg-accent hover:bg-accent-strong text-white font-semibold py-3.5 px-6 rounded-xl transition-all duration-200 active:scale-[0.97]"
                 >
                   Solicitar producto
                 </Link>
@@ -280,12 +278,12 @@ function ProductDetail() {
                   href={`https://api.whatsapp.com/send?phone=+5491126922128&text=Quiero%20consultar%20sobre%20${product.name}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex justify-center items-center border-2 border-cyan-600 text-cyan-600 hover:text-white hover:bg-blue-500 font-bold py-3 px-6 rounded-lg transition duration-200"
+                  className="flex justify-center items-center border-2 border-border-strong text-fg-secondary hover:text-fg hover:border-border-base font-semibold py-3.5 px-6 rounded-xl transition-all duration-200 active:scale-[0.97]"
                 >
                   Consultar
                 </Link>
               </div>
-              <span className="text-slate-600 text-sm mt-4">
+              <span className="text-fg-muted text-sm mt-5 leading-relaxed">
                 * Al solicitar este producto, indica cantidad, color, y diseño.
                 En el caso de enviar tu propio diseño, adjunta el archivo o
                 imagen correspondiente en formato .PNG o .JPG. Consulta las
@@ -296,11 +294,10 @@ function ProductDetail() {
         </div>
 
         {/* Productos relacionados */}
-        <div className="mt-16 mb-12 mx-4 md:mx-16">
-          <h2 className="text-2xl font-bold mb-8 text-slate-900">
-            Productos relacionados |
-            <br />
-            Arma tu kit
+        <div className="mt-16 mb-10 mx-4 md:mx-10">
+          <h2 className="text-2xl font-bold mb-8">
+            Productos relacionados
+            <span className="text-fg-muted font-normal"> · Arma tu kit</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {allProducts
@@ -312,20 +309,20 @@ function ProductDetail() {
                 <Link
                   key={relatedProduct.id}
                   href={`/products/${relatedProduct.id}`}
-                  className="bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-4 cursor-pointer group"
+                  className="dark-card rounded-2xl hover:border-border-strong transition-all duration-300 p-5 cursor-pointer group"
                 >
-                  <div className="relative w-full h-48 bg-slate-100 rounded-lg overflow-hidden mb-4">
+                  <div className="relative w-full aspect-square bg-ink-800 rounded-xl overflow-hidden mb-4">
                     <Image
                       src={relatedProduct.image}
                       alt={relatedProduct.name}
                       fill
-                      className="object-contain group-hover:scale-110 transition-transform duration-200"
+                      className="object-cover p-4 group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="font-semibold text-slate-900 mb-2">
+                  <h3 className="font-semibold mb-2 line-clamp-1">
                     {relatedProduct.name}
                   </h3>
-                  <p className="text-sm text-slate-600">
+                  <p className="text-sm text-fg-muted line-clamp-2">
                     {relatedProduct.description}
                   </p>
                 </Link>

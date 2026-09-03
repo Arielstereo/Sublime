@@ -6,86 +6,62 @@ const steps = [
     id: 1,
     title: "Elegí tus productos",
     desc: "Navegá por la web y seleccioná tus productos.",
-    color: "border-pink-500",
-    bg: "bg-pink-500",
   },
   {
     id: 2,
     title: "Pedí presupuesto o reservá por WhatsApp",
     desc: "Enviá cantidad y detalles para recibir un presupuesto rápido.",
-    color: "border-cyan-500",
-    bg: "bg-cyan-500",
   },
   {
     id: 3,
     title: "Forma de pago",
     desc: "Transferencia bancaria o efectivo al retirar/entregar. Según el pedido te podríamos solicitar una seña del 50%.",
-    color: "border-yellow-500",
-    bg: "bg-yellow-500",
   },
   {
     id: 4,
     title: "Enviá tu diseño o solicitá uno personalizado",
     desc: "Adjuntá tu archivo o consultanos para diseñarlo según tu necesidad.",
-    color: "border-black",
-    bg: "bg-black",
   },
   {
     id: 5,
     title: "¡Listo!",
-    desc: "Recibí o retirá tu pedido.El tiempo de producción varía según el tipo de producto y cantidad.",
-    color: "border-green-500",
-    bg: "bg-green-500",
+    desc: "Recibí o retirá tu pedido. El tiempo de producción varía según el tipo de producto y cantidad.",
   },
 ];
 
 const OrderSteps = () => {
   return (
-    <div className="min-h-screen w-full bg-white relative">
-      {/* White Grid with Dots Background */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `
-        linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px),
-        radial-gradient(circle, rgba(51,65,85,0.4) 1px, transparent 1px)
-      `,
-          backgroundSize: "20px 20px, 20px 20px, 20px 20px",
-          backgroundPosition: "0 0, 0 0, 0 0",
-        }}
-      />
-      {/* Your Content/Components */}
-      <section id="pasos" className="py-16 md:py-48 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center mb-12 mx-4">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Como realizar tu pedido
-            </h2>
-            <p className="text-slate-600 text-base md:text-lg mx-auto max-w-2xl text-left md:text-center">
-              Seguí estos simples pasos para completar tu pedido.
-            </p>
-          </div>
+    <section id="pasos" className="relative w-full bg-ink-900 py-24 md:py-32 overflow-hidden">
+      <div className="absolute inset-0 z-0 dot-grid opacity-40" />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative">
-            {steps.map((step) => (
-              <div
-                key={step.id}
-                className={`flex flex-col items-start bg-white border-2 ${step.color} rounded-2xl p-6`}
-              >
-                <div
-                  className={`flex items-center justify-center w-12 h-12 rounded-full ${step.bg} text-white font-bold mb-4`}
-                >
-                  {step.id}
-                </div>
-                <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
-                <p className="text-sm text-slate-600">{step.desc}</p>
-              </div>
-            ))}
-          </div>
+      <div className="relative z-10 container mx-auto px-4 md:px-8">
+        <div className="flex flex-col items-center mb-14 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+            Cómo realizar tu pedido
+          </h2>
+          <p className="text-fg-secondary text-base md:text-lg max-w-2xl text-pretty">
+            Seguí estos simples pasos para completar tu pedido.
+          </p>
         </div>
-      </section>
-    </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          {steps.map((step) => (
+            <div
+              key={step.id}
+              className="dark-card flex flex-col items-start rounded-2xl p-6 hover:border-border-strong transition-colors duration-300"
+            >
+              <div className="mb-4 flex items-center justify-center h-11 w-11 rounded-full bg-accent text-white font-bold">
+                {step.id}
+              </div>
+              <h3 className="font-semibold text-base mb-2 leading-snug">
+                {step.title}
+              </h3>
+              <p className="text-sm text-fg-muted leading-relaxed">{step.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

@@ -3,67 +3,61 @@ import { Orbitron } from "next/font/google";
 import Link from "next/link";
 
 const orbitron = Orbitron({
-  weight: "600",
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
 const Hero = () => {
   return (
-    <div className="min-h-screen w-full bg-white relative">
-      {/* White Grid with Dots Background */}
+    <section id="inicio" className="relative min-h-screen w-full overflow-hidden bg-ink-950">
+      {/* Dot grid */}
+      <div className="absolute inset-0 z-0 dot-grid" />
+      {/* Radial glow behind content */}
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `
-        linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px),
-        radial-gradient(circle, rgba(51,65,85,0.4) 1px, transparent 1px)
-      `,
-          backgroundSize: "20px 20px, 20px 20px, 20px 20px",
-          backgroundPosition: "0 0, 0 0, 0 0",
+          background:
+            "radial-gradient(ellipse 60% 50% at 50% 40%, rgba(236,72,153,0.10), transparent 70%)",
         }}
       />
-      {/* Your Content/Components */}
-      <section className="relative flex flex-col py-32 md:py-48 h-screen">
-        <div className="relative z-10 mx-auto px-4 text-center">
-          <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-4">
-            <div className="flex flex-col gap-2">
-              <h1
-                className={`${orbitron.className} text-5xl md:text-7xl text-gray-800`}
-              >
-                Sublime
-              </h1>
-              <h2
-                className={`${orbitron.className} text-xl md:text-2xl text-gray-800`}
-              >
-                by Emprendev
-              </h2>
-            </div>
-            <Image
-              width={200}
-              height={200}
-              src="/logo-sublime.png"
-              alt="Sublime by Emprendev"
-              className="object-cover w-1/5 mb-4"
-            />
-          </div>
-          <p className="mt-4 md:text-lg text-gray-600 max-w-xl mx-auto animate-fade-in">
-            Personalización de productos | Regalos empresariales | Merchandising
-            corporativo
-          </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
-            <Link
-              href="/catalogo.pdf"
-              target="_blank"
-              className="w-64 cursor-pointer bg-black hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200"
+      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-5rem)] max-w-6xl flex-col items-center justify-center px-4 py-24 text-center">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
+          <Image
+            width={200}
+            height={200}
+            src="/logo-sublime.png"
+            alt="Sublime by Emprendev"
+            className="h-24 w-auto md:h-32 drop-shadow-[0_8px_30px_rgba(236,72,153,0.25)]"
+          />
+          <div className="flex flex-col gap-1 items-center md:items-start">
+            <h1
+              className={`${orbitron.className} text-5xl md:text-6xl text-fg font-bold tracking-tight`}
             >
-              Ver catálogo
-            </Link>
+              Sublime
+            </h1>
+            <h2 className={`${orbitron.className} text-xl md:text-2xl text-accent-strong`}>
+              by Emprendev
+            </h2>
           </div>
         </div>
-      </section>
-    </div>
+
+        <p className="mt-2 max-w-2xl text-base md:text-lg text-fg-secondary text-pretty">
+          Personalización de productos | Regalos empresariales | Merchandising
+          corporativo
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
+          <Link
+            href="/catalogo.pdf"
+            target="_blank"
+            className="inline-flex items-center justify-center w-64 cursor-pointer bg-accent hover:bg-accent-strong text-white font-semibold py-3.5 px-6 rounded-xl transition-all duration-200 active:scale-[0.97]"
+          >
+            Ver catálogo
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 };
 

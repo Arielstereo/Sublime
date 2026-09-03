@@ -9,8 +9,7 @@ const ProductCarousel = () => {
   const [itemsPerSlide, setItemsPerSlide] = useState(3);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
 
-  const allCategories = data.categories;
-  const categories = allCategories;
+  const categories = data.categories;
 
   useEffect(() => {
     const handleResize = () => {
@@ -54,15 +53,15 @@ const ProductCarousel = () => {
   };
 
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-8">
+    <section className="py-20 md:py-28 bg-ink-950">
+      <div className="container mx-auto px-4 md:px-8">
         {/* Header */}
-        <div className="flex flex-col items-center mb-12 mx-4">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="flex flex-col items-center mb-12 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
             Productos Destacados
           </h2>
-          <p className="text-slate-600 text-base md:text-lg mx-auto max-w-2xl text-left md:text-center">
-            Descubrí algunos de nuestros productos más populares.Desliza para
+          <p className="text-fg-secondary text-base md:text-lg max-w-2xl text-pretty">
+            Descubrí algunos de nuestros productos más populares. Deslizá para
             ver más opciones. Consulta por otros productos y personalizaciones.
           </p>
         </div>
@@ -72,7 +71,7 @@ const ProductCarousel = () => {
           {/* Products Grid */}
           <div className="overflow-hidden">
             <div
-              className="flex transition-transform duration-500 ease-out"
+              className="flex transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]"
               style={{
                 transform: `translateX(-${currentIndex * (100 / itemsPerSlide)}%)`,
               }}
@@ -84,10 +83,10 @@ const ProductCarousel = () => {
                 >
                   <Link
                     href={`/products/${category.id}`}
-                    className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col"
+                    className="group dark-card rounded-2xl overflow-hidden hover:border-border-strong transition-all duration-300 h-full flex flex-col"
                   >
                     {/* Image Container */}
-                    <div className="relative overflow-hidden aspect-square bg-slate-100">
+                    <div className="relative overflow-hidden aspect-square bg-ink-800">
                       <Image
                         src={category.image}
                         alt={category.id}
@@ -96,22 +95,21 @@ const ProductCarousel = () => {
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       {/* Category Badge */}
-                      <div className="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                      <span className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-semibold">
                         {category.label}
-                      </div>
+                      </span>
                     </div>
 
                     {/* Content */}
-                    <div className="p-4 md:p-6 flex flex-col grow">
-                      <h3 className="font-bold text-lg md:text-xl mb-2 line-clamp-2">
+                    <div className="p-5 md:p-6 flex flex-col grow">
+                      <h3 className="font-semibold text-lg md:text-xl mb-2 line-clamp-2">
                         {category.name}
                       </h3>
-                      <p className="text-slate-600 text-sm md:text-base mb-4 line-clamp-2 grow">
+                      <p className="text-fg-muted text-sm md:text-base mb-4 line-clamp-2 grow">
                         {category.label}
                       </p>
 
-                      {/* CTA */}
-                      <span className="inline-flex items-center gap-2 text-pink-600 font-medium hover:text-pink-700 text-sm md:text-base">
+                      <span className="inline-flex items-center gap-2 text-accent-strong font-medium text-sm md:text-base group-hover:gap-3 transition-all duration-200">
                         Ver detalles →
                       </span>
                     </div>
@@ -124,7 +122,7 @@ const ProductCarousel = () => {
           {/* Navigation Buttons */}
           <button
             onClick={handlePrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 z-10 bg-pink-600 hover:bg-pink-700 text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all duration-200 shadow-lg"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 z-10 bg-ink-800 hover:bg-ink-700 border border-border-base text-fg w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all duration-200 active:scale-95"
             aria-label="Anterior"
           >
             <svg
@@ -144,7 +142,7 @@ const ProductCarousel = () => {
 
           <button
             onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 z-10 bg-pink-600 hover:bg-pink-700 text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all duration-200 shadow-lg"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 z-10 bg-ink-800 hover:bg-ink-700 border border-border-base text-fg w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all duration-200 active:scale-95"
             aria-label="Siguiente"
           >
             <svg
@@ -173,10 +171,10 @@ const ProductCarousel = () => {
                   setCurrentIndex(index);
                   setIsAutoPlay(false);
                 }}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`h-2 rounded-full transition-all duration-300 ${
                   currentIndex === index
-                    ? "bg-pink-600 w-8"
-                    : "bg-slate-300 hover:bg-slate-400"
+                    ? "w-8 bg-accent"
+                    : "w-2 bg-ink-700 hover:bg-ink-600"
                 }`}
                 aria-label={`Ir a diapositiva ${index + 1}`}
               />
