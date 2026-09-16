@@ -13,7 +13,7 @@ const Products = () => {
     : products;
   const hasMore = !showAll && products.length > MOBILE_INITIAL;
   return (
-    <section id="productos" className="py-20 md:py-32 bg-ink-950">
+    <section id="productos" className="py-20 md:py-32 bg-ink-800">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col items-center mb-12 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">

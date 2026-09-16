@@ -35,8 +35,8 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-border-soft backdrop-blur-xl bg-ink-950/80">
-      <div className="mx-auto max-w-7xl px-4 md:px-8 py-3 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-border-soft backdrop-blur-xl bg-ink-800">
+      <div className="mx-auto max-w-7xl px-4 md:px-8 py-6 flex items-center justify-between">
         <button
           onClick={() => scrollToSection("inicio")}
           className="flex gap-3 items-center justify-center cursor-pointer group"
@@ -48,7 +48,9 @@ const Header = () => {
             alt="Sublime by Emprendev"
             className="h-10 w-auto transition-opacity group-hover:opacity-90"
           />
-          <span className={`${orbitron.className} text-xl font-bold tracking-tight`}>
+          <span
+            className={`${orbitron.className} text-xl font-bold tracking-tight`}
+          >
             Sublime
           </span>
         </button>
@@ -58,7 +60,7 @@ const Header = () => {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="text-fg-secondary hover:text-fg cursor-pointer bg-transparent border-none transition-colors duration-200"
+              className="text-fg- hover:text-fg-muted cursor-pointer bg-transparent border-none transition-colors duration-200"
             >
               {item.label}
             </button>

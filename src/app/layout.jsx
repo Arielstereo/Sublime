@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Brand from "./components/Brand";
 import ScrollToTop from "./components/ScrollToTop";
+import Background from "./components/Background";
 
 const rubik = Rubik({
   weight: ["300", "400", "500", "600", "700"],
@@ -48,11 +49,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={`${rubik.variable} antialiased pt-20 bg-ink-950 text-fg`}>
+      <body className={`${rubik.variable} antialiased pt-20 text-fg`}>
         <ScrollToTop />
         <Header />
         <Brand />
-        {children}
+        <Background>{children}</Background>
         <Footer />
       </body>
     </html>

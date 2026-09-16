@@ -29,7 +29,10 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="servicios" className="relative w-full bg-ink-900 py-24 md:py-32 overflow-hidden">
+    <section
+      id="servicios"
+      className="relative w-full py-24 md:py-32 overflow-hidden"
+    >
       <div className="absolute inset-0 z-0 dot-grid opacity-40" />
 
       <div className="relative z-10 container mx-auto px-4 md:px-8">
@@ -52,7 +55,11 @@ const Services = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-accent-soft text-accent-strong group-hover:scale-110 transition-transform duration-300">
-                <i className={`${service.icon} w-6 h-6`} role="img" aria-hidden="true" />
+                <i
+                  className={`${service.icon} w-6 h-6`}
+                  role="img"
+                  aria-hidden="true"
+                />
               </div>
               <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
               <p className="text-fg-muted text-sm leading-relaxed">

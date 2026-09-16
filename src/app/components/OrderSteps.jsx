@@ -31,7 +31,10 @@ const steps = [
 
 const OrderSteps = () => {
   return (
-    <section id="pasos" className="relative w-full bg-ink-900 py-24 md:py-32 overflow-hidden">
+    <section
+      id="pasos"
+      className="relative w-full py-24 md:py-32 overflow-hidden"
+    >
       <div className="absolute inset-0 z-0 dot-grid opacity-40" />
 
       <div className="relative z-10 container mx-auto px-4 md:px-8">
@@ -56,7 +59,9 @@ const OrderSteps = () => {
               <h3 className="font-semibold text-base mb-2 leading-snug">
                 {step.title}
               </h3>
-              <p className="text-sm text-fg-muted leading-relaxed">{step.desc}</p>
+              <p className="text-sm text-fg-secondary leading-relaxed">
+                {step.desc}
+              </p>
             </div>
           ))}
         </div>

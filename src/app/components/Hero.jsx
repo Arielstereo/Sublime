@@ -9,19 +9,11 @@ const orbitron = Orbitron({
 
 const Hero = () => {
   return (
-    <section id="inicio" className="relative min-h-screen w-full overflow-hidden bg-ink-950">
-      {/* Dot grid */}
-      <div className="absolute inset-0 z-0 dot-grid" />
-      {/* Radial glow behind content */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 60% 50% at 50% 40%, rgba(236,72,153,0.10), transparent 70%)",
-        }}
-      />
-
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-5rem)] max-w-6xl flex-col items-center justify-center px-4 py-24 text-center">
+    <section
+      id="inicio"
+      className="relative min-h-screen w-full overflow-hidden"
+    >
+      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-5rem)] max-w-6xl flex-col items-center justify-center px-4 py-16 text-center">
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
           <Image
             width={200}
@@ -36,7 +28,9 @@ const Hero = () => {
             >
               Sublime
             </h1>
-            <h2 className={`${orbitron.className} text-xl md:text-2xl text-accent-strong`}>
+            <h2
+              className={`${orbitron.className} text-xl md:text-2xl text-fg-secondary font-semibold tracking-tight`}
+            >
               by Emprendev
             </h2>
           </div>
@@ -47,7 +41,7 @@ const Hero = () => {
           corporativo
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
+        {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
           <Link
             href="/catalogo.pdf"
             target="_blank"
@@ -55,7 +49,7 @@ const Hero = () => {
           >
             Ver catálogo
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -53,7 +53,7 @@ const ProductCarousel = () => {
   };
 
   return (
-    <section className="py-20 md:py-28 bg-ink-950">
+    <section className="py-20 md:py-28 bg-ink-800">
       <div className="container mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="flex flex-col items-center mb-12 text-center">

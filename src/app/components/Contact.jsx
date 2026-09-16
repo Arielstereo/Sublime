@@ -1,5 +1,6 @@
-import Image from "next/image";
+"use client";
 import Link from "next/link";
+import CircularText from "./CircularText";
 
 const socials = [
   {
@@ -14,7 +15,7 @@ const socials = [
     handle: "Sublime By Emprendev",
     href: "https://www.facebook.com/profile.php?id=61587309211928",
     icon: "icon-[uil--facebook-f]",
-    color: "bg-accent-strong",
+    color: "bg-accent",
   },
   {
     name: "Email",
@@ -27,7 +28,7 @@ const socials = [
 
 const Contact = () => {
   return (
-    <section id="contacto" className="py-20 md:py-32 bg-ink-950">
+    <section id="contacto" className="py-20 md:py-32 bg-ink-800">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col items-center mb-14 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
@@ -40,14 +41,13 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16">
-          <div className="hidden md:block flex-1">
-            <Image
-              src="/sublime.png"
-              alt="Contacto"
-              width={800}
-              height={400}
-              className="mx-auto w-full max-w-md opacity-90"
+        <div className="max-w-4xl mx-auto flex flex-col-reverse md:flex-row items-center gap-8">
+          <div className="flex-1">
+            <CircularText
+              text="SUBLIME*BY*EMPRENDEV*"
+              onHover="speedUp"
+              spinDuration={20}
+              className="custom-class"
             />
           </div>
           <div className="flex justify-center items-center w-full md:w-auto">

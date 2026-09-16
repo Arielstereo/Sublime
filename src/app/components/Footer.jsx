@@ -28,7 +28,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-ink-900 text-fg py-14 border-t border-border-soft">
+    <footer className="bg-ink-700 text-fg py-14 border-t border-border-soft relative z-50">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-3">
