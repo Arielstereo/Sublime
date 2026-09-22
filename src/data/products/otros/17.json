@@ -1,0 +1,26 @@
+{
+  "id": 17,
+  "category": "otros",
+  "name": "Gorra Trucker Personalizada",
+  "image": "/otros/gorra-rosa.png",
+  "image2": "/otros/gorra-negra.png",
+  "description": "Con tu diseño especial",
+  "fullDescription": "Gorra trucker personalizada con tu diseño favorito.",
+  "price": "$9.000",
+  "bulkPrice": "$6.500",
+  "showBulkPriceByQuantity": true,
+  "badgeText": "¡Para vos!",
+  "colors": [
+    "bg-black",
+    "bg-pink-500",
+    "bg-blue-500",
+    "bg-green-500",
+    "bg-yellow-500"
+  ],
+  "features": [
+    "Diseño personalizado con tu imagen o frase.",
+    "Gorra trucker con diseño personalizado.",
+    "Color blanco delante, color de la malla a elección.",
+    "Talla única ajustable."
+  ]
+}

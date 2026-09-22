@@ -1,4 +1,4 @@
-import data from "@/data/data.json";
+import data from "@/data";
 
 const allProducts = data.products;
 const categoryNames = data.categoryNames;
@@ -80,22 +80,14 @@ export default function Head({ params }) {
         "@type": "Product",
         name: product.name,
         description: product.fullDescription || product.description,
-        image: [product.image, product.image2].filter(Boolean),
+        image: [product.image, product.image2, product.image3].filter(Boolean),
         sku: product.sku || String(product.id),
-        offers: {
-          "@type": "Offer",
-          price: product.price
-            ? String(product.price).replace(/[^0-9.,]/g, "")
-            : undefined,
-          priceCurrency: "ARS",
-          availability: "https://schema.org/InStock",
-          url: process.env.NEXT_PUBLIC_SITE_URL
-            ? new URL(
-                `/products/${product.id}`,
-                process.env.NEXT_PUBLIC_SITE_URL,
-              ).toString()
-            : `/products/${product.id}`,
-        },
+        url: process.env.NEXT_PUBLIC_SITE_URL
+          ? new URL(
+              `/products/${product.id}`,
+              process.env.NEXT_PUBLIC_SITE_URL,
+            ).toString()
+          : `/products/${product.id}`,
       }
     : null;
 

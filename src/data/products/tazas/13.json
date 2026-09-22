@@ -1,0 +1,18 @@
+{
+  "id": 13,
+  "category": "tazas",
+  "name": "Taza de cerámica",
+  "image": "/tazas/taza2.png",
+  "image2": "/tazas/taza1.png",
+  "description": "Con tu diseño especial",
+  "fullDescription": "Taza de cerámica personalizada.",
+  "price": "$12.000",
+  "bulkPrice": "$8.000",
+  "showBulkPriceByQuantity": true,
+  "badgeText": "Desayuno con amor",
+  "features": [
+    "Diseño personalizado con tu imagen, frase o dibujo.",
+    "Taza de cerámica resistente.",
+    "Empaque listo para regalo."
+  ]
+}

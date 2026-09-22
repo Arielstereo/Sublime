@@ -1,0 +1,27 @@
+{
+  "id": 21,
+  "category": "tazas",
+  "name": "Taza personalizada color interior y asa",
+  "image": "/tazas/gamer.png",
+  "image2": "/tazas/san-valen.png",
+  "description": "Taza",
+  "fullDescription": "Taza de cerámica personalizada con tu diseño,interior y asa de color.",
+  "price": "$13.000",
+  "bulkPrice": "$9.000",
+  "showBulkPriceByQuantity": true,
+  "badgeText": "¡Personaliza tu taza!",
+  "colors": [
+    "bg-black",
+    "bg-blue-500",
+    "bg-violet-500",
+    "bg-pink-500",
+    "bg-green-500",
+    "bg-yellow-500"
+  ],
+  "features": [
+    "Diseño personalizado.",
+    "Cerámica resistente.",
+    "Caja personalizada.",
+    "Color en interior y mango."
+  ]
+}

@@ -1,4 +1,4 @@
-import data from "@/data/data.json";
+import data from "@/data";
 
 export async function GET() {
   const base = process.env.NEXT_PUBLIC_SITE_URL || "https://sublime.empren.dev";

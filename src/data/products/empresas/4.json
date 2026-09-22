@@ -1,0 +1,20 @@
+{
+  "id": 4,
+  "category": "empresas",
+  "name": "Mousepad Personalizado",
+  "image": "/empresas/mouse-rectangular.png",
+  "image2": "/empresas/mouse-circular.png",
+  "description": "Regalos empresariales",
+  "fullDescription": "Mousepad con base antideslizante y tu diseño personalizado.",
+  "price": "$7.500",
+  "bulkPrice": "$5.000",
+  "showBulkPriceByQuantity": true,
+  "badgeText": "¡Promociona tu marca!",
+  "colors": [],
+  "features": [
+    "Base antideslizante.",
+    "Diseño personalizado con tu logo o imagen.",
+    "Medida estándar.",
+    "Rectangular o circular."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": 16,
+  "category": "otros",
+  "name": "Almohada Personalizada",
+  "image": "/otros/coka2.jpeg",
+  "image2": "/otros/coka.jpeg",
+  "description": "Con tu diseño especial",
+  "fullDescription": "Almohada personalizada con tu diseño.",
+  "price": "$12.000",
+  "showBulkPriceByQuantity": false,
+  "badgeText": "¡Regala comodidad!",
+  "features": [
+    "Diseño personalizado con tu imagen o frase.",
+    "Almohada con relleno incluido 20 x 20 cm.",
+    "Color blanco.",
+    "Ideal para regalar."
+  ]
+}

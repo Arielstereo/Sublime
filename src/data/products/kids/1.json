@@ -1,0 +1,19 @@
+{
+  "id": 1,
+  "category": "kids",
+  "name": "Taza o vaso infantil personalizado",
+  "image": "/kids/cajas.jpeg",
+  "image2": "/kids/hulk.jpeg",
+  "description": "Ideal para el agasajado o souvenir",
+  "fullDescription": "Taza o vaso de plástico de alta calidad con tu diseño personalizado.",
+  "price": "$8.000",
+  "bulkPrice": "$5.000",
+  "showBulkPriceByQuantity": true,
+  "badgeText": "¡Ideal para el jardín o souvenir!",
+  "features": [
+    "Taza o vaso de plástico sublimado con tu personaje favorito.",
+    "Elije tu diseño",
+    "Ideal para al jardín o souvenir de cumpleaños.",
+    "Caja personalizada de regalo."
+  ]
+}

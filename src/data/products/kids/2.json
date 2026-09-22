@@ -1,0 +1,29 @@
+{
+  "id": 2,
+  "category": "kids",
+  "name": "Set de jardín",
+  "image": "/kids/runa.jpg",
+  "image2": "/kids/set.jpg",
+  "description": "Combo ideal para el jardín de infantes",
+  "fullDescription": "Taza o vaso infantil + set de toalla, servilleta y mantel.",
+  "price": "$18.000",
+  "showBulkPriceByQuantity": false,
+  "badgeText": "Oferta de inicio de clases",
+  "colors": [
+    "bg-cyan-300",
+    "bg-pink-300",
+    "bg-white",
+    "bg-blue-500",
+    "bg-green-500",
+    "bg-red-500",
+    "bg-yellow-500"
+  ],
+  "features": [
+    "Taza o vaso a elección con caja sublimada y diseño personalizado.",
+    "Set de toalla, servilleta y mantelito.",
+    "Bolsito tipo mochila de regalo!",
+    "Todo personalizado."
+  ],
+  "isPromo": true,
+  "imagePromo": "/kids/set2.jpeg"
+}

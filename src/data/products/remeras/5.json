@@ -1,0 +1,25 @@
+{
+  "id": 5,
+  "category": "remeras",
+  "name": "Remera dry fit personalizada",
+  "image": "/remeras/Person.png",
+  "image2": "/remeras/Person3.png",
+  "description": "Remera dry fit personalizada",
+  "fullDescription": "Remera dry fit, personalizada con el logo de tu negocio.",
+  "price": "$15.000",
+  "bulkPrice": "$11.000",
+  "showBulkPriceByQuantity": true,
+  "badgeText": "¡Ideal para  el gym!",
+  "colors": [
+    "bg-white",
+    "bg-yellow-300",
+    "bg-sky-300",
+    "bg-green-300"
+  ],
+  "features": [
+    "Diseño personalizado.",
+    "Opción frente y espalda.",
+    "Modelos unisex.",
+    "Talles S a XL."
+  ]
+}

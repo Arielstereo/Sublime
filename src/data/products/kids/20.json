@@ -1,0 +1,17 @@
+{
+  "id": 20,
+  "category": "kids",
+  "name": "Remera infantil",
+  "image": "/kids/kids1.png",
+  "image2": "/kids/kids2.png",
+  "description": "Remera niña/o personalizada",
+  "fullDescription": "Remera 100% poliéster personalizada con tu personaje favorito.",
+  "price": "$10.000",
+  "showBulkPriceByQuantity": false,
+  "badgeText": "Infantiles",
+  "features": [
+    "Diseño infantil personalizado.",
+    "Remera blanca de poliéster.",
+    "Varios talles."
+  ]
+}

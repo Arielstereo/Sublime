@@ -1,0 +1,23 @@
+{
+  "id": 7,
+  "category": "remeras",
+  "name": "Remera personalizada",
+  "image3": "/remeras/remera-white.png",
+  "image2": "/remeras/remera-slate.png",
+  "image": "/remeras/equo-delante.png",
+  "description": "Con logo, imagen o texto",
+  "fullDescription": "Remera de modal, personalizada a tu elección.",
+  "price": "$12.000",
+  "bulkPrice": "$9.000",
+  "showBulkPriceByQuantity": true,
+  "badgeText": "¡Crea tu estilo!",
+  "colors": [
+    "bg-white",
+    "bg-slate-500"
+  ],
+  "features": [
+    "Diseño personalizado. Imagen, dibujo o texto.",
+    "Modelos unisex.",
+    "Talles S a XL."
+  ]
+}

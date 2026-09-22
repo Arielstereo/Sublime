@@ -3,11 +3,20 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import data from "@/data/data.json";
+import data from "@/data";
 
 const allProducts = data.products;
 const categoryProducts = data.categoryProducts;
 const categoryNames = data.categoryNames;
+
+const WHATSAPP_NUMBER = "+5491126922128";
+const INSTAGRAM_URL = "https://instagram.com/sublime.emprendev";
+const INSTAGRAM_HANDLE = "@sublime.emprendev";
+
+const waLink = (message) =>
+  `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(
+    message,
+  )}`;
 
 const isCategory = (id) => {
   return Object.keys(categoryNames).includes(id);
@@ -73,19 +82,14 @@ function CategoryView({ categoryId }) {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-semibold text-xl mb-2 line-clamp-1">
+                <h3 className="font-semibold text-xl mb-2 line-clamp-2">
                   {product.name}
                 </h3>
                 <p className="text-fg-muted mb-4 line-clamp-2">
                   {product.description}
                 </p>
-                <span className="inline-flex items-center justify-center gap-2 w-full cursor-pointer border border-border-strong bg-ink-800 hover:bg-accent hover:border-accent text-fg hover:text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 active:scale-[0.98]">
-                  <span>Solicitar presupuesto</span>
-                  <i
-                    className="icon-[streamline-pixel--logo-whatapp] w-5 h-5"
-                    role="img"
-                    aria-hidden="true"
-                  ></i>
+                <span className="inline-flex items-center gap-2 text-accent-strong font-medium group-hover:gap-3 transition-all duration-200">
+                  Ver producto →
                 </span>
               </div>
             </Link>
@@ -94,7 +98,7 @@ function CategoryView({ categoryId }) {
 
         <div className="mt-16 flex justify-center items-center">
           <Link
-            href="https://api.whatsapp.com/send?phone=+5491126922128&text=Necesito%20presupuesto%20para:%20"
+            href={waLink("Necesito presupuesto para: ")}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 w-72 cursor-pointer border border-border-strong bg-ink-800 hover:bg-accent hover:border-accent text-fg hover:text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 active:scale-[0.98]"
@@ -129,7 +133,10 @@ function ProductDetail() {
       <div className="min-h-screen flex items-center justify-center bg-ink-950">
         <div className="text-center px-4">
           <h1 className="text-4xl font-bold mb-4">Producto no encontrado</h1>
-          <Link href="/#productos" className="text-accent-strong hover:underline">
+          <Link
+            href="/#productos"
+            className="text-accent-strong hover:underline"
+          >
             Volver a categorías
           </Link>
         </div>
@@ -137,8 +144,13 @@ function ProductDetail() {
     );
   }
 
-  const images = [product.image, product.image2].filter(Boolean);
+  const images = [product.image, product.image2, product.image3].filter(
+    Boolean,
+  );
   const currentImage = images[selectedImage] || product.image;
+  const relatedProducts = allProducts
+    .filter((p) => p.category === product.category && p.id !== product.id)
+    .slice(0, 3);
 
   return (
     <div className="min-h-screen bg-ink-950 py-10 md:py-14">
@@ -174,8 +186,8 @@ function ProductDetail() {
               </div>
 
               {/* Selector de imágenes */}
-              {images.length > 1 && (
-                <div className="flex gap-4 w-1/2">
+              {images.length > 0 && (
+                <div className="flex gap-3 w-full md:w-1/2">
                   {images.map((img, index) => (
                     <button
                       key={index}
@@ -194,13 +206,38 @@ function ProductDetail() {
                       />
                     </button>
                   ))}
+                  {images.length < 3 && (
+                    <Link
+                      href={waLink(
+                        `Hola, quiero personalizar ${product.name} con un diseño propio. ¿Cómo envío la imagen o el diseño?`,
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Enviar diseño propio para ${product.name}`}
+                      className="flex-1 relative aspect-square rounded-lg border-2 border-dashed border-border-strong hover:border-accent hover:text-accent transition-all overflow-hidden bg-ink-800"
+                    >
+                      <span className="absolute inset-0 flex flex-col items-center justify-center gap-1 p-2 text-center">
+                        <i
+                          className="icon-[lucide--palette] w-5 h-5 text-accent-strong"
+                          role="img"
+                          aria-hidden="true"
+                        ></i>
+                        <span className="text-xs font-semibold text-fg">
+                          Tu diseño
+                        </span>
+                        <span className="text-[10px] text-fg-muted leading-tight">
+                          Enviá tu idea
+                        </span>
+                      </span>
+                    </Link>
+                  )}
                 </div>
               )}
             </div>
 
             {/* Detalles */}
-            <div className="flex flex-col justify-center">
-              <div className="mb-4">
+            <div className="flex flex-col">
+              <div className="mt-8 mb-4">
                 <span className="inline-block px-3 py-1 bg-accent-soft text-accent-strong rounded-full text-sm font-semibold">
                   {categoryNames[product.category]}
                 </span>
@@ -214,21 +251,15 @@ function ProductDetail() {
                 {product.fullDescription}
               </p>
 
-              <div className="mb-6">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="text-3xl font-bold text-accent-strong tabular-nums">
-                    {product.price}
-                  </div>
-                </div>
-                {product.showBulkPriceByQuantity && (
-                  <div className="text-lg text-fg-secondary pl-0">
-                    + 5 unidades:{" "}
-                    <span className="font-semibold text-accent-strong text-lg">
-                      {product.bulkPrice}
-                    </span>
-                    {"  "}c/u
-                  </div>
-                )}
+              <div className="mb-6 rounded-xl bg-ink-800 border border-slate-500 p-4">
+                <p className="text-sm text-fg-secondary leading-relaxed">
+                  Producto 100% personalizable: el precio se ajusta a la{" "}
+                  <span className="text-fg font-medium">
+                    cantidad y diseño requerido.
+                  </span>{" "}
+                  <br />
+                  Pedinos tu presupuesto sin cargo.
+                </p>
               </div>
 
               {/* Colores disponibles */}
@@ -237,11 +268,11 @@ function ProductDetail() {
                   <h3 className="text-sm font-semibold mb-3">
                     Colores disponibles:
                   </h3>
-                  <div className="flex gap-3 flex-wrap">
+                  <div className="flex gap-3 flex-wrap" aria-hidden="true">
                     {product.colors.map((color, index) => (
                       <div
                         key={index}
-                        className={`w-8 h-8 rounded-full border-2 border-border-strong hover:scale-110 transition-all cursor-pointer shadow-sm ${color}`}
+                        className={`w-8 h-8 rounded-full border-2 border-border-strong shadow-sm ${color}`}
                       />
                     ))}
                   </div>
@@ -265,51 +296,59 @@ function ProductDetail() {
               </div>
 
               {/* Botones */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col md:flex-row gap-3">
                 <Link
-                  href={`https://api.whatsapp.com/send?phone=+5491126922128&text=Quiero%20solicitar%20${product.name}`}
+                  href={waLink(
+                    `Hola, quiero solicitar presupuesto para: ${product.name} (${categoryNames[product.category]}).`,
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex justify-center items-center bg-accent hover:bg-accent-strong text-white font-semibold py-3.5 px-6 rounded-xl transition-all duration-200 active:scale-[0.97]"
+                  className="group flex justify-center items-center gap-3 bg-green-600 hover:bg-green-700 text-white font-semibold py-3.5 px-6 rounded-xl transition-all duration-200 active:scale-[0.97]"
                 >
-                  Solicitar producto
+                  <i
+                    className="icon-[streamline-pixel--logo-whatapp] w-5 h-5 text-white"
+                    role="img"
+                    aria-hidden="true"
+                  ></i>
+                  Solicitar presupuesto
                 </Link>
                 <Link
-                  href={`https://api.whatsapp.com/send?phone=+5491126922128&text=Quiero%20consultar%20sobre%20${product.name}`}
+                  href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex justify-center items-center border-2 border-border-strong text-fg-secondary hover:text-fg hover:border-border-base font-semibold py-3.5 px-6 rounded-xl transition-all duration-200 active:scale-[0.97]"
+                  className="group flex justify-center items-center gap-3 border-2 border-border-strong text-fg-secondary hover:text-fg hover:border-accent-strong font-semibold py-3.5 px-6 rounded-xl transition-all duration-200 active:scale-[0.97]"
                 >
-                  Consultar
+                  <i
+                    className="icon-[lucide--instagram] w-5 h-5 text-accent-strong"
+                    role="img"
+                    aria-hidden="true"
+                  ></i>
+                  Ver más en Instagram · {INSTAGRAM_HANDLE}
                 </Link>
               </div>
               <span className="text-fg-muted text-sm mt-5 leading-relaxed">
-                * Al solicitar este producto, indica cantidad, color, y diseño.
-                En el caso de enviar tu propio diseño, adjunta el archivo o
-                imagen correspondiente en formato .PNG o .JPG. Consulta las
-                opciones disponibles.
+                * Al solicitar presupuesto, indica cantidad, color, y diseño. En
+                el caso de enviar tu propio diseño, adjunta el archivo o imagen
+                correspondiente en formato .PNG o .JPG. Consulta las opciones
+                disponibles.
               </span>
             </div>
           </div>
         </div>
 
         {/* Productos relacionados */}
-        <div className="mt-16 mb-10 mx-4 md:mx-10">
-          <h2 className="text-2xl font-bold mb-8">
-            Productos relacionados
-            <span className="text-fg-muted font-normal"> · Arma tu kit</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {allProducts
-              .filter(
-                (p) => p.category === product.category && p.id !== product.id,
-              )
-              .slice(0, 3)
-              .map((relatedProduct) => (
+        {relatedProducts.length > 0 && (
+          <div className="mt-16 mb-10 mx-4 md:mx-10">
+            <h2 className="text-2xl font-bold mb-8">
+              Productos relacionados
+              <span className="text-fg-muted font-normal"> · Arma tu kit</span>
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {relatedProducts.map((relatedProduct) => (
                 <Link
                   key={relatedProduct.id}
                   href={`/products/${relatedProduct.id}`}
-                  className="dark-card rounded-2xl hover:border-border-strong transition-all duration-300 p-5 cursor-pointer group"
+                  className="dark-card rounded-2xl hover:border-border-strong transition-all duration-300 p-5 group"
                 >
                   <div className="relative w-full aspect-square bg-ink-800 rounded-xl overflow-hidden mb-4">
                     <Image
@@ -319,7 +358,7 @@ function ProductDetail() {
                       className="object-cover p-4 group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="font-semibold mb-2 line-clamp-1">
+                  <h3 className="font-semibold mb-2 line-clamp-2">
                     {relatedProduct.name}
                   </h3>
                   <p className="text-sm text-fg-muted line-clamp-2">
@@ -327,8 +366,9 @@ function ProductDetail() {
                   </p>
                 </Link>
               ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

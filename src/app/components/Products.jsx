@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { products } from "@/data/data.json";
+import { products } from "@/data";
 import { useState } from "react";
 
 const MOBILE_INITIAL = 6;
@@ -26,7 +26,7 @@ const Products = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full md:w-4/5 mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full md:w-4/5 mx-auto">
           {visibleProducts.map((product) => (
             <Link
               key={product.id}
@@ -43,7 +43,7 @@ const Products = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-semibold text-xl mb-3 line-clamp-1">
+                <h3 className="font-semibold text-xl mb-3 line-clamp-2">
                   {product.name}
                 </h3>
                 <span className="inline-flex items-center gap-2 text-accent-strong font-medium group-hover:gap-3 transition-all duration-200">

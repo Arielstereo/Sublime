@@ -1,0 +1,19 @@
+{
+  "id": 14,
+  "category": "tazas",
+  "name": "Taza con asa de corazón",
+  "image": "/tazas/corazon4.png",
+  "image2": "/tazas/corazon3.png",
+  "description": "Con tu diseño especial",
+  "fullDescription": "Taza de cerámica con asa de corazón personalizada.",
+  "price": "$12.000",
+  "bulkPrice": "$8.000",
+  "showBulkPriceByQuantity": true,
+  "badgeText": "¡Regala amor y personalización!",
+  "features": [
+    "Diseño personalizado con tu imagen, frase o dibujo.",
+    "Taza de cerámica resistente.",
+    "Asa de corazón decorativa.",
+    "Empaque listo para regalo."
+  ]
+}

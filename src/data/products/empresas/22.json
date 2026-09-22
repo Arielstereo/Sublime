@@ -1,0 +1,23 @@
+{
+  "id": 22,
+  "category": "empresas",
+  "name": "Pocillo de café c/ zuncho + posavaso",
+  "image": "/otros/pocillo.jpeg",
+  "image2": "/otros/pocillo2.jpeg",
+  "description": "Pocillo de café",
+  "fullDescription": "Pocillo de café + zuncho + posavaso.",
+  "price": "$15.000",
+  "bulkPrice": "$10.000",
+  "showBulkPriceByQuantity": true,
+  "badgeText": "Para la oficina",
+  "colors": [
+    "bg-white"
+  ],
+  "features": [
+    "Diseño personalizado del zuncho y posavaso.",
+    "Cerámica resistente.",
+    "Caja personalizada."
+  ],
+  "isPromo": true,
+  "imagePromo": "/otros/pocillo.jpeg"
+}

@@ -1,0 +1,18 @@
+{
+  "id": 12,
+  "category": "tazas",
+  "name": "Taza de cerámica, personalizada con asa con accesorio de pelota de fútbol.",
+  "image": "/tazas/taza-river.png",
+  "image2": "/tazas/taza-boca.png",
+  "description": "Con tu equipo favorito",
+  "fullDescription": "Taza de cerámica personalizada con asa con accesorio de pelota de fútbol.",
+  "price": "$13.500",
+  "bulkPrice": "$10.000",
+  "showBulkPriceByQuantity": true,
+  "badgeText": "Personalizada con tu equipo favorito",
+  "features": [
+    "Diseño personalizado con imagenes de tu equipo favorito.",
+    "Taza de cerámica.",
+    "Empaque personalizado."
+  ]
+}

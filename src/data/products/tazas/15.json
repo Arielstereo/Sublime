@@ -1,0 +1,20 @@
+{
+  "id": 15,
+  "category": "tazas",
+  "name": "Taza Spotify",
+  "image": "/tazas/spotify1.png",
+  "image2": "/tazas/spotify.png",
+  "description": "Con tu diseño especial",
+  "fullDescription": "Taza con código de Spotify personalizado.",
+  "price": "$13.000",
+  "showBulkPriceByQuantity": false,
+  "badgeText": "¡Regala música personalizada!",
+  "features": [
+    "Diseño personalizado con código de Spotify.",
+    "Taza de cerámica fondo y asa de color.",
+    "Elige el tema favorito de tu artista o playlist.",
+    "Caja personalizada."
+  ],
+  "isPromo": true,
+  "imagePromo": "/tazas/spotify.png"
+}

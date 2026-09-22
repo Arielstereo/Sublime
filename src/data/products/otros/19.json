@@ -1,0 +1,17 @@
+{
+  "id": 19,
+  "category": "otros",
+  "name": "Mousepad Personalizado",
+  "image": "/otros/mouse1.png",
+  "image2": "/otros/mouse2.png",
+  "description": "Diseño exclusivo para regalar",
+  "fullDescription": "Mousepad con base antideslizante y tu diseño personalizado.",
+  "price": "$7.500",
+  "showBulkPriceByQuantity": false,
+  "badgeText": "¡Para tu pc!",
+  "features": [
+    "Diseño personalizado.",
+    "Redondo o rectangular.",
+    "Base antideslizante."
+  ]
+}

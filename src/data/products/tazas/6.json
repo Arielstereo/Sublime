@@ -1,0 +1,22 @@
+{
+  "id": 6,
+  "category": "tazas",
+  "name": "Taza mágica personalizada",
+  "image": "/tazas/cumple.png",
+  "image2": "/tazas/cumple-magic.png",
+  "description": "Sorprende a tu agasajado",
+  "fullDescription": "Taza de cerámica mágica 100% personalizable con tu foto, nombre o mensaje especial. Cambia de color con el calor. Color negro de base.",
+  "price": "$14.000",
+  "bulkPrice": "$10.000",
+  "showBulkPriceByQuantity": true,
+  "badgeText": "¡Magia en cada taza!",
+  "colors": [
+    "bg-black"
+  ],
+  "features": [
+    "Personalizable.",
+    "Cerámica resistente.",
+    "Impresión de alta calidad.",
+    "Empaque especial."
+  ]
+}

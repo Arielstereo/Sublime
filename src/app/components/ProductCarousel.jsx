@@ -2,12 +2,14 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import data from "@/data/data.json";
+import data from "@/data";
 
 const ProductCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerSlide, setItemsPerSlide] = useState(3);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
+  const [reduceMotion, setReduceMotion] = useState(false);
 
   const categories = data.categories;
 
@@ -28,7 +30,16 @@ const ProductCarousel = () => {
   }, []);
 
   useEffect(() => {
-    if (!isAutoPlay) return;
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updatePreference = () => setReduceMotion(mediaQuery.matches);
+
+    updatePreference();
+    mediaQuery.addEventListener("change", updatePreference);
+    return () => mediaQuery.removeEventListener("change", updatePreference);
+  }, []);
+
+  useEffect(() => {
+    if (!isAutoPlay || isPaused || reduceMotion) return;
 
     const timer = setInterval(() => {
       setCurrentIndex((prev) => {
@@ -38,7 +49,7 @@ const ProductCarousel = () => {
     }, 5000);
 
     return () => clearInterval(timer);
-  }, [isAutoPlay, categories.length, itemsPerSlide]);
+  }, [isAutoPlay, isPaused, reduceMotion, categories.length, itemsPerSlide]);
 
   const handleNext = () => {
     const maxIndex = Math.max(0, categories.length - itemsPerSlide);
@@ -67,7 +78,13 @@ const ProductCarousel = () => {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative max-w-7xl mx-auto">
+        <div
+          className="relative max-w-7xl mx-auto"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onFocusCapture={() => setIsPaused(true)}
+          onBlurCapture={() => setIsPaused(false)}
+        >
           {/* Products Grid */}
           <div className="overflow-hidden">
             <div
@@ -76,46 +93,51 @@ const ProductCarousel = () => {
                 transform: `translateX(-${currentIndex * (100 / itemsPerSlide)}%)`,
               }}
             >
-              {categories.map((category) => (
-                <div
-                  key={category.id}
-                  className="w-full md:w-1/2 lg:w-1/3 shrink-0 px-2 md:px-3"
-                >
-                  <Link
-                    href={`/products/${category.id}`}
-                    className="group dark-card rounded-2xl overflow-hidden hover:border-border-strong transition-all duration-300 h-full flex flex-col"
+              {categories.map((category) => {
+                const productCount =
+                  data.categoryProducts[category.id]?.length ?? 0;
+                return (
+                  <div
+                    key={category.id}
+                    className="w-full md:w-1/2 lg:w-1/3 shrink-0 px-2 md:px-3"
                   >
-                    {/* Image Container */}
-                    <div className="relative overflow-hidden aspect-square bg-ink-800">
-                      <Image
-                        src={category.image}
-                        alt={category.id}
-                        width={300}
-                        height={300}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      {/* Category Badge */}
-                      <span className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-semibold">
-                        {category.label}
-                      </span>
-                    </div>
+                    <Link
+                      href={`/products/${category.id}`}
+                      className="group dark-card rounded-2xl overflow-hidden hover:border-border-strong transition-all duration-300 h-full flex flex-col"
+                    >
+                      {/* Image Container */}
+                      <div className="relative overflow-hidden aspect-square bg-ink-800">
+                        <Image
+                          src={category.image}
+                          alt={category.name}
+                          width={300}
+                          height={300}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                        {/* Category Badge */}
+                        <span className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-semibold">
+                          {category.label}
+                        </span>
+                      </div>
 
-                    {/* Content */}
-                    <div className="p-5 md:p-6 flex flex-col grow">
-                      <h3 className="font-semibold text-lg md:text-xl mb-2 line-clamp-2">
-                        {category.name}
-                      </h3>
-                      <p className="text-fg-muted text-sm md:text-base mb-4 line-clamp-2 grow">
-                        {category.label}
-                      </p>
+                      {/* Content */}
+                      <div className="p-5 md:p-6 flex flex-col grow">
+                        <h3 className="font-semibold text-lg md:text-xl mb-2 line-clamp-2">
+                          {category.name}
+                        </h3>
+                        <p className="text-fg-muted text-sm md:text-base mb-4 grow">
+                          {productCount}{" "}
+                          {productCount === 1 ? "producto" : "productos"}
+                        </p>
 
-                      <span className="inline-flex items-center gap-2 text-accent-strong font-medium text-sm md:text-base group-hover:gap-3 transition-all duration-200">
-                        Ver detalles →
-                      </span>
-                    </div>
-                  </Link>
-                </div>
-              ))}
+                        <span className="inline-flex items-center gap-2 text-accent-strong font-medium text-sm md:text-base group-hover:gap-3 transition-all duration-200">
+                          Ver detalles →
+                        </span>
+                      </div>
+                    </Link>
+                  </div>
+                );
+              })}
             </div>
           </div>
 

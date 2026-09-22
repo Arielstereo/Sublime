@@ -31,7 +31,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Generar catálogo PDF
 
-Se incluye un script para crear un catálogo en PDF usando los productos definidos en `src/data/data.json`.
+Se incluye un script para crear un catálogo en PDF usando los productos definidos en `src/data/products/*.json`.
 Genera ahora una **tabla de una sola fila por producto** con columnas para nombre, descripción, precio e imagen (las imágenes se reducen). Añade el logo de Sublime en la cabecera y un color tenue de fondo alternado en las filas.
 
 1. Instala dependencias (incluye pdfkit):

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "empresas",
+    "name": "Empresas & Negocios",
+    "label": "Merchandising corporativo",
+    "image": "/tredi.png"
+  },
+  {
+    "id": "kids",
+    "name": "Eventos",
+    "label": "Cumpleaños y souvenirs",
+    "image": "/kids.png"
+  },
+  {
+    "id": "tazas",
+    "name": "Tazas",
+    "label": "Tazas personalizadas",
+    "image": "/empresas/google.png"
+  },
+  {
+    "id": "remeras",
+    "name": "Uniformes Corporativos",
+    "label": "Para negocios y empresas",
+    "image": "/empresas/work.png"
+  },
+  {
+    "id": "otros",
+    "name": "Más productos",
+    "label": "¡Busca tu producto!",
+    "image": "/tote.png"
+  }
+]

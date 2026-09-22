@@ -1,0 +1,23 @@
+{
+  "id": 3,
+  "category": "empresas",
+  "name": "Remera Corporativa sublimada",
+  "image": "/empresas/equo-delante.png",
+  "image2": "/empresas/equo-atras.png",
+  "description": "Con logo de tu empresa o negocio.",
+  "fullDescription": "Remera 100% poliester, sublimada con el logo de tu empresa o negocio.",
+  "price": "$15.000",
+  "bulkPrice": "$10.000",
+  "showBulkPriceByQuantity": true,
+  "badgeText": "¡Equipa a tu equipo!",
+  "colors": [
+    "bg-white",
+    "bg-slate-500"
+  ],
+  "features": [
+    "Logo o imagen sublimado en frente, según diseño del cliente.",
+    "Consulta presupuesto por estampado en espalda.",
+    "Color blanco o gris.",
+    "Talles S a XL."
+  ]
+}

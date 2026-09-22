@@ -1,4 +1,4 @@
-// simple Node.js script to generate a PDF catalog from data.json
+// simple Node.js script to generate a PDF catalog from src/data/products
 // run with: node scripts/generateCatalog.js
 
 import fs from "fs";
@@ -6,9 +6,14 @@ import path from "path";
 import PDFDocument from "pdfkit";
 
 // load the product data
-const dataPath = path.join(process.cwd(), "src", "data", "data.json");
-const rawData = fs.readFileSync(dataPath, "utf-8");
-const { products } = JSON.parse(rawData);
+const productsDir = path.join(process.cwd(), "src", "data", "products");
+const products = fs
+  .readdirSync(productsDir, { recursive: true })
+  .filter((file) => file.endsWith(".json"))
+  .map((file) =>
+    JSON.parse(fs.readFileSync(path.join(productsDir, file), "utf-8")),
+  )
+  .sort((a, b) => a.id - b.id);
 
 const outPath = path.join(process.cwd(), "public", "catalogo.pdf");
 const doc = new PDFDocument({ autoFirstPage: false, margin: 50 });

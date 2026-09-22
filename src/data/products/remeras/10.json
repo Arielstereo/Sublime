@@ -1,0 +1,27 @@
+{
+  "id": 10,
+  "category": "remeras",
+  "name": "Gorra Trucker Personalizada",
+  "image": "/remeras/trucker1.png",
+  "image2": "/remeras/trucker2.png",
+  "description": "Ideal para merchandising",
+  "fullDescription": "Gorra trucker sublimada con tu logo, color con frente blanco.",
+  "price": "$9.000",
+  "bulkPrice": "$6.500",
+  "showBulkPriceByQuantity": true,
+  "badgeText": "¡Destaca tu empresa!",
+  "colors": [
+    "bg-black",
+    "bg-cyan-500",
+    "bg-red-500",
+    "bg-blue-500",
+    "bg-green-500",
+    "bg-yellow-500"
+  ],
+  "features": [
+    "Posee 5 gajos y frente de goma blanca.",
+    "Diseño personalizado con tu logo.",
+    "Varios colores disponibles.",
+    "Talla única ajustable."
+  ]
+}
