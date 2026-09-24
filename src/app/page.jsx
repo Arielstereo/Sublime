@@ -1,7 +1,7 @@
 import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import ProductCarousel from "./components/ProductCarousel";
-import Products from "./components/Products";
+import Works from "./components/Works";
 import OrderSteps from "./components/OrderSteps";
 import Services from "./components/Services";
 
@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <ProductCarousel />
       <Services />
-      <Products />
+      <Works />
       <OrderSteps />
       <Contact />
     </div>

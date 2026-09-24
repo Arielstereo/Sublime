@@ -9,7 +9,7 @@ import p6 from "./products/tazas/6.json";
 import p7 from "./products/remeras/7.json";
 import p8 from "./products/empresas/8.json";
 import p10 from "./products/remeras/10.json";
-import p11 from "./products/remeras/11.json";
+// import p11 from "./products/remeras/11.json";
 import p12 from "./products/tazas/12.json";
 import p13 from "./products/tazas/13.json";
 import p14 from "./products/tazas/14.json";
@@ -32,7 +32,7 @@ export const products = [
   p7,
   p8,
   p10,
-  p11,
+  // p11,
   p12,
   p13,
   p14,

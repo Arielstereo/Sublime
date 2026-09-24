@@ -58,7 +58,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-border-soft backdrop-blur-xl bg-ink-800">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-border-strong backdrop-blur-xl bg-ink-800">
       <div className="mx-auto max-w-7xl px-4 md:px-8 py-6 flex items-center justify-between">
         <button
           onClick={() => scrollToSection("inicio")}
@@ -262,10 +262,10 @@ const Header = () => {
                           <ul aria-label="Categorías de productos">
                             <li>
                               <button
-                                onClick={() => scrollToSection("productos")}
+                                onClick={() => scrollToSection("trabajos")}
                                 className="w-full text-left py-3 pl-4 text-fg-secondary hover:text-fg cursor-pointer bg-transparent border-none transition-colors duration-200"
                               >
-                                Ver todos los productos
+                                Ver todos los trabajos
                               </button>
                             </li>
                             {Object.entries(categoryNames).map(([id, name]) => (

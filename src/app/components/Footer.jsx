@@ -22,7 +22,7 @@ const Footer = () => {
 
   const nav = [
     { id: "servicios", label: "Servicios" },
-    { id: "productos", label: "Productos" },
+    { id: "trabajos", label: "Trabajos" },
     { id: "pasos", label: "¿Cómo pedir?" },
     { id: "contacto", label: "Contacto" },
   ];
@@ -35,7 +35,7 @@ const Footer = () => {
             <Image
               width={200}
               height={200}
-              src="/logo.png"
+              src="/logo-sublime.png"
               alt="Sublime by Emprendev"
               className="h-10 w-auto brightness-0 invert opacity-90"
             />

@@ -1,23 +1,21 @@
 {
   "id": 18,
   "category": "remeras",
-  "name": "Remera personalizada",
-  "image": "/remeras/beer.jpg",
-  "image2": "/remeras/rangla2.png",
-  "description": "Con foto y mensaje especial",
-  "fullDescription": "Remera de modal tipo ranglan, sublimada con tu diseño favorito.",
+  "name": "Buzos y Camperas personalizadas",
+  "image": "/remeras/buzo.png",
+  "image2": "/remeras/hard.jpg",
+  "description": "Personalizado con tu logo",
+  "fullDescription": "Buzo o campera con el diseño personalizado. Varios modelos.",
   "price": "$15.000",
   "showBulkPriceByQuantity": false,
   "badgeText": "¡Diseño único!",
   "colors": [
-    "bg-black",
-    "bg-blue-500",
-    "bg-red-500"
+    "bg-gray-500",
+    "bg-white"
   ],
   "features": [
-    "Remera de modal tipo ranglan con mangas y cuello de color.",
+    "Buzo o campera - varios modelos.",
     "Talles S a XL.",
-    "Diseño personalizado",
-    "Bandas, personajes, frases, futbol, etc."
+    "Diseño personalizado"
   ]
 }

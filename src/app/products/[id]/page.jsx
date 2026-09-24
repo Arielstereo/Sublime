@@ -8,6 +8,13 @@ import data from "@/data";
 const allProducts = data.products;
 const categoryProducts = data.categoryProducts;
 const categoryNames = data.categoryNames;
+const categories = data.categories;
+
+// Categorías relacionadas que se muestran como cards de navegación dentro de
+// la grilla de una categoría, para no repetir productos repetidos.
+const LINKED_CATEGORIES = {
+  empresas: ["remeras", "tazas"],
+};
 
 const WHATSAPP_NUMBER = "+5491126922128";
 const INSTAGRAM_URL = "https://instagram.com/sublime.emprendev";
@@ -25,6 +32,32 @@ const isCategory = (id) => {
 function CategoryView({ categoryId }) {
   const products = categoryProducts[categoryId] || [];
   const categoryName = categoryNames[categoryId] || "Categoría";
+
+  const linkedCategories = (LINKED_CATEGORIES[categoryId] || [])
+    .map((id) => categories.find((cat) => cat.id === id))
+    .filter(Boolean);
+
+  const gridItems = [];
+  let linkIndex = 0;
+  const linkStep =
+    products.length > 0 && linkedCategories.length > 0
+      ? Math.max(2, Math.ceil(products.length / linkedCategories.length))
+      : 0;
+  products.forEach((product, index) => {
+    gridItems.push({ kind: "product", data: product });
+    if (
+      linkStep &&
+      (index + 1) % linkStep === 1 &&
+      linkIndex < linkedCategories.length
+    ) {
+      gridItems.push({
+        kind: "category",
+        data: linkedCategories[linkIndex++],
+      });
+    }
+  });
+  gridItems.push({ kind: "cta" });
+  gridItems.push({ kind: "cta-kit" });
 
   if (products.length === 0) {
     return (
@@ -66,50 +99,122 @@ function CategoryView({ categoryId }) {
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full md:w-4/5 mx-auto">
-          {products.map((product) => (
-            <Link
-              key={product.id}
-              href={`/products/${product.id}`}
-              className="group dark-card rounded-2xl overflow-hidden hover:border-border-strong transition-all duration-300"
-            >
-              <div className="relative overflow-hidden aspect-square bg-ink-800">
-                <Image
-                  width={300}
-                  height={300}
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover p-6 group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="font-semibold text-xl mb-2 line-clamp-2">
-                  {product.name}
+          {gridItems.map((item) =>
+            item.kind === "cta" ? (
+              <div
+                key="cta-otros"
+                className="dark-card rounded-2xl border-2 border-dashed border-border-soft hover:border-accent/60 transition-all duration-300 flex flex-col items-center justify-center text-center p-6"
+              >
+                <h3 className="font-semibold text-xl mb-2">
+                  ¿No encontrás lo que buscás?
                 </h3>
-                <p className="text-fg-muted mb-4 line-clamp-2">
-                  {product.description}
+                <p className="text-fg-muted text-sm mb-5 text-pretty">
+                  Consultá por otros productos, cantidades y diseños
+                  personalizados que no ves en la web.
                 </p>
-                <span className="inline-flex items-center gap-2 text-accent-strong font-medium group-hover:gap-3 transition-all duration-200">
-                  Ver producto →
-                </span>
+                <Link
+                  href={waLink(
+                    `Hola, busco para ${categoryName}: ¿tienen otros productos disponibles que no veo en la web?`,
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full bg-accent hover:bg-accent-strong text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 active:scale-[0.97]"
+                >
+                  <i
+                    className="icon-[streamline-pixel--logo-whatapp] w-5 h-5 text-white"
+                    role="img"
+                    aria-hidden="true"
+                  ></i>
+                  Consultar por WhatsApp
+                </Link>
               </div>
-            </Link>
-          ))}
-        </div>
-
-        <div className="mt-16 flex justify-center items-center">
-          <Link
-            href={waLink("Necesito presupuesto para: ")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 w-72 cursor-pointer border border-border-strong bg-ink-800 hover:bg-accent hover:border-accent text-fg hover:text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 active:scale-[0.98]"
-          >
-            <span>Solicitar presupuesto</span>
-            <i
-              className="icon-[streamline-pixel--logo-whatapp] w-5 h-5"
-              role="img"
-              aria-hidden="true"
-            ></i>
-          </Link>
+            ) : item.kind === "cta-kit" ? (
+              <div
+                key="cta-kit"
+                className="dark-card rounded-2xl border-2 border-dashed border-border-soft hover:border-accent/60 transition-all duration-300 flex flex-col items-center justify-center text-center p-6"
+              >
+                <h3 className="font-semibold text-xl mb-2">
+                  ¿Querés armar un kit?
+                </h3>
+                <p className="text-fg-muted text-sm mb-5 text-pretty">
+                  Combiná varios productos en un kit personalizado y pedinos un
+                  presupuesto especial por cantidad.
+                </p>
+                <Link
+                  href={waLink(
+                    `Hola, quiero armar un kit con varios productos para ${categoryName}. ¿Me pueden pasar un presupuesto especial?`,
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full border-2 border-accent text-accent-strong hover:bg-accent-soft font-semibold py-3 px-6 rounded-xl transition-all duration-200 active:scale-[0.97]"
+                >
+                  <i
+                    className="icon-[streamline-pixel--logo-whatapp] w-5 h-5"
+                    role="img"
+                    aria-hidden="true"
+                  ></i>
+                  Pedir presupuesto del kit
+                </Link>
+              </div>
+            ) : item.kind === "category" ? (
+              <Link
+                key={`cat-${item.data.id}`}
+                href={`/products/${item.data.id}`}
+                className="group dark-card rounded-2xl overflow-hidden hover:border-border-strong transition-all duration-300"
+              >
+                <div className="relative overflow-hidden aspect-square bg-ink-800">
+                  <Image
+                    width={300}
+                    height={300}
+                    src={item.data.image}
+                    alt={item.data.name}
+                    className="w-full h-full object-cover p-6 group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <span className="inline-block px-3 py-1 bg-accent-soft text-accent-strong rounded-full text-sm font-semibold mb-3">
+                    {item.data.label}
+                  </span>
+                  <h3 className="font-semibold text-xl mb-2 line-clamp-2">
+                    {item.data.name}
+                  </h3>
+                  <p className="text-fg-muted mb-4 line-clamp-2">
+                    Descubrí todos los productos de esta categoría.
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-accent-strong font-medium group-hover:gap-3 transition-all duration-200">
+                    Ver categoría →
+                  </span>
+                </div>
+              </Link>
+            ) : (
+              <Link
+                key={item.data.id}
+                href={`/products/${item.data.id}`}
+                className="group dark-card rounded-2xl overflow-hidden hover:border-border-strong transition-all duration-300"
+              >
+                <div className="relative overflow-hidden aspect-square bg-ink-800">
+                  <Image
+                    width={300}
+                    height={300}
+                    src={item.data.image}
+                    alt={item.data.name}
+                    className="w-full h-full object-cover p-6 group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-semibold text-xl mb-2 line-clamp-2">
+                    {item.data.name}
+                  </h3>
+                  <p className="text-fg-muted mb-4 line-clamp-2">
+                    {item.data.description}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-accent-strong font-medium group-hover:gap-3 transition-all duration-200">
+                    Ver producto →
+                  </span>
+                </div>
+              </Link>
+            ),
+          )}
         </div>
       </div>
     </section>
@@ -296,7 +401,7 @@ function ProductDetail() {
               </div>
 
               {/* Botones */}
-              <div className="flex flex-col md:flex-row gap-3">
+              <div className="flex flex-col gap-3">
                 <Link
                   href={waLink(
                     `Hola, quiero solicitar presupuesto para: ${product.name} (${categoryNames[product.category]}).`,

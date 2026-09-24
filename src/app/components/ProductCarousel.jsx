@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import data from "@/data";
+import CurvedLoop from "./CurvedLoop";
 
 const ProductCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -203,6 +204,16 @@ const ProductCarousel = () => {
             ))}
           </div>
         </div>
+      </div>
+      <div>
+        <CurvedLoop
+          marqueeText="Tazas ✦ Remeras ✦ Totebags ✦ Llaveros ✦ Gorras ✦ Stickers ✦ Termos ✦ Mates ✦ Buzos ✦"
+          speed={2}
+          curveAmount={0}
+          direction="right"
+          interactive={false}
+          className="text-6xl md:text-2xl"
+        />
       </div>
     </section>
   );
