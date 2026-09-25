@@ -54,7 +54,7 @@ const Services = () => {
               className="dark-card group rounded-2xl p-6 hover:border-border-strong hover:-translate-y-1 transition-all duration-300"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-accent-soft text-accent-strong group-hover:scale-110 transition-transform duration-300">
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600/50 text-sky-100 group-hover:scale-110 transition-transform duration-300">
                 <i
                   className={`${service.icon} w-6 h-6`}
                   role="img"

@@ -53,7 +53,7 @@ const OrderSteps = () => {
               key={step.id}
               className="dark-card flex flex-col items-start rounded-2xl p-6 hover:border-border-strong transition-colors duration-300"
             >
-              <div className="mb-4 flex items-center justify-center h-11 w-11 rounded-full bg-accent text-white font-bold">
+              <div className="mb-4 flex items-center justify-center h-11 w-11 rounded-full border border-accent-strong text-white font-bold">
                 {step.id}
               </div>
               <h3 className="font-semibold text-base mb-2 leading-snug">

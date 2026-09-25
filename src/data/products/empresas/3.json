@@ -1,23 +1,22 @@
 {
   "id": 3,
   "category": "empresas",
-  "name": "Remera Corporativa sublimada",
-  "image": "/empresas/equo-delante.png",
-  "image2": "/empresas/equo-atras.png",
+  "name": "Botella térmica",
+  "image": "/empresas/tredi-termo.png",
+  "image2": "/empresas/termo-vercel.png",
+  "image3": "/empresas/muevelo.png",
   "description": "Con logo de tu empresa o negocio.",
-  "fullDescription": "Remera 100% poliester, sublimada con el logo de tu empresa o negocio.",
+  "fullDescription": "Botella térmica, ideal para el gym o regalo corporativo.",
   "price": "$15.000",
   "bulkPrice": "$10.000",
   "showBulkPriceByQuantity": true,
-  "badgeText": "¡Equipa a tu equipo!",
+  "badgeText": "¡Para el gym o la oficina!",
   "colors": [
-    "bg-white",
-    "bg-slate-500"
+    "bg-white"
   ],
   "features": [
     "Logo o imagen sublimado en frente, según diseño del cliente.",
-    "Consulta presupuesto por estampado en espalda.",
-    "Color blanco o gris.",
-    "Talles S a XL."
+    "Color blanco.",
+    "Consulta los diferentes modelos."
   ]
 }
