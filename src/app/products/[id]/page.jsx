@@ -98,13 +98,20 @@ function CategoryView({ categoryId }) {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full md:w-4/5 mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 w-full md:w-4/5 mx-auto">
           {gridItems.map((item) =>
             item.kind === "cta" ? (
               <div
                 key="cta-otros"
                 className="dark-card rounded-2xl border-2 border-dashed border-border-soft hover:border-accent/60 transition-all duration-300 flex flex-col items-center justify-center text-center p-6"
               >
+                <Image
+                  src="/logo-sublime.png"
+                  alt="logo"
+                  width={80}
+                  height={80}
+                  className="mb-4"
+                />
                 <h3 className="font-semibold text-xl mb-2">
                   ¿No encontrás lo que buscás?
                 </h3>
@@ -133,8 +140,15 @@ function CategoryView({ categoryId }) {
                 key="cta-kit"
                 className="dark-card rounded-2xl border-2 border-dashed border-border-soft hover:border-accent/60 transition-all duration-300 flex flex-col items-center justify-center text-center p-6"
               >
+                <Image
+                  src="/logo-sublime.png"
+                  alt="logo"
+                  width={80}
+                  height={80}
+                  className="mb-4"
+                />
                 <h3 className="font-semibold text-xl mb-2">
-                  ¿Querés armar un kit?
+                  ¿Querés armar tu kit?
                 </h3>
                 <p className="text-fg-muted text-sm mb-5 text-pretty">
                   Combiná varios productos en un kit personalizado y pedinos un
@@ -153,7 +167,7 @@ function CategoryView({ categoryId }) {
                     role="img"
                     aria-hidden="true"
                   ></i>
-                  Pedir presupuesto del kit
+                  Pedir presupuesto
                 </Link>
               </div>
             ) : item.kind === "category" ? (

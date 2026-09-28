@@ -7,7 +7,7 @@
   },
   {
     "id": "kids",
-    "name": "Eventos",
+    "name": "Kids",
     "label": "Cumpleaños y souvenirs",
     "image": "/kids.png"
   },
@@ -27,6 +27,6 @@
     "id": "otros",
     "name": "Más productos",
     "label": "¡Busca tu producto!",
-    "image": "/tote.png"
+    "image": "/tarjeta.jpeg"
   }
 ]

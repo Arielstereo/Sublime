@@ -1,16 +1,16 @@
 {
   "id": 3,
   "category": "empresas",
-  "name": "Botella térmica",
+  "name": "Botellas térmicas y mates",
   "image": "/empresas/tredi-termo.png",
-  "image2": "/empresas/termo-vercel.png",
+  "image2": "/empresas/mate1.png",
   "image3": "/empresas/muevelo.png",
   "description": "Con logo de tu empresa o negocio.",
-  "fullDescription": "Botella térmica, ideal para el gym o regalo corporativo.",
+  "fullDescription": "Botellas térmica y mates, ideal para regalo corporativo.",
   "price": "$15.000",
   "bulkPrice": "$10.000",
   "showBulkPriceByQuantity": true,
-  "badgeText": "¡Para el gym o la oficina!",
+  "badgeText": "¡Productos premium!",
   "colors": [
     "bg-white"
   ],

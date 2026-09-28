@@ -21,6 +21,7 @@ import p19 from "./products/otros/19.json";
 import p20 from "./products/kids/20.json";
 import p21 from "./products/tazas/21.json";
 import p22 from "./products/empresas/22.json";
+import p23 from "./products/kids/23.json";
 
 export const products = [
   p1,
@@ -44,6 +45,7 @@ export const products = [
   p20,
   p21,
   p22,
+  p23,
 ];
 
 export const categoryProducts = Object.keys(categoryNames).reduce(

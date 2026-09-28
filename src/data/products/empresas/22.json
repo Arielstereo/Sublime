@@ -1,22 +1,27 @@
 {
   "id": 22,
   "category": "empresas",
-  "name": "Pocillo de café c/ zuncho + posavaso",
-  "image": "/otros/pocillo.jpeg",
-  "image2": "/otros/pocillo2.jpeg",
-  "description": "Pocillo de café",
-  "fullDescription": "Pocillo de café + zuncho + posavaso.",
+  "name": "Accesorios para la oficina",
+  "image": "/empresas/equo-anotador.jpeg",
+  "image2": "/empresas/acc2.png",
+  "image3": "/empresas/acc3.png",
+  "description": "Artículos personalizados para tu empresa",
+  "fullDescription": "Anotadores - LLaveros - Clips y más..",
   "price": "$15.000",
   "bulkPrice": "$10.000",
   "showBulkPriceByQuantity": true,
   "badgeText": "Para la oficina",
   "colors": [
-    "bg-white"
+    "bg-white",
+    "bg-blue-600",
+    "bg-red-600",
+    "bg-yellow-600"
   ],
   "features": [
-    "Diseño personalizado del zuncho y posavaso.",
-    "Cerámica resistente.",
-    "Caja personalizada."
+    "Diseño personalizado con logo de tu negocio o empresa.",
+    "Colores y diseño a elección",
+    "Consulta todas las opciones disponibles.",
+    "Para el personal, regalos o merchandising."
   ],
   "isPromo": true,
   "imagePromo": "/otros/pocillo.jpeg"

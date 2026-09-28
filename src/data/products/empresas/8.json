@@ -1,27 +1,22 @@
 {
   "id": 8,
   "category": "empresas",
-  "name": "Taza Corporativa",
-  "image": "/empresas/taza-frente2.png",
-  "image2": "/empresas/google.png",
-  "description": "Ideal para merchandising",
-  "fullDescription": "Taza de ceramica color interno y mango.",
+  "name": "Totebags y bolsas corporativas",
+  "image": "/empresas/tote-sublime.jpg",
+  "image2": "/empresas/tote-muevelo.png",
+  "image3": "/tote.png",
+  "description": "Publicidad para tu empresa",
+  "fullDescription": "Totebags y bolsas con logo o diseño personalizado.",
   "price": "$13.000",
   "bulkPrice": "$9.000",
   "showBulkPriceByQuantity": true,
   "badgeText": "¡Refuerza tu marca!",
   "colors": [
-    "bg-black",
-    "bg-blue-500",
-    "bg-violet-500",
-    "bg-pink-500",
-    "bg-green-500",
-    "bg-yellow-500"
+    "bg-white"
   ],
   "features": [
-    "Taza corporativa de cerámica, alta calidad.",
-    "Diseño personalizado con tu logo o imagen.",
-    "Color en interior y mango.",
-    "Caja personalizada."
+    "Totebags y bolsas personalizadas.",
+    "Consulta modelos y medidas.",
+    "Con el logo de tu empresa o negocio."
   ]
 }

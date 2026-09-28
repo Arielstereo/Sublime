@@ -1,0 +1,22 @@
+{
+  "id": 23,
+  "category": "kids",
+  "name": "Lunchera personalizada",
+  "image": "/kids/lunchera.png",
+  "image2": "/kids/lunchera.png",
+  "description": "Lunchera personalizada",
+  "fullDescription": "Ideal para el jardín o colegio.",
+  "price": "$10.000",
+  "showBulkPriceByQuantity": false,
+  "badgeText": "Lunchera infantil",
+  "colors": [
+    "bg-blue-600",
+    "bg-red-600",
+    "bg-pink-500"
+  ],
+  "features": [
+    "Diseño personalizado con nombre y diseño a elección.",
+    "Resistentes y libres de bpa.",
+    "Consulta disponibilidad de colores."
+  ]
+}
