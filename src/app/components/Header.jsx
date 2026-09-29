@@ -12,8 +12,9 @@ const orbitron = Orbitron({
 });
 
 const NAV_ITEMS = [
-  { id: "servicios", label: "Servicios" },
   { id: "productos", label: "Productos" },
+  { id: "servicios", label: "Servicios" },
+  { id: "trabajos", label: "Trabajos" },
   { id: "pasos", label: "¿Cómo pedir?" },
   { id: "contacto", label: "Contacto" },
 ];
@@ -260,14 +261,6 @@ const Header = () => {
                       >
                         <div className="overflow-hidden min-h-0">
                           <ul aria-label="Categorías de productos">
-                            <li>
-                              <button
-                                onClick={() => scrollToSection("trabajos")}
-                                className="w-full text-left py-3 pl-4 text-fg-secondary hover:text-fg cursor-pointer bg-transparent border-none transition-colors duration-200"
-                              >
-                                Ver todos los trabajos
-                              </button>
-                            </li>
                             {Object.entries(categoryNames).map(([id, name]) => (
                               <li key={id}>
                                 <Link
