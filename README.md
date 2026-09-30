@@ -1,6 +1,6 @@
 # Sublime by Emprendev
 
-![Sublime Logo](public/logo-sublime.png)
+![Sublime Logo](public/sublime-screen.jpeg)
 
 > Personalizá todo lo que imaginás — productos a medida, regalos corporativos y merchandising único.
 
