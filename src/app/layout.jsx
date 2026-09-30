@@ -52,6 +52,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preload" as="image" href="/logo-sublime.png" />
+      </head>
       <body className={`${rubik.variable} antialiased pt-20 text-fg`}>
         <ScrollToTop />
         <Header />

@@ -62,6 +62,7 @@ const Works = () => {
                     fill
                     sizes="(min-width: 768px) 45vw, 100vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent"></div>
                   <span className="absolute bottom-4 left-4 px-3 py-1.5 rounded-full bg-ink-950/70 backdrop-blur-md border border-border-strong text-sm font-semibold">

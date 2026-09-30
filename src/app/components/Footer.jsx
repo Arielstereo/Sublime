@@ -38,6 +38,7 @@ const Footer = () => {
               src="/logo-sublime.png"
               alt="Sublime by Emprendev"
               className="h-10 w-auto brightness-0 invert opacity-90"
+              loading="lazy"
             />
           </div>
 
