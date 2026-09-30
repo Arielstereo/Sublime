@@ -33,6 +33,9 @@ export const metadata = {
     "regalos empresariales",
   ],
   authors: [{ name: "Sublime by Emprendev" }],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Sublime by Emprendev",
     description: "Personalizá todo lo que imagines",
