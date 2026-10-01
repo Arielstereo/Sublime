@@ -24,7 +24,7 @@ const works = [
     text: "Productos personalizados para eventos infantiles: kits, souvenirs y regalos con el diseño del agasajado.",
     image: "/cumple.jpeg",
     instagram:
-      "https://www.instagram.com/p/DYfjJLwmlMg/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
+      "https://www.instagram.com/p/Dd9acuEmv3Z/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
   },
 ];
 
