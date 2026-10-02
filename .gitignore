@@ -44,3 +44,5 @@ next-env.d.ts
 /chrome/
 /lighthouse-report.json
 /lighthouse-report-2.json
+
+package-lock.json
