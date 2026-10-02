@@ -12,15 +12,16 @@ export default function ScrollToTop() {
 
   // Show button when scrolled down
   useEffect(() => {
+    let visible = false;
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
+      const next = window.scrollY > 300;
+      if (next !== visible) {
+        visible = next;
+        setIsVisible(next);
       }
     };
 
-    window.addEventListener("scroll", toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility, { passive: true });
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
@@ -32,7 +33,7 @@ export default function ScrollToTop() {
   };
 
   return (
-    isVisible && (
+    isVisible ? (
       <button
         onClick={scrollToTop}
         className="fixed bottom-8 right-4 cursor-pointer z-50 bg-accent hover:bg-accent-strong text-white font-bold p-3 rounded-full shadow-[0_8px_24px_rgba(236,72,153,0.35)] active:scale-95 transition-all duration-200"
@@ -52,6 +53,6 @@ export default function ScrollToTop() {
           />
         </svg>
       </button>
-    )
+    ) : null
   );
 }

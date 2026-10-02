@@ -170,7 +170,7 @@ function CategoryView({ categoryId }) {
               <Link
                 key={`cat-${item.data.id}`}
                 href={`/products/${item.data.id}`}
-                className="group dark-card rounded-2xl overflow-hidden hover:border-border-strong transition-all duration-300"
+                className="group dark-card rounded-2xl overflow-hidden hover:border-border-strong transition-all duration-300 [content-visibility:auto] [contain-intrinsic-size:auto_300px]"
               >
                 <div className="relative overflow-hidden aspect-square bg-ink-800">
                   <Image
@@ -200,7 +200,7 @@ function CategoryView({ categoryId }) {
               <Link
                 key={item.data.id}
                 href={`/products/${item.data.id}`}
-                className="group dark-card rounded-2xl overflow-hidden hover:border-border-strong transition-all duration-300"
+                className="group dark-card rounded-2xl overflow-hidden hover:border-border-strong transition-all duration-300 [content-visibility:auto] [contain-intrinsic-size:auto_300px]"
               >
                 <div className="relative overflow-hidden aspect-square bg-ink-800">
                   <Image
@@ -455,7 +455,7 @@ function ProductDetail() {
                 <Link
                   key={relatedProduct.id}
                   href={`/products/${relatedProduct.id}`}
-                  className="dark-card rounded-2xl hover:border-border-strong transition-all duration-300 p-5 group"
+                  className="dark-card rounded-2xl hover:border-border-strong transition-all duration-300 p-5 group [content-visibility:auto] [contain-intrinsic-size:auto_300px]"
                 >
                   <div className="relative w-full aspect-square bg-ink-800 rounded-xl overflow-hidden mb-4">
                     <Image
@@ -482,3 +482,5 @@ function ProductDetail() {
 }
 
 export default ProductDetail;
+
+

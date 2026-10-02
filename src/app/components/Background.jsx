@@ -1,6 +1,8 @@
 "use client";
 
-import GhostFibers from "./GhostFibers";
+import dynamic from "next/dynamic";
+
+const GhostFibers = dynamic(() => import("./GhostFibers"), { ssr: false });
 
 const Background = ({ children }) => {
   return (
